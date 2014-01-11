@@ -16,7 +16,7 @@ void display(int a[], int n);
 int main(){
 	int a[11] = {0, 9, 8, 6, 4, 1, 10, 19, 16, 5, 7};
 	display(a, 11);
-	shell_Sort(a, 0, 11);
+	quick_Sort(a, 0, 11);
 	display(a, 11);
 return 0;
 }
@@ -67,9 +67,41 @@ void shell_Sort(int a[], const int start, const int end){
 		}
 	}
 }
-
+//1-11 update //有借鉴于网络//还需加深理解
 void quick_Sort(int a[], const int start, const int end){
-
+	int stack[100];
+	int top = 0;
+	int low, high, i, j, pivot;
+	int temp;
+	stack[top++] = (end - start);
+	stack[top++] = 0;
+	while(top != 0){
+		low = stack[--top];
+		high = stack[--top];
+		pivot = high;
+		i = low;
+		for(j = low; j < high; j++){
+			if(a[j] <= a[pivot]){
+				temp = a[j];
+				a[j] = a[i];
+				a[i] = temp;
+				i++;
+			}
+		}
+		if(i != pivot){
+			temp = a[i];
+			a[i] = a[pivot];
+			a[pivot] = temp;
+		}	
+		if(i - low > 1){
+			stack[top++] = i - 1;
+			stack[top++] = low;
+		}
+		if(high - i > 1){
+			stack[top++] = high;
+			stack[top++] = i + 1;
+		}
+	}	
 }
 
 void display(int a[],int n){
