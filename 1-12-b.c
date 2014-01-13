@@ -1,5 +1,5 @@
 /**
-*线性表的链式存储//没搞定，有段错误，待解决...|-（
+*线性表的链式存储
 */
 
 #include<stdio.h>
@@ -13,9 +13,9 @@ typedef struct LNode {
 } LNode, *LinkList;
 
 
-int InitList_head(LinkList l);//初始化链表（头插法）
+LNode* InitList_head();//初始化链表（头插法）
 
-int InitList_rear(LinkList l);//初始化链表（尾插法）
+LNode* InitList_rear();//初始化链表（尾插法）
 
 LNode* GetElem(LinkList l, int i);//按序号查找结点
 
@@ -29,14 +29,25 @@ void Traversal(LinkList l);
 
 int main() {
 	LinkList ls;
-	InitList_head(ls);
+	ls = InitList_rear();
+	Traversal(ls);
+	/*
+	LinkList find;
+	find = GetElem(ls, 3);
+	printf("%d\n", find->data);
+	find = LocateElem(ls, 111);
+	printf("%d\n", find->data);
+	*/
+	InsertNode(ls, 5, 111);
+	Traversal(ls);
+	DeleteNode(ls, 1);
 	Traversal(ls);
 	return 0;
 }
 
 
-int InitList_head(LinkList l){
-	LNode *s;
+LNode* InitList_head(){
+	LNode *s, *l;
 	int x;
 	l = (LinkList)malloc(sizeof(LNode));
 	l->next = NULL;
@@ -48,11 +59,11 @@ int InitList_head(LinkList l){
 		l->next = s;
 		scanf("%d", &x);
 	}
-	return 1;
+	return l;
 }//初始化链表（头插法）
 
-int InitList_rear(LinkList l){
-	LNode *s, *r;
+LNode* InitList_rear(){
+	LNode *s, *r, *l;
 	int x;
 	l = (LinkList)malloc(sizeof(LNode));
 	r = l;
@@ -64,8 +75,9 @@ int InitList_rear(LinkList l){
 		s->next = NULL;
 		r->next = s;
 		r = s;
+		scanf("%d", &x);
 	}
-	return 1;
+	return l;
 }//初始化链表（尾插法）
 
 LNode* GetElem(LinkList l, int i){
@@ -89,20 +101,20 @@ LNode* LocateElem(LinkList l, Elemtype e){
 }//按值查找结点
 
 int InsertNode(LinkList l, int i, Elemtype e){
-	LNode *s = l, *insert;
-	s = GetElem(s, i - 1);
+	LNode *s, *insert;
+	s = GetElem(l, i - 1);
 	insert = (LNode *)malloc(sizeof(LNode));
 	insert->data = e;
-	insert->next = s;
+	insert->next = s->next;
 	s->next = insert;
 	return 1;
 }//在指定位置插入结点
 
 int DeleteNode(LinkList l, int i){
-	LNode *s = l, *delete;
-	s = GetElem(s, i - 1);
+	LNode *s, *delete;
+	s = GetElem(l, i - 1);
 	delete = s->next;
-	s = delete->next;
+	s->next = delete->next;
 	free(delete);
 	return 1;
 }//删除指定位置结点
@@ -110,8 +122,8 @@ int DeleteNode(LinkList l, int i){
 void Traversal(LinkList l){
 	LNode *s = l;
 	int i = 0;
-	while(s) {
-		printf("%d-->%d", i, s->data);
+	while(s->next) {
+		printf("%d-->%d\n", i, s->next->data);
 		i++;
 		s = s->next;
 	}
