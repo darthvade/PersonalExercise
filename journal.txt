@@ -3,3 +3,5 @@ Jan 10:继续了解熟悉Git和github的使用/复习直接插入排序/二分�
 Jan 11:快速排序（非递归）（还需加深理解）/ 开始stanford的数据库公开课，看了半结构化数据部分，quiz还没做/
 Jan 12:完成了数据库公开课quiz/线性表的具体实现/
 Jan 13:继续数据库课程/开始看C++/继续复习Shell
+Jan 14:完成了数据库的一个exercise/开始看C++的继承/继续学习Shell
+Jan 15:看完数据库JSON部分，quiz还没做/开始看“Linux Programming”_chapter_3(Files)/
