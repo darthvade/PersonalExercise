@@ -3,33 +3,19 @@
 */
 #include<iostream>
 using namespace std;
-class A {
-	public:
-		A():i(0) {
-			cout << "A::A()" << endl;
-		}
-		~A() {
-			cout << "A::~A()" << endl;
-		}
-		void print() {
-			cout << "A--->i = " << i << endl;
-		}
-	protected:
-		void set(int n) {
-			i = n;
-		}
-	private:
-		 int i;
-};
-class B : public A {
-	public:
-		void f() {
-			set(9999);
-			print();
-		}
-};
+void fun(int a = 2, int b = 2);
+void fun2(int a = 2, int b = 2, int c = 2);
+
 int main() {
-	B b;
-	b.f();
+	fun();
+	fun2();
 	return 0;
+}
+
+void fun(int a, int b){
+	cout << a << " " << b << endl;
+}
+
+void fun2(int a, int b, int c){
+	cout << a << " " << b << " " << c << endl;
 }
