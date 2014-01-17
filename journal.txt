@@ -6,3 +6,4 @@ Jan 13:继续数据库课程/开始看C++/继续复习Shell
 Jan 14:完成了数据库的一个exercise/开始看C++的继承/继续学习Shell
 Jan 15:看完数据库JSON部分，quiz还没做/开始看“Linux Programming”_chapter_3(Files)/C++函数重载,内联函数
 Jan 16:数据库关系代数/“Linux Programming”_chapter_3(Files)/
+Jan 17:数据库关系代数/C++多态/

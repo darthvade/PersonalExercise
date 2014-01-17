@@ -18,6 +18,11 @@ class A {
 		}
 };
 
+int x = 10;
+
+int& fun(){
+	return x;
+}
 
 int main(){
 	/*
@@ -45,5 +50,7 @@ int main(){
 			    //b仅仅可以指向a,而不可以指向其他对象（但a的值，既可以通过b改变，也可以通过其他方式改变，比如自增一）
 	a++;
 	cout << ++(*b) << endl;
+	fun() = 10000;
+	cout << x << endl;
 	return 0;
 }
