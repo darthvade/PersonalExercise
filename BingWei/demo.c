@@ -1,5 +1,8 @@
 /**
-*
+*	基本思想：将所有字符串存储在一个结构体数组里，从第一个串开始，
+*			  找出这个字符串的所有母串，之后依次打印该字符串和其所有母串；
+*			  之后，从第二个字符串开始，以此类推，直到打印出所有字符串
+*			  *注：字符串长度为1组的直接打印，不许要找母串
 */
 
 #include<stdio.h>
@@ -11,6 +14,7 @@ typedef struct {
 	char code[64];	//存储编码
 	int isPre;	//存储一条编码是否为另一条编码的前缀：若是，其值为1；不是，其值为0
 	int isCode;	//本单元是否存储着一条编码：值为1，为有；值为0，为没有
+	int printed;//记录次条编码是否被打印过：值为1，为打印过；值为0，为没打印过
 } Decode; 
 
 int isPrefix(const char* s1, const char* s2);//s2是否是s1的前缀：若是，返回1；不是，返回0
@@ -66,6 +70,7 @@ void initArray(Decode* dc, int n){
 		strcpy(dc[i].code, "");
 		dc[i].isPre = 0;
 		dc[i].isCode = 0;
+		dc[i].printed = 0;
 		i++;
 	}
 }
@@ -97,26 +102,30 @@ void printArray(Decode* dc){
 		if(1 == dc[i].n){
 			printf("%s\n", dc[i].name);
 			i++;
-		}
-		dc[i].isPre = 1;
-		j = i + 1;
-		while(dc[j].isCode){
-			dc[j].isPre = isPrefix(dc[j].code, dc[i].code);
-			j++;
-		}
-		j = i;
-		while(dc[j].isCode){
-			if(dc[j].isPre) {
-				n = dc[j].n;
-				while(n--){
-					printf("%s", "    ");
-				}
-				printf("%s\n", dc[j].name);
-				dc[j].isPre = 0;
+		}else{
+			dc[i].isPre = 1;
+			j = i + 1;
+			//while扫描一遍数组，确定dc[i].code是哪些字符串的子串
+			while(dc[j].isCode){
+				dc[j].isPre = isPrefix(dc[j].code, dc[i].code);
+				j++;
 			}
-			j++;
+			j = i;
+			//打印哪些未被打印过的dc[i].code的母串
+			while(dc[j].isCode){
+				if(dc[j].isPre && !dc[j].printed) {
+					n = dc[j].n;
+					while(n--){
+						printf("%s", "    ");
+					}
+					printf("%s\n", dc[j].name);
+					dc[j].isPre = 0;
+					dc[j].printed = 1;
+				}
+				j++;
+			}
+			i++;
 		}
-		i++;
 	}
 }
 
