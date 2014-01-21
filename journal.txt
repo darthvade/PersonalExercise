@@ -9,3 +9,4 @@ Jan 16:数据库关系代数/“Linux Programming”_chapter_3(Files)/
 Jan 17:数据库关系代数/C++多态/
 Jan 18:看了一下“C专家编程”，对一些C语言标准加深理解
 Jan 19:继续数据库，完成BingWei的语言练习
+Jan 20:完成数据库关系代数quiz/“Linux Programming”_chapter_4&5略看/
