@@ -1,7 +1,7 @@
-#include<stdio.h>
-
+/**
+* 莫名其妙的C99标准
+*/
 int main(){
-	char* array[] = {"123", "1234", "12345", "123456", "1234567"};
-	printf("%d\n", sizeof(array));
+	bool k;
 	return 0;
 }

@@ -14,7 +14,7 @@ typedef struct {
 	char code[64];	//存储编码
 	int isPre;	//存储一条编码是否为另一条编码的前缀：若是，其值为1；不是，其值为0
 	int isCode;	//本单元是否存储着一条编码：值为1，为有；值为0，为没有
-	int printed;//记录次条编码是否被打印过：值为1，为打印过；值为0，为没打印过
+	int printed;    //记录一条编码是否被打印过：值为1，为打印过；值为0，为没打印过
 } Decode; 
 
 int isPrefix(const char* s1, const char* s2);//s2是否是s1的前缀：若是，返回1；不是，返回0
@@ -114,7 +114,7 @@ void printArray(Decode* dc){
 			//打印哪些未被打印过的dc[i].code的母串
 			while(dc[j].isCode){
 				if(dc[j].isPre && !dc[j].printed) {
-					n = dc[j].n;
+					n = dc[j].n - 1;
 					while(n--){
 						printf("%s", "    ");
 					}
