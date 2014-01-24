@@ -11,4 +11,6 @@ Jan 18:看了一下“C专家编程”，对一些C语言标准加深理解
 Jan 19:继续数据库，完成BingWei的C语言练习
 Jan 20:完成数据库关系代数quiz/“Linux Programming”_chapter_4&5略看/
 Jan 21:“Linux Programming”_chapter_6/改进BingWei的C语言作业/看“C专家编程”
-Jan 22:
+Jan 22:“C专家编程”/（进度有点慢：（）
+Jan 23:“C专家编程”/“Linux Programming”
+Jan 24:C++拷贝构造函数/静态成员/静态对象

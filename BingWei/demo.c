@@ -23,14 +23,14 @@ void initArray(Decode* dc, int n);//初始化结构体数组dc,数组大小为n
 
 void readFile(const char* fname, Decode* dc);//读取文件fname到结构体数组dc
 
-void printArray(Decode* dc);//按模式打印结构体数组dc
+void printArray_v2(Decode* dc);//按模式打印结构体数组dc
 
 int main(){
 	
 	Decode dc[20];
 	initArray(dc, 20);
 	readFile("input.txt", dc);
-	printArray(dc);
+	printArray_v2(dc);
 	
 	/**测试readFile
 	printf("%s\n", dc[16].name);//测试用
@@ -129,6 +129,40 @@ void printArray(Decode* dc){
 	}
 }
 
+void printArray_v2(Decode* dc){
+	int i = 0;
+	int j = 0;
+	int n = 0;
+	while(dc[i].isCode){
+		if(1 == dc[i].n){
+			printf("%s\n", dc[i].name);
+			i++;
+		}else{
+			dc[i].isPre = 1;
+			j = 0;
+			//while扫描一遍数组，确定dc[i].code是哪些字符串的子串
+			while(dc[j].isCode){
+				dc[j].isPre = isPrefix(dc[j].code, dc[i].code);
+				j++;
+			}
+			j = 0;
+			//打印哪些未被打印过的dc[i].code的母串
+			while(dc[j].isCode){
+				if(dc[j].isPre && !dc[j].printed) {
+					n = dc[j].n - 1;
+					while(n--){
+						printf("%s", "    ");
+					}
+					printf("%s\n", dc[j].name);
+					dc[j].isPre = 0;
+					dc[j].printed = 1;
+				}
+				j++;
+			}
+			i++;
+		}
+	}
+}
 
 
 
