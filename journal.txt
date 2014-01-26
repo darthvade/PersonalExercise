@@ -14,4 +14,4 @@ Jan 21:“Linux Programming”_chapter_6/改进BingWei的C语言作业/看“C�
 Jan 22:“C专家编程”/（进度有点慢：（）
 Jan 23:“C专家编程”/“Linux Programming”
 Jan 24:C++拷贝构造函数/静态成员/静态对象
-Jan 26:
+Jan 26:“C专家编程”/将C语言笔记转成MarkDown格式/继续数据库公开课
