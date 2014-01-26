@@ -23,14 +23,14 @@ void initArray(Decode* dc, int n);//初始化结构体数组dc,数组大小为n
 
 void readFile(const char* fname, Decode* dc);//读取文件fname到结构体数组dc
 
-void printArray_v2(Decode* dc);//按模式打印结构体数组dc
+void printArray(Decode* dc);//按模式打印结构体数组dc
 
 int main(){
 	
 	Decode dc[20];
 	initArray(dc, 20);
 	readFile("input.txt", dc);
-	printArray_v2(dc);
+	printArray(dc);
 	
 	/**测试readFile
 	printf("%s\n", dc[16].name);//测试用
