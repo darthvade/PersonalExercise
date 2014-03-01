@@ -140,7 +140,6 @@ void shell_insertion_sort(elem_t *a, const int start, const int end) {
 
 void bubble_sort(elem_t *a, const int start, const int end) {
 	int i, j, exchange;
-	elem_t tmp;
 	for(i = start; i < end; i++) {
 		exchange = 0;
 		for(j = end - 1; j > i; j--) {
