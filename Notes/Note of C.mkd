@@ -8,6 +8,9 @@
 - [限制对于函数的访问](#3)
 - [关于struct,union和enum](#4)
 - [声明的优先级规则](#5) 
+- [typedef和#define的区别](#6)
+- [typedef用在哪？](#7)
+- [char *str1 与 char str2\[\]](#8)
 
 <span id='1'></span>    
 ###const与*操作符
@@ -56,3 +59,27 @@
         char* const* (*next)();
         意为：“next是一个指向函数的指针，该指针返回另一个指针，该指针指向一个只读的指向char的指针”。
     
+<span id='6'></span>        
+###typedef和#define的区别
+	A：可以用其他类型说明符对宏类型名进行扩展，但对typedef所定义的类型名却不能这样做。
+	例：	#define peach int
+		unsigned peach i; /*没问题*/
+		typedef int banana;
+		unsigned banana i; /*非法*/
+	B：在连续几个变量的声明中，用typedef定义的类型能够保证声明中所有的变量均为同一种类型，
+	   而#define定义的类型则无法保证。
+	例：	#define int_ptr int*
+		in_ptr  peach, banana; /*peach类型为指针，banana类型为int*/
+		
+<span id='7'></span> 
+###typedef用在哪？
+    应该用在：A：数组​/结构/指针以及函数的组合类型。
+		    B：可移植类型。
+		    C：为强制类型转换提供简单的名子
+	不建议用：结构体定义 
+	
+<span id='8'></span> 
+###char *str1 与 char str2[]
+    C语言的字符串常量存储在代码段。
+	char *str1 = “hello”; //若str1是局部变量，则str1是堆栈里的一个指针，它指向代码段的“hello”
+	char str2[] = “hello”; // 此语句中的“hello”有两份拷贝，一份在代码段、一份在堆栈段
