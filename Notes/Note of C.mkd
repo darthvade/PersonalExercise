@@ -12,6 +12,8 @@
 - [typedef用在哪？](#7)
 - [char *str1 与 char str2\[\]](#8)
 
+*   [const与*操作符](#xxx)
+
 <span id='1'></span>    
 ###const与*操作符
 
@@ -83,3 +85,5 @@
     C语言的字符串常量存储在代码段。
 	char *str1 = “hello”; //若str1是局部变量，则str1是堆栈里的一个指针，它指向代码段的“hello”
 	char str2[] = “hello”; // 此语句中的“hello”有两份拷贝，一份在代码段、一份在堆栈段
+	
+<h2 id="xxx">heheh</h2>
