@@ -88,6 +88,6 @@
 	char *str1 = “hello”; //若str1是局部变量，则str1是堆栈里的一个指针，它指向代码段的“hello”
 	char str2[] = “hello”; // 此语句中的“hello”有两份拷贝，一份在代码段、一份在堆栈段
 	
-<h2 id="xxx">heheh</h2>
+## const与*操作符
 
 ## Tooling
