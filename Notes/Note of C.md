@@ -12,7 +12,7 @@
 - [typedef用在哪？](#7)
 - [char *str1 与 char str2\[\]](#8)
 
-*   [const与*操作符](#xxx)
+* [const与*操作符](#xxx)
 
 <span id='1'></span>    
 ###const与*操作符
