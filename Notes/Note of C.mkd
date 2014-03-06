@@ -10,7 +10,7 @@
 - [声明的优先级规则](#5) 
 - [typedef和#define的区别](#6)
 - [typedef用在哪？](#7)
-- [char *str1 与 char str2\[\]](#8)
+- [char *str1 与 char str2\[\]](#char *str1)
 
 <h3 id='1'>1</h3>
 ###const与*操作符
@@ -78,7 +78,8 @@
 		    C：为强制类型转换提供简单的名子
 	不建议用：结构体定义 
 	
-<h3 id='8'>8</h3> ###char *str1 与 char str2[]
+<h3 id='8'>8</h3> 
+###char *str1 与 char str2[]
     C语言的字符串常量存储在代码段。
 	char *str1 = “hello”; //若str1是局部变量，则str1是堆栈里的一个指针，它指向代码段的“hello”
 	char str2[] = “hello”; // 此语句中的“hello”有两份拷贝，一份在代码段、一份在堆栈段
