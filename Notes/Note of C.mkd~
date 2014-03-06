@@ -12,7 +12,12 @@
 - [typedef用在哪？](#7)
 - [char *str1 与 char str2\[\]](#8)
 
-<span id='1'>1</span>    
+
+
+* [Tooling](#tooling)
+* [const与*操作符](#const)
+
+<span id='1'></span>    
 ###const与*操作符
 
     const int* b = &a;    
@@ -23,25 +28,25 @@
     （const在*的右边）说明：b仅仅可以指向a，而不可以指向其他对象（但a的值，既可以通    
     过b改变，也可以通过其他方式改变，比如自增一）   
 
-<span id='2'>2</span>     
+<span id='2'></span>     
 ###break的作用
 
     跳出最近的循环语句或switch语句（注：跟if语句没关系！）     
 
-<span id='3'>3</span>    
+<span id='3'></span>    
 ###限制对于函数的访问
 
     函数名前加static说明：函数仅在这个文件内可见
     函数名前加extern说明：函数在任何地方都可见
 
-<span id='4'>4</span>    
+<span id='4'></span>    
 ###关于struct,union和enum
 
     struct：内部各类型用“分号”分隔
     union：内部各类型用“分号”分隔，各部分共用存储空间
     enum：内部各类型用“逗号”分隔，作用：将一串名字与一串“整形”值联系在一起。只可以使用声明时使用的名字对齐赋值   
 
-<span id='5'>5</span>        
+<span id='5'></span>        
 ###声明的优先级规则
 
     A：声明从它的名字开始读取，然后按照优先级顺序依次读取
@@ -59,7 +64,7 @@
         char* const* (*next)();
         意为：“next是一个指向函数的指针，该指针返回另一个指针，该指针指向一个只读的指向char的指针”。
     
-<span id='6'>6</span>        
+<span id='6'></span>        
 ###typedef和#define的区别
 	A：可以用其他类型说明符对宏类型名进行扩展，但对typedef所定义的类型名却不能这样做。
 	例：	#define peach int
@@ -71,16 +76,20 @@
 	例：	#define int_ptr int*
 		in_ptr  peach, banana; /*peach类型为指针，banana类型为int*/
 		
-<span id='7'>7</span> 
+<span id='7'></span> 
 ###typedef用在哪？
     应该用在：A：数组​/结构/指针以及函数的组合类型。
 		    B：可移植类型。
 		    C：为强制类型转换提供简单的名子
 	不建议用：结构体定义 
 	
-<span id='8'>8</span> 
+<span id='8'></span> 
 ###char *str1 与 char str2[]
     C语言的字符串常量存储在代码段。
 	char *str1 = “hello”; //若str1是局部变量，则str1是堆栈里的一个指针，它指向代码段的“hello”
 	char str2[] = “hello”; // 此语句中的“hello”有两份拷贝，一份在代码段、一份在堆栈段
+	
 
+## Tooling
+
+## const与*操作符
