@@ -36,4 +36,8 @@ void clear(Linklist L);//清除所有数据节点@
 
 void destory(Linklist *L);//销毁整个链表@
 
+void merge_tail(Linklist L, Linklist src1, Linklist src2);//合并两个链表@
+
+void merge_head(Linklist L, Linklist src1, Linklist src2);//合并两个链表@
+
 #endif

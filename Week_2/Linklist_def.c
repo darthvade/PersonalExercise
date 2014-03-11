@@ -130,6 +130,7 @@ void destory(Linklist *L) {
 		clear(*L);
 	}
 	free(*L);
+	*L = NULL;
 }//销毁整个链表
 
 void reverse(Linklist L) {
@@ -152,3 +153,74 @@ void reverse(Linklist L) {
 		tail->next = temp;
 	}
 }//链表逆置@
+
+void merge_tail(Linklist L, Linklist src1, Linklist src2) {
+	LinkNode *psrc1 = src1->next;
+	LinkNode *psrc2 = src2->next;
+	LinkNode *temp;
+	while(psrc1 && psrc2) {
+		if(psrc1->data < psrc2->data) {
+			temp = psrc1;
+			src1->next = psrc1->next;
+			temp->next = L->next;
+			L->next = temp;
+			psrc1 = src1->next;
+		} else {
+			temp = psrc2;
+			src2->next = psrc2->next;
+			temp->next = L->next;
+			L->next = temp;
+			psrc2 = src2->next;
+		}
+	}
+	while(psrc1) {
+		temp = psrc1;
+		src1->next = psrc1->next;
+		temp->next = L->next;
+		L->next = temp;
+		psrc1 = src1->next;
+	}
+	while(psrc2) {
+		temp = psrc2;
+		src2->next = psrc2->next;
+		temp->next = L->next;
+		L->next = temp;
+		psrc2 = src2->next;
+	}
+}//合并两个链表@
+
+void merge_head(Linklist L, Linklist src1, Linklist src2) {
+	LinkNode *psrc1 = src1->next;
+	LinkNode *psrc2 = src2->next;
+	LinkNode *temp;
+	LinkNode *Ltail = L;
+	while(psrc1 && psrc2) {
+		if(psrc1->data < psrc2->data) {
+			temp = psrc1;
+			src1->next = psrc1->next;
+			Ltail->next = temp;
+			Ltail = temp;
+			psrc1 = src1->next;
+		} else {
+			temp = psrc2;
+			src2->next = psrc2->next;
+			Ltail->next = temp;
+			Ltail = temp;
+			psrc2 = src2->next;
+		}
+	}
+	while(psrc1) {
+		temp = psrc1;
+		src1->next = psrc1->next;
+		Ltail->next = temp;
+		Ltail = temp;
+		psrc1 = src1->next;
+	}
+	while(psrc2) {
+		temp = psrc2;
+		src2->next = psrc2->next;
+		Ltail->next = temp;
+		Ltail = temp;
+		psrc2 = src2->next;
+	}
+}//合并两个链表@
