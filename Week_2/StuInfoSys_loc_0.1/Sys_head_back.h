@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /*-----------------------------------------------------------------------------------*/
 
@@ -65,9 +66,11 @@ void delete_info_from_list(LinkInfo Lmain, int del_id); /*删除信息总表中�
 
 void update_info_in_list(LinkInfo Lmain, int del_id, StuInfo *update_info); /*更新信息总表中指定学号的学生信息*/
 
-// (StuInfo *)search_info_from_list(LinkInfo Lmain, int del_id); /*查找信息总表中指定学号的学生信息*/
+void search_info_from_list(LinkInfo Lmain, int del_id, StuInfo *search_info); /*查找信息总表中指定学号的学生信息*/
 
 void update_index_table(LinkInfo Lmain, IndexTable *index); /*更新索引表信息*/
+
+void reverse_main_list(LinkInfo Lmain); /*逆置信息总表*/
 
 void debug(LinkInfo Lmain); /*打印信息总表的所有信息*/
 

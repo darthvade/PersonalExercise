@@ -52,6 +52,9 @@ void read_all_info_from_file(char *filename, LinkInfo Lmain) {
 } /*读出文件中的所有信息并插入信息总表*/
 
 void write_all_info_into_file(char *filename, LinkInfo Lmain) {
+	if(Lmain->next->i_ps->s_id < Lmain->next->next->i_ps->s_id) {
+		reverse_main_list(Lmain);
+	}
 	FILE *fp;
 	fp = fopen(filename, "w");
 	if(fp == NULL) {
@@ -118,25 +121,90 @@ void debug(LinkInfo Lmain) {
 } /*打印信息总表的所有信息*/
 
 void insert_new_info_into_list(LinkInfo Lmain, StuInfo *insert_info) {
-
+	if(Lmain->next->i_ps->s_id < Lmain->next->next->i_ps->s_id) {
+		reverse_main_list(Lmain);
+	}
+	InfoNode *insert;
+	StuInfo *tempdata;
+	insert = (InfoNode *)malloc(sizeof(InfoNode));
+	tempdata = (StuInfo *)malloc(sizeof(StuInfo));
+	insert->i_ps = tempdata;
+	memcpy(tempdata, insert_info, sizeof(StuInfo));
+	if(Lmain->next == NULL) {
+		tempdata->s_id = 20140001;
+	} else {
+		tempdata->s_id = Lmain->next->i_ps->s_id + 1;
+	}
+	insert->next = Lmain->next;
+	Lmain->next = insert;	
 }  /*将一个新元素-插入-信息总表*/
 
 void delete_info_from_list(LinkInfo Lmain, int del_id) {
-
+	InfoNode *cur;	
+	InfoNode *pre;
+	if(Lmain->next == NULL) {
+		return;
+	}
+ 	cur = Lmain->next;	
+	pre = Lmain;
+	while(cur && cur->i_ps->s_id != del_id) {
+		pre = cur;
+		cur = cur->next;
+	}
+	if(cur == NULL) {
+		return;
+	}
+	if(cur != NULL) {
+		pre->next = cur->next;
+		free(cur);
+	}
 } /*-删除-信息总表中指定学号的学生信息*/
 
 void update_info_in_list(LinkInfo Lmain, int del_id, StuInfo *update_info) {
-
+	InfoNode *cur;	
+	if(Lmain->next == NULL) {
+		return;
+	}
+ 	cur = Lmain->next;	
+	while(cur && cur->i_ps->s_id != del_id) {
+		cur = cur->next;
+	}
+	if(cur == NULL) {
+		return;
+	}
+	if(cur != NULL) {
+		memcpy(cur->i_ps, update_info, sizeof(StuInfo));
+	}
 }  /*-更新-信息总表中指定学号的学生信息*/
 
-// (StuInfo *)search_info_from_list(LinkInfo Lmain, int del_id) {
+void search_info_from_list(LinkInfo Lmain, int del_id, StuInfo *search_info) {
 
-// } /*-查找-信息总表中指定学号的学生信息*/
+} /*-查找-信息总表中指定学号的学生信息*/
 
 void update_index_table(LinkInfo Lmain, IndexTable *index) {
 
 } /*更新索引表信息*/
 
+void reverse_main_list(LinkInfo Lmain) {
+	InfoNode *head;
+	InfoNode *tail;
+	InfoNode *temp;
+	if(Lmain->next == NULL) {
+		return;
+	}
+	head = Lmain->next;
+	tail = Lmain->next;
+	while(tail->next) {
+		tail = tail->next;
+	}
+	while(tail != head) {
+		temp = head;
+		Lmain->next = head->next;
+		head = head->next;
+		temp->next = tail->next;
+		tail->next = temp;
+	}
+} /*逆置信息总表*/
 
 
 
