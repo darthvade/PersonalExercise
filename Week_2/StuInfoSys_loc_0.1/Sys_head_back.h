@@ -18,6 +18,8 @@
 #define LEN_SCORE_CLASS_NAME 32 /*学生成绩_课程名_字符串_最大长度*/
 #define LEN_SCORE_MAX_CLASS_NUM 4 /*学生成绩_最大课程数*/
 
+#define LEN_INDEX_MAX 1024 /*索引表长度*/
+
 /*-----------------------------------------------------------------------------------*/
 
 struct Score {
@@ -52,6 +54,8 @@ typedef struct InfoNode InfoNode;
 typedef struct InfoNode * LinkInfo;
 typedef struct IndexNode IndexTable;
 
+IndexTable MainIndex[LEN_INDEX_MAX]; /*存储所有学生信息结点的指针信息*/
+
 /*-----------------------------------------------------------------------------------*/
 
 void init_info_main_list(LinkInfo *L); /*初始化信息总表*/
@@ -68,7 +72,7 @@ void update_info_in_list(LinkInfo Lmain, int del_id, StuInfo *update_info); /*�
 
 void search_info_from_list(LinkInfo Lmain, int del_id, StuInfo *search_info); /*查找信息总表中指定学号的学生信息*/
 
-void update_index_table(LinkInfo Lmain, IndexTable *index); /*更新索引表信息*/
+/*还没有测试！！！*/ void update_index_table(LinkInfo Lmain, IndexTable *index, int *real_info_len); /*更新索引表信息*/
 
 void reverse_main_list(LinkInfo Lmain); /*逆置信息总表*/
 

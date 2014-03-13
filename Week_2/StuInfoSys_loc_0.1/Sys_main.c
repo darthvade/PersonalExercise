@@ -1,6 +1,8 @@
 #include "Sys_head_back.h"
 
 int main() {
+
+	int index_real_len = 0;
 	LinkInfo Lmain; //信息总表
 	init_info_main_list(&Lmain); //初始化信息总表
 	read_all_info_from_file("Sys_Database.db", Lmain); //从文件读数据
@@ -28,13 +30,18 @@ int main() {
 	strcpy(st.s_score.c_name[3], "writing");
 	st.s_score.c_score[3] = 87;
 
-	update_info_in_list(Lmain, 1005, &st);
+	update_index_table(Lmain, MainIndex, &index_real_len);
+
+	//update_info_in_list(Lmain, 1005, &st);
 
 	//delete_info_from_list(Lmain, 1129);
 
 	//insert_new_info_into_list(Lmain, &st); //插入新学生信息
 
 	//delete_info_from_list(Lmain, 1024);
+
+	//search_info_from_list(Lmain, 1011, &st);
+	//printf("%d ---> %s ---> %s\n", st.s_id, st.s_name, st.s_major);
 
 /*测试---------------------------------------------------------------------*/
 

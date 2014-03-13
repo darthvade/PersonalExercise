@@ -178,11 +178,35 @@ void update_info_in_list(LinkInfo Lmain, int del_id, StuInfo *update_info) {
 }  /*-更新-信息总表中指定学号的学生信息*/
 
 void search_info_from_list(LinkInfo Lmain, int del_id, StuInfo *search_info) {
-
+	InfoNode *cur;	
+	if(Lmain->next == NULL) {
+		return;
+	}
+ 	cur = Lmain->next;	
+	while(cur && cur->i_ps->s_id != del_id) {
+		cur = cur->next;
+	}
+	if(cur == NULL) {
+		return;
+	}
+	if(cur != NULL) {
+		memcpy(search_info, cur->i_ps, sizeof(StuInfo));
+	}
 } /*-查找-信息总表中指定学号的学生信息*/
 
-void update_index_table(LinkInfo Lmain, IndexTable *index) {
-
+void update_index_table(LinkInfo Lmain, IndexTable *index, int *real_info_len) {
+	int i = 0;
+	if(Lmain || Lmain->next) {
+		return;
+	}
+	InfoNode *p = Lmain->next;
+	while(p) {
+		index[i].id = p->i_ps->s_id;
+		index[i].i_ps = p->i_ps;
+		i++;
+		p = p->next;
+		(*real_info_len)++;
+	}
 } /*更新索引表信息*/
 
 void reverse_main_list(LinkInfo Lmain) {
