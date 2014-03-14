@@ -52,8 +52,10 @@ void read_all_info_from_file(char *filename, LinkInfo Lmain) {
 } /*读出文件中的所有信息并插入信息总表*/
 
 void write_all_info_into_file(char *filename, LinkInfo Lmain) {
-	if(Lmain->next->i_ps->s_id < Lmain->next->next->i_ps->s_id) {
-		reverse_main_list(Lmain);
+	if(Lmain->next != NULL && Lmain->next->next != NULL) {
+		if(Lmain->next->i_ps->s_id < Lmain->next->next->i_ps->s_id) {
+			reverse_main_list(Lmain);
+		}
 	}
 	FILE *fp;
 	fp = fopen(filename, "w");
@@ -83,7 +85,7 @@ void write_all_info_into_file(char *filename, LinkInfo Lmain) {
 	fclose(fp);	
 } /*将所有信息从信息总表写入文件*/
 
-void debug(LinkInfo Lmain) {
+void debug_main_list(LinkInfo Lmain) {
 	int i = 0;
 	InfoNode *p;
 	if(Lmain == NULL) {
@@ -121,8 +123,10 @@ void debug(LinkInfo Lmain) {
 } /*打印信息总表的所有信息*/
 
 void insert_new_info_into_list(LinkInfo Lmain, StuInfo *insert_info) {
-	if(Lmain->next->i_ps->s_id < Lmain->next->next->i_ps->s_id) {
-		reverse_main_list(Lmain);
+	if(Lmain->next != NULL && Lmain->next->next != NULL) {
+		if(Lmain->next->i_ps->s_id < Lmain->next->next->i_ps->s_id) {
+			reverse_main_list(Lmain);
+		}
 	}
 	InfoNode *insert;
 	StuInfo *tempdata;
@@ -196,10 +200,16 @@ void search_info_from_list(LinkInfo Lmain, int del_id, StuInfo *search_info) {
 
 void update_index_table(LinkInfo Lmain, IndexTable *index, int *real_info_len) {
 	int i = 0;
-	if(Lmain || Lmain->next) {
+	InfoNode *p;
+	if(Lmain == NULL) {
+		printf("This Main List is NOT existed!\n");
+		return;
+	}		
+	p = Lmain->next;
+	if(Lmain->next == NULL) {
+		printf("No element in this list!\n");
 		return;
 	}
-	InfoNode *p = Lmain->next;
 	while(p) {
 		index[i].id = p->i_ps->s_id;
 		index[i].i_ps = p->i_ps;
@@ -230,6 +240,15 @@ void reverse_main_list(LinkInfo Lmain) {
 	}
 } /*逆置信息总表*/
 
+void debug_main_index(IndexTable *main_index, int *index_real_len) {
+	int pos;
+	for(pos = 0; pos < *index_real_len; pos++) {
+		printf("pos:%d --> ID:%d --> NAME:%s\n", 
+						pos,
+						main_index[pos].id,
+						main_index[pos].i_ps->s_name);
+	}
+} /*打印信息总索引表的所有信息*/
 
 
 

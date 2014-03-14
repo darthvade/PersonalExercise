@@ -72,16 +72,17 @@ void update_info_in_list(LinkInfo Lmain, int del_id, StuInfo *update_info); /*�
 
 void search_info_from_list(LinkInfo Lmain, int del_id, StuInfo *search_info); /*查找信息总表中指定学号的学生信息*/
 
-/*还没有测试！！！*/ void update_index_table(LinkInfo Lmain, IndexTable *index, int *real_info_len); /*更新索引表信息*/
+void update_index_table(LinkInfo Lmain, IndexTable *index, int *real_info_len); /*更新索引表信息*/
 
 void reverse_main_list(LinkInfo Lmain); /*逆置信息总表*/
 
-void debug(LinkInfo Lmain); /*打印信息总表的所有信息*/
+void debug_main_list(LinkInfo Lmain); /*打印信息总表的所有信息*/
+
+void debug_main_index(IndexTable *main_index, int *index_real_len); /*打印信息总索引表链接的所有信息*/
 
 /*-----------------------------------------------------------------------------------*/
 
 #endif
-
 
 
 

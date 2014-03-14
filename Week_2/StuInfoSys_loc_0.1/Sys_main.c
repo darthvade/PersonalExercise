@@ -30,11 +30,13 @@ int main() {
 	strcpy(st.s_score.c_name[3], "writing");
 	st.s_score.c_score[3] = 87;
 
-	update_index_table(Lmain, MainIndex, &index_real_len);
+	//update_index_table(Lmain, MainIndex, &index_real_len);
+
+	//debug_main_index(MainIndex, &index_real_len);
 
 	//update_info_in_list(Lmain, 1005, &st);
 
-	//delete_info_from_list(Lmain, 1129);
+	delete_info_from_list(Lmain, 20140001);
 
 	//insert_new_info_into_list(Lmain, &st); //插入新学生信息
 
@@ -47,6 +49,6 @@ int main() {
 
 
 	write_all_info_into_file("Sys_Database.db", Lmain); // 向文件写入数据
-	//debug(Lmain);
+	//debug_main_list(Lmain);
 	return 0;
 }
