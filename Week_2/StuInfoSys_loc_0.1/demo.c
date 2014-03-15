@@ -1,74 +1,57 @@
-#include<stdio.h>
-#include<string.h>
+#include "Sys_head_back.h"
+#include "Sys_head_account.h"
+//#include <curses.h>
 
-#define LEN_STU_NAME 32
-#define LEN_STU_MAJOR 32
-
-#define LEN_SCORE_CLASS_NAME 32
-#define LEN_SCORE_MAX_CLASS_NUM 4
-
-struct Score {
-	char c_name[LEN_SCORE_MAX_CLASS_NUM][LEN_SCORE_CLASS_NAME];
-	double c_score[LEN_SCORE_MAX_CLASS_NUM];
-	double c_total_avg_score;
-};
-
-struct Student {
-	int s_id;
-	char s_name[LEN_STU_NAME];
-	int s_age;
-	int s_grade;
-	int s_class;
-	char s_major[LEN_STU_MAJOR];
-	struct Score s_score;
-};
-
-struct InfoNode {
-	struct Student *i_ps;
-	struct InfoNode *next;	
-};
-
-typedef struct Student StuInfo;
-typedef struct Score ScoreInfo;
-typedef struct InfoNode InfoNode;
+LinkInfo Lmain; /*学生信息总表*/
+LinkAccount Laccount; /*账户信息表*/
 
 int main() {
-	StuInfo st;
-	FILE *fp;
-
-	st.s_id = 1001;
-	strcpy(st.s_name, "Kevin");
-	st.s_age = 24;
-	st.s_grade = 5;
-	st.s_class = 3;
-	strcpy(st.s_major, "Opto-e");
-
-	strcpy(st.s_score.c_name[0], "math");
-	st.s_score.c_score[0] = 97;
-
-	strcpy(st.s_score.c_name[1], "science");
-	st.s_score.c_score[1] = 87;
-
-	strcpy(st.s_score.c_name[2], "history");
-	st.s_score.c_score[2] = 67;
-
-	strcpy(st.s_score.c_name[3], "writing");
-	st.s_score.c_score[3] = 87;
-
-
-	fp = fopen("output.data", "w");
-	fprintf(fp, "%d %s %d %d %d %s\n", st.s_id, st.s_name, st.s_age, st.s_grade, st.s_class, st.s_major);
-	fprintf(fp, "%s %s %s %s %lf %lf %lf %lf %lf\n", st.s_score.c_name[0], st.s_score.c_name[1], 
-													st.s_score.c_name[2], st.s_score.c_name[3], 
-											   		st.s_score.c_score[0], st.s_score.c_score[1], 
-													st.s_score.c_score[2], st.s_score.c_score[3],
-											   		st.s_score.c_total_avg_score);	
-	fclose(fp);
+	//LinkAccount Laccount; /*账户信息表*/
+	AccountNode login_account; /*当前登录者信息*/
+	init_account_list(&Laccount); /*初始化账户信息表*/
+	init_info_main_list(&Lmain); /*初始化学生信息总表*/
+	read_account_from_file("Account.db", Laccount); /*从文件读取用户信息*/
+	read_all_info_from_file("Sys_Database.db", Lmain);
+	while(1) {
+		system("clear");
+		printf("Student Infomation Management System V_0.1\n");
+		putchar('\n');
+		putchar('\n');
+		printf("Login [or Enter \"exit\" to QUIT]:");
+		scanf("%s", login_account.u_name);
+		if(strcmp(login_account.u_name, "exit") == 0) {
+			system("clear");
+			break;
+		}
+		printf("\nPassword:");
+		scanf("%s", login_account.u_password);//需要改成密码保护版本
+		//这里放置密码输入函数
+		//input_password(login_account.u_password);
+		AccountNode search_user; /*查询账户信息*/
+		memset(&search_user, 0, sizeof(AccountNode));
+		search_account(Laccount, login_account.u_name, &search_user);
+		if((strcmp(search_user.u_name, login_account.u_name) == 0) && (strcmp(search_user.u_password, login_account.u_password) == 0)) {
+			system("clear");
+			/*系统内部逻辑*/
+			//printf("已进入系统！\n");
+			if(search_user.permission == PER_ADMIN) {
+				//printf("管理员 已进入系统！\n");
+				admin_action();
+			}
+			if(search_user.permission == PER_USER) {
+				//printf("普通用户 已进入系统！\n");
+				user_action();
+				//while(1);//测试用
+			}
+			/*系统内部逻辑*/
+			//while(1);
+		} else {
+			continue;
+		}
+		
+		//debug_main_list(Lmain);//测试用
+		write_account_into_file("Account.db", Laccount);
+		write_all_info_into_file("Sys_Database.db", Lmain);
+	}
 	return 0;
 }
-
-
-
-
-
-
