@@ -2,6 +2,8 @@
 
 extern LinkInfo Lmain;
 
+extern LinkAccount Laccount;
+
 void init_account_list(LinkAccount *L) {
 	(*L) = (AccountNode *)malloc(sizeof(AccountNode));
 	(*L)->next = NULL;
@@ -166,6 +168,9 @@ void admin_action() {
 		putchar('\n');
 		printf("My Option:");
 		scanf("%d", &action);
+		if(action == 9) {
+			break;
+		}
 		switch(action) {
 			case 1:
 				system("clear");
@@ -176,61 +181,91 @@ void admin_action() {
 			case 2:
 				system("clear");
 				printf("2. [Delete]  Student Info\n");
-				while(1);//测试用
+				delete_stu_info();
+				//while(1);//测试用
 				break;
 			case 3:
 				system("clear");
 				printf("3. [Update]  Student Info\n");
-				while(1);//测试用
+				update_stu_info();
+				//while(1);//测试用
 				break;
 			case 4:
 				system("clear");
 				printf("4. [Search]  Student Info\n");
-				while(1);//测试用
+				search_stu_info(); 
+				//while(1);//测试用
 				break;
 			case 5:
 				system("clear");
 				printf("5. [Add] New User Account\n");
-				while(1);//测试用
+				//while(1);//测试用
+				add_new_user(); 
 				break;
 			case 6:
 				system("clear");
 				printf("6. [Delete]  User Account\n");
-				while(1);//测试用
+				delete_user(); 
+				//while(1);//测试用
 				break;
 			case 7:
 				system("clear");
 				printf("7. [Update]  User Account\n");
-				while(1);//测试用
+				update_user(); 
+				//while(1);//测试用
 				break;
 			case 8:
 				system("clear");
 				printf("8. [Search]  User Account\n");
-				while(1);//测试用
+				search_user(); 
+				//while(1);//测试用
 				break;
+			/*
 			case 9:
 				system("clear");
 				break;
+			*/
 		}
-		break;
 	}
 } /*管理员行为*/
 
 void user_action() {
-	
+	int action;
+	while(1) {
+		system("clear");
+		printf("**User MENU**\n");
+		putchar('\n');
+		putchar('\n');
+		printf("1. [Search]  Student Info\n");
+		putchar('\n');
+		putchar('\n');
+		printf("2. [LogOut]\n");
+		putchar('\n');
+		putchar('\n');
+		printf("My Option:");
+		scanf("%d", &action);
+		if(action == 2) {
+			break;
+		}
+		switch(action) {
+			case 1:
+				system("clear");
+				printf("1. [Search]  Student Info\n");
+				search_stu_info(); 
+				//while(1);//测试用
+				break;
+		}
+	}
 } /*普通用户行为*/
 
 void add_new_stu_info() {
-	//read_all_info_from_file("Sys_Database.db", Lmain);
 	putchar('\n');	
 	putchar('\n');
 	StuInfo input;
 	memset(&input, 0, sizeof(StuInfo));
 	printf("Please Input Student Information\n");
-	//getchar();
 	printf("\nStudent NAME:");
 	scanf("%s", input.s_name);
-	//getchar();
 	printf("\nStudent MAJOR:");
 	scanf("%s", input.s_major);
 	printf("\nStudent CLASS ONE NAME:");
@@ -243,36 +278,143 @@ void add_new_stu_info() {
 	scanf("%s", input.s_score.c_name[3]);
 
 	insert_new_info_into_list(Lmain, &input);
-	//write_all_info_into_file("Sys_Database.db", Lmain);
-	//printf("Insertion COMPLETE!\n");
 } /*增加学生信息*/
 
 void delete_stu_info() {
-
+	putchar('\n');	
+	putchar('\n');
+	int del_id;
+	printf("Please Input the Student ID:");
+	scanf("%d", &del_id);
+	delete_info_from_list(Lmain, del_id);
 } /*删除学生信息*/
 
 void update_stu_info() {
-
+	putchar('\n');	
+	putchar('\n');
+	StuInfo input;
+	memset(&input, 0, sizeof(StuInfo));
+	int update_id;
+	printf("Please Input the Student ID:");
+	scanf("%d", &update_id);
+	putchar('\n');
+	putchar('\n');
+	input.s_id = update_id;
+	printf("Please Input Student Information\n");
+	printf("\nStudent NAME:");
+	scanf("%s", input.s_name);
+	printf("\nStudent MAJOR:");
+	scanf("%s", input.s_major);
+	printf("\nStudent CLASS ONE NAME:");
+	scanf("%s", input.s_score.c_name[0]);
+	printf("\nStudent CLASS TWO NAME:");
+	scanf("%s", input.s_score.c_name[1]);
+	printf("\nStudent CLASS THREE NAME:");
+	scanf("%s", input.s_score.c_name[2]);
+	printf("\nStudent CLASS FOUR NAME:");
+	scanf("%s", input.s_score.c_name[3]);
+	update_info_in_list(Lmain, update_id, &input);
 } /*修改学生信息*/
 
 void search_stu_info() {
-
+	putchar('\n');	
+	putchar('\n');
+	StuInfo input;
+	memset(&input, 0, sizeof(StuInfo));
+	int search_id;
+	printf("Please Input the Student ID:");
+	scanf("%d", &search_id);
+	search_info_from_list(Lmain, search_id, &input);
+	putchar('\n');	
+	putchar('\n');
+	printf("NAME:%s\n", input.s_name);		
+	printf("MAJOR:%s\n", input.s_major);
+	while(1) {
+		int flag = 0;	
+		putchar('\n');	
+		putchar('\n');
+		putchar('\n');	
+		putchar('\n');
+		printf("press '1' to RETURN\n");
+		scanf("%d", &flag);
+		if(flag == 1) {
+			break;
+		}
+	}	
 } /*查找学生信息*/
 
 void add_new_user() {
+	putchar('\n');	
+	putchar('\n');
+	//StuInfo input;
+	AccountNode input;
+	memset(&input, 0, sizeof(AccountNode));
+	printf("Please Input User Information\n");
+	printf("\nUser NAME:");
+	scanf("%s", input.u_name);
+	printf("\nUser PERMISSION [admin:1,user:0]:");
+	scanf("%d", &input.permission);
+	printf("\nUser PASSWORD:");
+	scanf("%s", input.u_password);
+
+	insert_new_account(Laccount, &input);
 
 } /*增加账户信息*/
 
 void delete_user() {
-
+	putchar('\n');	
+	putchar('\n');
+	char del_id[LEN_USER_NAME];
+	printf("Please Input the User ID:");
+	scanf("%s", del_id);
+	delete_account(Laccount, del_id);
 } /*删除账户信息*/
 
 void update_user() {
-
+	char update_id[LEN_USER_NAME];
+	putchar('\n');	
+	putchar('\n');
+	AccountNode input;
+	memset(&input, 0, sizeof(AccountNode));
+	printf("Please Input the User NAME:");
+	scanf("%s", update_id);
+	putchar('\n');
+	putchar('\n');
+	printf("Please Input User Information\n");
+	printf("\nUser NAME:");
+	scanf("%s", input.u_name);
+	printf("\nUser PERMISSION:");
+	scanf("%d", &input.permission);
+	printf("\nUser PASSWORD:");
+	scanf("%s", input.u_password);
+	update_account(Laccount, update_id, &input);
 } /*修改账户信息*/
 
 void search_user() {
-
+	putchar('\n');	
+	putchar('\n');
+	AccountNode input;
+	memset(&input, 0, sizeof(AccountNode));
+	char search_id[LEN_USER_NAME];
+	printf("Please Input the User ID:");
+	scanf("%s", search_id);
+	search_account(Laccount, search_id, &input);
+	putchar('\n');	
+	putchar('\n');
+	printf("NAME:%s\n", input.u_name);		
+	printf("PERMISSION:%d\n", input.permission);
+	while(1) {
+		int flag = 0;	
+		putchar('\n');	
+		putchar('\n');
+		putchar('\n');	
+		putchar('\n');
+		printf("press '1' to RETURN\n");
+		scanf("%d", &flag);
+		if(flag == 1) {
+			break;
+		}
+	}	
 } /*查找账户信息*/
 
 
