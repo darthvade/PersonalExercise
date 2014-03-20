@@ -10,9 +10,10 @@ void rLR(const int *input, int pos, int n);//前序遍历
 void LrR(const int *input, int pos, int n);//中序遍历
 void LRr(const int *input, int pos, int n);//后序遍历、深度优先搜索
 void BFS(const int *input, int n);//广度优先搜索、层序遍历
+int find_tree(const int *input, int key, int n);//二叉搜索
 
 /*循环队列*/
-#define MAX_LEN 20
+#define MAX_LEN 100
 typedef struct Queue {
 	int data[MAX_LEN];
 	int front;
@@ -30,7 +31,7 @@ int dequeue(Queue *input, int *n); //出队
 int main() {
 
 
-	int input[] = {7, 5, 4, 6, 3, 2, 0, 1, 0, 0, 0, 8};
+	int input[] = {8, 5, 13, 4, 6, 9, 15};
 	rLR(input, 0, sizeof(input) / sizeof(int));
 	putchar('\n');
 	LrR(input, 0, sizeof(input) / sizeof(int));
@@ -38,6 +39,11 @@ int main() {
 	LRr(input, 0, sizeof(input) / sizeof(int));
 	putchar('\n');
 
+	BFS(input, sizeof(input) / sizeof(int));
+
+	int pos;
+	pos = find_tree(input, 19, sizeof(input) / sizeof(int));
+	printf("pos = %d\n", pos);
 
 	/*
 	int output;
@@ -65,7 +71,7 @@ int main() {
 void rLR(const int *input, int pos, int n) {
 	if(pos < n) {
 		if(input[pos] != 0) {
-			printf("%d ", input[pos]);
+			printf("%4d ", input[pos]);
 		}
 		rLR(input, pos * 2 + 1, n);
 		rLR(input, pos * 2 + 2, n);
@@ -78,7 +84,7 @@ void LrR(const int *input, int pos, int n) {
 	if(pos < n) {
 		LrR(input, pos * 2 + 1, n);
 		if(input[pos]) {
-			printf("%d ", input[pos]);
+			printf("%4d ", input[pos]);
 		}
 		LrR(input, pos * 2 + 2, n);
 	} else {
@@ -91,7 +97,7 @@ void LRr(const int *input, int pos, int n) {
 		LRr(input, pos * 2 + 1, n);
 		LRr(input, pos * 2 + 2, n);
 		if(input[pos]) {
-			printf("%d ", input[pos]);
+			printf("%4d ", input[pos]);
 		}
 	} else {
 		return;
@@ -132,7 +138,34 @@ int dequeue(Queue *input, int *n) {
 } //出队
 
 void BFS(const int *input, int n) {
-
+	int output;
+	Queue q;
+	init_queue(&q);
+	enqueue(&q, 0);
+	while(!is_empty(&q)) {
+		dequeue(&q, &output);
+		printf("%4d ", input[output]);
+		if((output * 2 + 1 < n) && (input[output * 2 + 1] != 0)) {
+			enqueue(&q, output * 2 + 1);
+		}
+		if((output * 2 + 2 < n) && (input[output * 2 + 2] != 0)) {
+			enqueue(&q, output * 2 + 2);
+		}
+	}
+	putchar('\n');
 } //广度优先搜索、层序遍历
 
 
+int find_tree(const int *input, int key, int n) {
+	int i = 0;
+	while(i < n) {
+		if(input[i] == key) {
+			return i;
+		} else if(input[i] >= key) {
+			i = i * 2 + 1;
+		} else if(input[i] <= key) {
+			i = i * 2 + 2;
+		}
+	}	
+	return -1;//查找失败返回-1
+} //二叉搜索
