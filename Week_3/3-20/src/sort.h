@@ -21,4 +21,11 @@ void swap(int *a, int *b);
 
 void printInput(const int *a, int n);
 
+void heap_sort(int *a, const int n); //堆排序
+
+void heap_adjust(int *a, const int i, const int n); //调整堆
+
+void heap_init(int *a, const int n); //初始堆
+
 #endif
+

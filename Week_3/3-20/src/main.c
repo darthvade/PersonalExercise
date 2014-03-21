@@ -37,12 +37,18 @@ int main(int argc, char *argv[]) {
 			quick_sort(input, 0, count);
 			printInput(input, count);
 			break;
+		case 'p':
+			printf("heap_sort!\n\nresult:\n");
+			heap_sort(input, count);
+			printInput(input, count);
+			break;
 		case '-':
 			printf("'b' --> Bubble_sort\n");	
 			printf("'s' --> Sample_selection_sort\n");	
 			printf("'i' --> Straight_insertion_sort\n");	
 			printf("'h' --> Shell_sort\n");	
 			printf("'q' --> quick_sort\n");	
+			printf("'p' --> heap_sort\n");	
 			break;
 	}
 	fclose(fp);

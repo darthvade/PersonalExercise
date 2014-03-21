@@ -88,3 +88,39 @@ void printInput(const int *a, int n) {
 	}
 	putchar('\n');
 }
+
+void heap_sort(int *a, const int n) {
+	heap_init(a, n);
+	int i;
+	for(i = n - 1; i >= 0; i--) {
+		swap(a + i, a);
+		heap_adjust(a, 0, i);
+	}
+}  //堆排序
+
+void heap_adjust(int *a, const int i, const int n) {
+	int l = 2 * i + 1;
+	int r = 2 * i + 2;
+	int largest;
+	if(l < n && a[i] < a[l]) {
+		largest = l;
+	} else {
+		largest = i;
+	}
+	if(r < n && a[largest] < a[r]) {
+		largest = r;
+	}
+	if(i != largest) {
+		swap(a + i, a + largest);
+		heap_adjust(a, largest, n);
+	}
+} //调整堆
+
+void heap_init(int *a, const int n) {
+	int i;
+	for(i = n / 2; i >= 0; i--) {
+		heap_adjust(a, i, n);
+	}
+} //初始堆
+
+
