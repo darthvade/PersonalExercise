@@ -16,6 +16,8 @@ void matching(char *filename) {
 		if(temp == '\n') {
 			num_len++;
 			num_pos = 0;
+		} else if(temp == '\t') {
+			num_pos = num_pos + 4;
 		} else {
 			num_pos++;
 		}
@@ -45,7 +47,12 @@ void matching(char *filename) {
 				if(st.empty()) {
 					rst.push(bt);
 				} else {
-					st.pop();
+					if((st.top()).data != '(') {
+						rst.push(st.top());
+						st.pop();
+					} else {
+						st.pop();
+					}
 				}
 				break;
 			case ']':
@@ -55,7 +62,12 @@ void matching(char *filename) {
 				if(st.empty()) {
 					rst.push(bt);
 				} else {
-					st.pop();
+					if((st.top()).data != '[') {
+						rst.push(st.top());
+						st.pop();
+					} else {
+						st.pop();
+					}
 				}
 				break;
 			case '}':
@@ -65,7 +77,12 @@ void matching(char *filename) {
 				if(st.empty()) {
 					rst.push(bt);
 				} else {
-					st.pop();
+					if((st.top()).data != '{') {
+						rst.push(st.top());
+						st.pop();
+					} else {
+						st.pop();
+					}
 				}
 				break;
 			default:

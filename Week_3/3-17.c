@@ -6,6 +6,7 @@
 
 #include<stdio.h>
 
+
 void rLR(const int *input, int pos, int n);//前序遍历
 void LrR(const int *input, int pos, int n);//中序遍历
 void LRr(const int *input, int pos, int n);//后序遍历、深度优先搜索
