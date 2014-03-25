@@ -1,4 +1,4 @@
-###Finder 1.0 Manual
+###Finder 0.1 Manual
 
 	NAME
 		finder - print directory tree, find file in a directory
