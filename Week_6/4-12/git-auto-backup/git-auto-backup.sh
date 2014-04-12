@@ -6,4 +6,4 @@ echo $time
 
 cd ~/Github_practice
 git add .
-git commit -a -m "$time"
+git commit -a -m "$time git-auto-saved"
