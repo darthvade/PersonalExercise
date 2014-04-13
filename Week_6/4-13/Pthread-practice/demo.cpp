@@ -1,8 +1,16 @@
 #include <pthread.h>
 #include <iostream>
+#include <unistd.h>
 
 using namespace std;
 
 void *func(void *t) {
-	cout << (int)*t << endl;
+	sleep(3);
+	cout << (int)t << endl;
+}
+
+int main() {
+	pthread_t thread;
+
+	pthread_create(&thread, NULL, func, NULL);
 }
