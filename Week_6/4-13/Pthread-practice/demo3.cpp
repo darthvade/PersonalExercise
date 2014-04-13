@@ -11,12 +11,12 @@ struct ARG {
 
 typedef struct ARG Arg;
 
-void *func_boss(int *id) {
+void *func_boss(Arg *arg) {
 
 	pthread_exit((void *)0);
 }
 
-void *func_worker(int *id) {
+void *func_worker(Arg *arg) {
 
 	pthread_exit((void *)0);
 }
