@@ -10,3 +10,7 @@ struct ARG {
 };
 
 struct ARG Arg;
+
+void *func_boss(int *id) {
+
+}
