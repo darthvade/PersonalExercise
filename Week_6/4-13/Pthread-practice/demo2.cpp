@@ -3,8 +3,8 @@
 #include <unistd.h>
 
 void *func(void *t) {
-	t = t + 1;
-	return NULL;
+
+	return (void *)0;
 }
 
 int main() {
