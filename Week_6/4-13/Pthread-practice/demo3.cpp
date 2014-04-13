@@ -28,6 +28,7 @@ int main() {
 	pthread_t thread[NUM_WORKER_THREADS];
 	pthread_t boss;
 
+	//初始化锁和条件变量
 	pthread_mutex_init(&arg.mutex, NULL);
 	pthread_cond_init(&arg.cond, NULL);
 
@@ -43,5 +44,6 @@ int main() {
 	
 	pthread_join(boss, NULL);
 
+	pthread_mutex_destroy(&arg.mutex);
 	pthread_exit(NULL);
 }
