@@ -31,10 +31,10 @@ void *func_boss(Arg *arg) {
 }
 
 void *func_worker(Arg *arg) {
-
-	pthread_mutex_lock(&arg->mutex);
-
 	while(1) {
+
+		pthread_mutex_lock(&arg->mutex);
+
 		cout << endl;
 		cout <<  pthread_self() << endl;
 		cout << "worker begin!" << endl;
