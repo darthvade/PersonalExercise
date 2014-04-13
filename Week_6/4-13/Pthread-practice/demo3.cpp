@@ -31,24 +31,26 @@ void *func_boss(Arg *arg) {
 }
 
 void *func_worker(Arg *arg) {
-	pthread_mutex_lock(&arg->mutex);
+	while(1) {
+		pthread_mutex_lock(&arg->mutex);
 
-	cout << endl;
-	cout <<  pthread_self() << endl;
-	cout << "worker begin!" << endl;
-	cout << arg->data << endl;
-	
-	sleep(1);
-	arg->data += 1;
-	if(arg->data == 5) {
-		pthread_cond_signal(&arg->cond);
+		cout << endl;
+		cout <<  pthread_self() << endl;
+		cout << "worker begin!" << endl;
+		cout << arg->data << endl;
+		
+		sleep(1);
+		arg->data += 1;
+		if(arg->data == 5) {
+			pthread_cond_signal(&arg->cond);
+		}
+
+		cout << arg->data << endl;
+		cout << "worker end!" << endl;
+		cout << endl;
+
+		pthread_mutex_unlock(&arg->mutex);
 	}
-
-	cout << arg->data << endl;
-	cout << "worker end!" << endl;
-	cout << endl;
-
-	pthread_mutex_unlock(&arg->mutex);
 	pthread_exit((void *)0);
 }
 
