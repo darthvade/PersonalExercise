@@ -30,7 +30,9 @@ int main() {
 		pthread_create(thread + i, NULL, (void *(*)(void *))func_worker, &i);
 	}
 
-
+	for(int i = 0; i != NUM_WORKER_THREADS; ++i) {
+		pthread_join(thread[i], NULL);
+	}
 
 	pthread_exit(NULL);
 }
