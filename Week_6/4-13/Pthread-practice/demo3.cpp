@@ -30,5 +30,7 @@ int main() {
 		pthread_create(thread + i, NULL, (void *(*)(void *))func_worker, &i);
 	}
 
+
+
 	pthread_exit(NULL);
 }
