@@ -9,7 +9,7 @@ struct ARG {
 	pthread_cond_t cond;
 };
 
-struct ARG Args;
+typedef struct ARG Arg;
 
 void *func_boss(int *id) {
 
@@ -23,10 +23,12 @@ void *func_worker(int *id) {
 
 int main() {
 
+	Arg arg;
+
 	pthread_t thread[NUM_WORKER_THREADS];
 	pthread_t boss;
 
-	pthread_mutex_init();
+	pthread_mutex_init(&arg.mutex);
 
 	int i = 1000;
 	pthread_create(&boss, NULL, (void *(*)(void *))func_boss, &i);
