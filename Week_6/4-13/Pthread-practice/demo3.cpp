@@ -44,6 +44,7 @@ void *func_worker(Arg *arg) {
 		arg->data += 1;
 		if(arg->data == 5) {
 			pthread_cond_signal(&arg->cond);
+			pthread_mutex_unlock(&arg->mutex);
 			break;
 		}
 
