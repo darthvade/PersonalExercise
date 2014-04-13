@@ -32,10 +32,9 @@ int main() {
 	pthread_mutex_init(&arg.mutex, NULL);
 	pthread_cond_init(&arg.cond, NULL);
 
-	int i = 1000;
-	pthread_create(&boss, NULL, (void *(*)(void *))func_boss, &i);
+	pthread_create(&boss, NULL, (void *(*)(void *))func_boss, &arg);
 	for(int i = 0; i != NUM_WORKER_THREADS; ++i) {
-		pthread_create(thread + i, NULL, (void *(*)(void *))func_worker, &i);
+		pthread_create(thread + i, NULL, (void *(*)(void *))func_worker, &arg);
 	}
 
 	for(int i = 0; i != NUM_WORKER_THREADS; ++i) {
