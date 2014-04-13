@@ -7,6 +7,7 @@ using namespace std;
 #define NUM_THREAD 5
 
 void *func(int *t) {
+	pthread_lock(&mutex);
 	cout << endl;
 	cout << "func started" << endl;
 	cout << *t << endl;
@@ -23,7 +24,7 @@ int main() {
 	int arg = 100;
 	
 	pthread_mutex_t mutex;
-	pthread_mutex_init(&mutex);
+	pthread_mutex_init(&mutex, NULL);
 
 	//对不符合回调函数类型的进行强制类型转换
 	for(int i = 0; i != NUM_THREAD; ++i) {
