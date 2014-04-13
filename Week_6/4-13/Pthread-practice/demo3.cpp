@@ -21,7 +21,11 @@ void *func_boss(Arg *arg) {
 }
 
 void *func_worker(Arg *arg) {
+	pthread_mutex_lock(&arg->mutex);
 
+
+
+	pthread_mutex_unlock(&arg->mutex);
 	pthread_exit((void *)0);
 }
 
