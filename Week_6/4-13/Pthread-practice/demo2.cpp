@@ -2,8 +2,11 @@
 #include <pthread.h>
 #include <unistd.h>
 
-void *func(void *t) {
+using namespace std;
 
+void *func(void *t) {
+	int temp = (int)t;
+	cout << temp << endl;
 	return (void *)0;
 }
 
