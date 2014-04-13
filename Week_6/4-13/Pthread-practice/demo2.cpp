@@ -18,7 +18,7 @@ void *func(int *t) {
 	cout << "func finished" << endl;
 	cout << endl;
 	pthread_mutex_unlock(&mutex);
-	return (void *)0;
+	pthread_exit((void *) 0);
 }
 
 int main() {
@@ -41,5 +41,5 @@ int main() {
 
 	cout << "main finished!" << endl;
 
-	return 0;
+	pthread_exit(NULL);
 }
