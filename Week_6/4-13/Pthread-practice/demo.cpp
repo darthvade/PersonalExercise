@@ -6,7 +6,7 @@ using namespace std;
 
 void *func(void *t) {
 	sleep(3);
-	cout << t << endl;
+	cout << *((string *)t) << endl;
 }
 
 int main() {
