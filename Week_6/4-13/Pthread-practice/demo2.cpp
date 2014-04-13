@@ -18,8 +18,8 @@ void *func(ARG *arg) {
 	cout << endl;
 	cout << "func started" << endl;
 	cout << (*arg).data << endl;
-	*arg->data += 1;
-	cout << *t << endl;
+	(*arg).data	+= 1;
+	cout << (*arg).data << endl;
 	cout << "func finished" << endl;
 	cout << endl;
 	pthread_mutex_unlock(&arg->mutex);
