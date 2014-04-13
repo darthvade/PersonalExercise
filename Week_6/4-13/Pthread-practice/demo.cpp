@@ -5,8 +5,9 @@
 using namespace std;
 
 void *func(void *t) {
-	sleep(3);
 	cout << *((string *)t) << endl;
+	sleep(3);
+	return;
 }
 
 int main() {
