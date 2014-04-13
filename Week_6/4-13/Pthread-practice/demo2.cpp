@@ -4,9 +4,9 @@
 
 using namespace std;
 
-void *func(void *t) {
-	int temp = (int)t;
-	cout << *temp << endl;
+void *func(int *t) {
+	//int temp = (int)t;
+	cout << *t << endl;
 	return (void *)0;
 }
 
