@@ -23,6 +23,7 @@ int main() {
 	int arg = 100;
 	
 	pthread_mutex_t mutex;
+	pthread_mutex_init(&mutex);
 
 	//对不符合回调函数类型的进行强制类型转换
 	for(int i = 0; i != NUM_THREAD; ++i) {
