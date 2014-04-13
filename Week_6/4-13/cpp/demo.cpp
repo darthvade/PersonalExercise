@@ -7,6 +7,6 @@ int main() {
 	try {
 		throw runtime_error("Error!");
 	} catch (runtime_error err){
-		err.what();	
+		cout << err.what() << endl;
 	}
 }
