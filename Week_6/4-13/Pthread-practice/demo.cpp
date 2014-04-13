@@ -6,7 +6,7 @@ using namespace std;
 
 void *func(void *t) {
 	sleep(3);
-	cout << (int)t << endl;
+	cout << t << endl;
 }
 
 int main() {
@@ -14,7 +14,7 @@ int main() {
 
 	string s = "child thread!";
 
-	pthread_create(&thread, NULL, func, );
+	pthread_create(&thread, NULL, func, &s);
 
 	pthread_join(thread, NULL);
 	cout << "Prog finished!" << endl;
