@@ -25,7 +25,7 @@ int main() {
 	pthread_t boss;
 
 	int i = 1000;
-	pthread_create(&boss, NULL, func_boss, &i);
+	pthread_create(&boss, NULL, (void *(*)(void *))func_boss, &i);
 	for(int i = 0; i != NUM_WORKER_THREADS; ++i) {
 		pthread_create(thread + i, NULL, (void *(*)(void *))func_worker, &i);
 	}
