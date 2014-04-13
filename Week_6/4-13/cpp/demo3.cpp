@@ -7,7 +7,7 @@ void fun(int (&input)[5]) {
 }
 
 void fun2(...) {
-	cout << *input << endl;	
+	cout << "Hello world" << endl;	
 }
 
 int main() {
@@ -15,6 +15,6 @@ int main() {
 	int arr[5] = {1, 2, 3, 4, 5};
 	int arr2[4] = {1, 2, 3, 4};
 	fun(arr);
-	fun(arr2);
+	fun2(arr2, arr);
 
 }
