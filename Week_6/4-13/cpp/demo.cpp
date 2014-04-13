@@ -4,5 +4,9 @@
 using namespace std;
 
 int main() {
-	throw runtime_error("Error!");
+	try {
+		throw runtime_error("Error!");
+	} catch (runtime_error err){
+		err.what();	
+	}
 }
