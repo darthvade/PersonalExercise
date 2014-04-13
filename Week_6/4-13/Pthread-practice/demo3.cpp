@@ -12,7 +12,11 @@ struct ARG {
 typedef struct ARG Arg;
 
 void *func_boss(Arg *arg) {
+	pthread_mutex_lock(&arg->mutex);
 
+
+
+	pthread_mutex_unlock(&arg->mutex);
 	pthread_exit((void *)0);
 }
 
