@@ -11,11 +11,11 @@ void *func(void *t) {
 	return (void *)0;
 }
 
-void *func2(void *t) {
+void func2() {
 //	sleep(3);
 	cout << *((string *)t) << endl;
 	sleep(3);
-	return (void *)0;
+	return ;
 }
 
 int main() {
@@ -26,7 +26,7 @@ int main() {
 
 	pthread_once_t one_contr = PTHREAD_ONCE_INIT;
 
-	pthread_once(&one_contr, func);
+	pthread_once(&one_contr, func2);
 
 	pthread_create(&thread, NULL, func, &s2);
 
