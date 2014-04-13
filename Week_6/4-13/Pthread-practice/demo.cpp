@@ -13,4 +13,7 @@ int main() {
 	pthread_t thread;
 
 	pthread_create(&thread, NULL, func, NULL);
+
+	pthread_join(thread, NULL);
+	cout << "Prog finished!" << endl;
 }
