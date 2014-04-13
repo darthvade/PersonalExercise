@@ -28,7 +28,7 @@ int main() {
 	pthread_t thread[NUM_WORKER_THREADS];
 	pthread_t boss;
 
-	pthread_mutex_init();
+	pthread_mutex_init(&arg);
 
 	int i = 1000;
 	pthread_create(&boss, NULL, (void *(*)(void *))func_boss, &i);
