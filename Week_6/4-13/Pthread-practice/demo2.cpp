@@ -4,10 +4,9 @@
 
 using namespace std;
 
-void *func(void *t) {
-	//int temp = (int)t;
-	int* a(t);
-	cout <<  << endl;
+void *func(int *t) {
+	*t += 1;
+	cout << *t << endl;
 	return (void *)0;
 }
 
@@ -15,7 +14,7 @@ int main() {
 
 	pthread_t thread;
 	int arg = 100;
-	pthread_create(&thread, NULL, func, &arg);
+	pthread_create(&thread, NULL, (void *(*)(void *))func, &arg);
 
 	pthread_join(thread, NULL);
 
