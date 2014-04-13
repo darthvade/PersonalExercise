@@ -13,7 +13,7 @@ struct args {
 
 typedef struct args ARG;
 
-void *func(int *t) {
+void *func(ARG *arg) {
 	pthread_mutex_lock(&mutex);
 	cout << endl;
 	cout << "func started" << endl;
