@@ -3,6 +3,8 @@
 
 #define NUM_WORKER_THREADS 3
 
+using namespace std;
+
 struct ARG {
 	int data;
 	pthread_mutex_t mutex;
@@ -13,7 +15,7 @@ typedef struct ARG Arg;
 
 void *func_boss(Arg *arg) {
 	pthread_mutex_lock(&arg->mutex);
-
+	
 
 
 	pthread_mutex_unlock(&arg->mutex);
@@ -22,7 +24,7 @@ void *func_boss(Arg *arg) {
 
 void *func_worker(Arg *arg) {
 	pthread_mutex_lock(&arg->mutex);
-
+	
 
 
 	pthread_mutex_unlock(&arg->mutex);
