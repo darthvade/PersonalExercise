@@ -23,8 +23,12 @@ void *func_worker(int *id) {
 
 int main() {
 
+	Arg arg;
+
 	pthread_t thread[NUM_WORKER_THREADS];
 	pthread_t boss;
+
+	pthread_mutex_init();
 
 	int i = 1000;
 	pthread_create(&boss, NULL, (void *(*)(void *))func_boss, &i);
