@@ -16,7 +16,8 @@ typedef struct ARG Arg;
 void *func_boss(Arg *arg) {
 	pthread_mutex_lock(&arg->mutex);
 	
-
+	cout << endl;
+	cout << "boss begin!" << endl;
 
 	pthread_mutex_unlock(&arg->mutex);
 	pthread_exit((void *)0);
