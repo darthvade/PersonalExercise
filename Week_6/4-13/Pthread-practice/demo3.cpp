@@ -18,6 +18,7 @@ void *func_boss(int *id) {
 
 void *func_worker(int *id) {
 
+	pthread_exit((void *)0);
 }
 
 int main() {
