@@ -3,7 +3,7 @@ class X {
 		int data;
 	public:
 		void setData(int &input) const{
-			this->data = input; // error!
+//			this->data = input; // error!
 		}
 		void setData(int &input) {
 			this->data = input; // right!
