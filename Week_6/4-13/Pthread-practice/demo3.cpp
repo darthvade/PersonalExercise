@@ -20,6 +20,7 @@ void *func_boss(Arg *arg) {
 	cout << "boss begin!" << endl;
 
 	pthread_cond_wait(&arg->cond, &arg->mutex);
+	cout << "Boss: GOOD!" << endl;
 
 	cout << "worker end!" << endl;
 	cout << endl;
