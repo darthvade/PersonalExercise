@@ -26,6 +26,8 @@ int main() {
 
 	pthread_once(&one_contr, func2);
 
+//	pthread_once(&one_contr, func2);
+
 	pthread_create(&thread, NULL, func, &s1);
 
 	pthread_join(thread, NULL);
