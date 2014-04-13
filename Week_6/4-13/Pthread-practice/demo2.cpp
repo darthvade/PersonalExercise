@@ -17,7 +17,9 @@ int main() {
 	pthread_t thread[NUM_THREAD];
 	int arg = 100;
 	//对不符合回调函数类型的进行强制类型转换
-	pthread_create(&thread, NULL, (void *(*)(void *))func, &arg);
+	for(int i = 1; i != NUM_THREAD; ++i) {
+		pthread_create(&thread, NULL, (void *(*)(void *))func, &arg);
+	}
 
 	pthread_join(thread, NULL);
 
