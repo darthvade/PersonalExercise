@@ -17,8 +17,8 @@ void *func(ARG *arg) {
 	pthread_mutex_lock(&arg->mutex);
 	cout << endl;
 	cout << "func started" << endl;
-	cout << *arg->data << endl;
-	*t += 1;
+	cout << *(arg->data) << endl;
+	*arg->data += 1;
 	cout << *t << endl;
 	cout << "func finished" << endl;
 	cout << endl;
