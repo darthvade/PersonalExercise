@@ -34,7 +34,7 @@ void *func_worker(Arg *arg) {
 	pthread_mutex_lock(&arg->mutex);
 
 	cout << endl;
-	cout << "worker begin!" << endl;
+	cout <<  pthread_self() << "worker begin!" << endl;
 	cout << arg->data << endl;
 	
 	sleep(1);
