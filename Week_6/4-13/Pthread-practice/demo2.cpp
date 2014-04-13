@@ -29,9 +29,10 @@ void *func(ARG *arg) {
 int main() {
 
 	pthread_t thread[NUM_THREAD];
-	int arg = 100;
+	ARG arg;
+	arg.data = 1000;
 	
-	pthread_mutex_init(&mutex, NULL);
+	pthread_mutex_init(&arg.mutex, NULL);
 
 	//对不符合回调函数类型的进行强制类型转换
 	for(int i = 0; i != NUM_THREAD; ++i) {
