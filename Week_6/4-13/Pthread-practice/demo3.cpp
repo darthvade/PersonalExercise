@@ -45,5 +45,6 @@ int main() {
 	pthread_join(boss, NULL);
 
 	pthread_mutex_destroy(&arg.mutex);
+	pthread_cond_destroy(&arg.cond);
 	pthread_exit(NULL);
 }
