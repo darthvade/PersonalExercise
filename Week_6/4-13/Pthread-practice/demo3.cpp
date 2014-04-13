@@ -23,9 +23,6 @@ void *func_worker(int *id) {
 
 int main() {
 
-	Args arg;
-	arg.data;
-
 	pthread_t thread[NUM_WORKER_THREADS];
 	pthread_t boss;
 
