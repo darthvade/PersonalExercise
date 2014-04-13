@@ -17,6 +17,10 @@ class X {
 };
 
 int main() {
+	
+	int a = 100;
+	X x;
+	x.setData(a);
 
 	return 0;
 }
