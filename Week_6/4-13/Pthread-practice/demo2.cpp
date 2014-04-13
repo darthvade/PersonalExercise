@@ -6,7 +6,12 @@ using namespace std;
 
 #define NUM_THREAD 5
 	
-pthread_mutex_t mutex;
+struct args {
+	int data;
+	pthread_mutex_t mutex;
+};
+
+typedef struct args ARG;
 
 void *func(int *t) {
 	pthread_mutex_lock(&mutex);
