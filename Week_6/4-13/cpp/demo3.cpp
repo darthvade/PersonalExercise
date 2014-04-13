@@ -9,6 +9,8 @@ void fun(int (&input)[5]) {
 int main() {
 
 	int arr[5] = {1, 2, 3, 4, 5};
+	int arr2[4] = {1, 2, 3, 4};
 	fun(arr);
+	fun(arr2);
 
 }
