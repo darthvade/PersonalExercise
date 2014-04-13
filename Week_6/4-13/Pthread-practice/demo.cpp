@@ -5,9 +5,9 @@
 using namespace std;
 
 void *func(void *t) {
-	sleep(3);
+//	sleep(3);
 	cout << *((string *)t) << endl;
-	//sleep(3);
+	sleep(3);
 	return (void *)0;
 }
 
@@ -18,6 +18,6 @@ int main() {
 
 	pthread_create(&thread, NULL, func, &s);
 
-//	pthread_join(thread, NULL);
+	pthread_join(thread, NULL);
 	cout << "Prog finished!" << endl;
 }
