@@ -6,6 +6,10 @@ void fun(int (&input)[5]) {
 	cout << *input << endl;	
 }
 
+void fun2(...) {
+	cout << *input << endl;	
+}
+
 int main() {
 
 	int arr[5] = {1, 2, 3, 4, 5};
