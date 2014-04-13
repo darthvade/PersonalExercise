@@ -42,6 +42,7 @@ void *func_worker(Arg *arg) {
 int main() {
 
 	Arg arg;
+	arg.data = 0;
 
 	pthread_t thread[NUM_WORKER_THREADS];
 	pthread_t boss;
