@@ -31,9 +31,10 @@ void *func_boss(Arg *arg) {
 }
 
 void *func_worker(Arg *arg) {
-	while(1) {
-		pthread_mutex_lock(&arg->mutex);
 
+	pthread_mutex_lock(&arg->mutex);
+
+	while(1) {
 		cout << endl;
 		cout <<  pthread_self() << endl;
 		cout << "worker begin!" << endl;
@@ -49,9 +50,10 @@ void *func_worker(Arg *arg) {
 		cout << arg->data << endl;
 		cout << "worker end!" << endl;
 		cout << endl;
-
-		pthread_mutex_unlock(&arg->mutex);
 	}
+
+	pthread_mutex_unlock(&arg->mutex);
+
 	pthread_exit((void *)0);
 }
 
