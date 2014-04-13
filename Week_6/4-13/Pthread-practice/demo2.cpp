@@ -12,5 +12,11 @@ void *func(void *t) {
 
 int main() {
 
+	pthread_t thread;
+	int arg = 100;
+	pthread_create(&thread, NULL, func, &arg);
+
+	pthread_join(&thread, NULL);
+
 	return 0;
 }
