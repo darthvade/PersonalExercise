@@ -27,9 +27,11 @@ void *func_worker(Arg *arg) {
 
 	cout << endl;
 	cout << "worker begin!" << endl;
+	cout << arg->data << endl;
+	
+	arg->data += 1;
 
-
-
+	cout << arg->data << endl;
 	cout << "worker end!" << endl;
 	cout << endl;
 
