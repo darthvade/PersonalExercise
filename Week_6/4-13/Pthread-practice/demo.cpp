@@ -4,5 +4,5 @@
 using namespace std;
 
 void *func(void *t) {
-	cout << *t << endl;
+	cout << (int)*t << endl;
 }
