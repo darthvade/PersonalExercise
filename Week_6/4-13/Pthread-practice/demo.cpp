@@ -16,6 +16,10 @@ int main() {
 
 	string s = "child thread!";
 
+	pthread_once_t one_contr = PTHREAD_ONCE_INIT;
+
+	pthread_once(one_contr, func);
+
 	pthread_create(&thread, NULL, func, &s);
 
 	pthread_join(thread, NULL);
