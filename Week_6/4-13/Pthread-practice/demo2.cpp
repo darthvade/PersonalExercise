@@ -6,7 +6,8 @@ using namespace std;
 
 void *func(void *t) {
 	//int temp = (int)t;
-	cout << (*t) << endl;
+	int* a(t);
+	cout <<  << endl;
 	return (void *)0;
 }
 
