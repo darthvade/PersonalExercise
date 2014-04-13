@@ -1,7 +1,7 @@
 #include <iostream>
 #include <pthread.h>
 
-#define NUM_THREADS 3
+#define NUM_WORKER_THREADS 3
 
 struct ARG {
 	int data;
@@ -21,9 +21,9 @@ void *func_worker(int *id) {
 
 int main() {
 
-	pthread_t thread[NUM_THREADS];
+	pthread_t thread[NUM_WORKER_THREADS];
 
-	for(int i = 0; i != NUM_THREADS; ++i) {
+	for(int i = 0; i != NUM_WORKER_THREADS; ++i) {
 		pthread_create(thread + i, NULL, (void *(*)(void *))func_worker, &i);
 	}
 
