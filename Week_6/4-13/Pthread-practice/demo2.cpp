@@ -7,8 +7,13 @@ using namespace std;
 #define NUM_THREAD 5
 
 void *func(int *t) {
+	cout << endl;
+	cout << "func started" << endl;
+	cout << *t << endl;
 	*t += 1;
 	cout << *t << endl;
+	cout << "func finished" << endl;
+	cout << endl;
 	return (void *)0;
 }
 
