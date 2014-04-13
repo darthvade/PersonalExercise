@@ -68,11 +68,11 @@ int main() {
 	for(int i = 0; i != NUM_WORKER_THREADS; ++i) {
 		pthread_create(thread + i, NULL, (void *(*)(void *))func_worker, &arg);
 	}
-/*
+
 	for(int i = 0; i != NUM_WORKER_THREADS; ++i) {
 		pthread_join(thread[i], NULL);
 	}
-*/	
+	
 	pthread_join(boss, NULL);
 
 	pthread_mutex_destroy(&arg.mutex);
