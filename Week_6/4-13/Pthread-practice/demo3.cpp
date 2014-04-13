@@ -13,6 +13,7 @@ struct ARG Arg;
 
 void *func_boss(int *id) {
 
+	pthread_exit((void *)0);
 }
 
 void *func_worker(int *id) {
@@ -33,6 +34,8 @@ int main() {
 	for(int i = 0; i != NUM_WORKER_THREADS; ++i) {
 		pthread_join(thread[i], NULL);
 	}
+	
+	pthread_join(boss, NULL);
 
 	pthread_exit(NULL);
 }
