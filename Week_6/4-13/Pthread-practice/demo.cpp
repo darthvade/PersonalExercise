@@ -7,7 +7,7 @@ using namespace std;
 void *func(void *t) {
 	cout << *((string *)t) << endl;
 	sleep(3);
-	return;
+	return (void *)0;
 }
 
 int main() {
@@ -17,6 +17,6 @@ int main() {
 
 	pthread_create(&thread, NULL, func, &s);
 
-	pthread_join(thread, NULL);
+//	pthread_join(thread, NULL);
 	cout << "Prog finished!" << endl;
 }
