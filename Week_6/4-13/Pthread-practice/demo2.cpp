@@ -14,10 +14,10 @@ struct args {
 typedef struct args ARG;
 
 void *func(ARG *arg) {
-	pthread_mutex_lock(&mutex);
+	pthread_mutex_lock(&arg->mutex);
 	cout << endl;
 	cout << "func started" << endl;
-	cout << *t << endl;
+	cout << *arg->data << endl;
 	*t += 1;
 	cout << *t << endl;
 	cout << "func finished" << endl;
@@ -39,7 +39,7 @@ int main() {
 		pthread_create(thread + i, NULL, (void *(*)(void *))func, &arg);
 	}
 
-	pthread_mutex_destroy(&mutex);
+	pthread_mutex_destroy(&arg.mutex);
 
 	for(int i = 0; i != NUM_THREAD; ++i) {
 		pthread_join(thread[i], NULL);
