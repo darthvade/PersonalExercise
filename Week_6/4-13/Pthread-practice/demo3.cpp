@@ -19,6 +19,11 @@ void *func_boss(Arg *arg) {
 	cout << endl;
 	cout << "boss begin!" << endl;
 
+	pthread_cond_wait(&arg->cond);
+
+	cout << "worker end!" << endl;
+	cout << endl;
+
 	pthread_mutex_unlock(&arg->mutex);
 	pthread_exit((void *)0);
 }
