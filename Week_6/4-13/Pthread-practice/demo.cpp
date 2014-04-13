@@ -11,8 +11,9 @@ void *func(void *t) {
 }
 
 void func2() {
-	sleep(8);
-	cout << "once func" << endl;
+	cout << "once func start" << endl;
+	sleep(2);
+	cout << "once func end" << endl;
 	return ;
 }
 
