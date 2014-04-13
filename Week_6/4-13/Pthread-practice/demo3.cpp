@@ -23,7 +23,7 @@ void *func_boss(Arg *arg) {
 	pthread_cond_wait(&arg->cond, &arg->mutex);
 	cout << "Boss: GOOD!" << endl;
 
-	cout << "worker end!" << endl;
+	cout << "boss end!" << endl;
 	cout << endl;
 
 	pthread_mutex_unlock(&arg->mutex);
