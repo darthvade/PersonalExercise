@@ -29,6 +29,7 @@ int main() {
 	pthread_t boss;
 
 	pthread_mutex_init(&arg.mutex, NULL);
+	pthread_cond_init(&arg.cond, NULL);
 
 	int i = 1000;
 	pthread_create(&boss, NULL, (void *(*)(void *))func_boss, &i);
