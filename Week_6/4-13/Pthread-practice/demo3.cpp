@@ -30,6 +30,9 @@ void *func_worker(Arg *arg) {
 	cout << arg->data << endl;
 	
 	arg->data += 1;
+	if(arg->data == 5) {
+		pthread_cond_signal(&arg->cond);
+	} 
 
 	cout << arg->data << endl;
 	cout << "worker end!" << endl;
