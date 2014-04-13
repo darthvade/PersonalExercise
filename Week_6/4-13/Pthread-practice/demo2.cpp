@@ -22,8 +22,10 @@ int main() {
 	}
 
 	for(int i = 0; i != NUM_THREAD; ++i) {
-		pthread_join(thread + i, NULL);
+		pthread_join(thread[i], NULL);
 	}
+
+	cout << "main finished!" << endl;
 
 	return 0;
 }
