@@ -32,6 +32,8 @@ int main() {
 		pthread_mutex_unlock(&mutex);
 	}
 
+	pthread_mutex_destroy(&mutex);
+
 	for(int i = 0; i != NUM_THREAD; ++i) {
 		pthread_join(thread[i], NULL);
 	}
