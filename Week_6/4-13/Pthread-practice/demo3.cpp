@@ -14,3 +14,12 @@ struct ARG Arg;
 void *func_boss(int *id) {
 
 }
+
+void *func_worker(int *id) {
+
+}
+
+int main() {
+
+	pthread_exit(NULL);
+}
