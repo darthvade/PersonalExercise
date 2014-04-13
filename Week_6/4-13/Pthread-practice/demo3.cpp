@@ -2,7 +2,7 @@
 #include <pthread.h>
 #include <unistd.h>
 
-#define NUM_WORKER_THREADS 4
+#define NUM_WORKER_THREADS 9
 
 using namespace std;
 
@@ -38,7 +38,7 @@ void *func_worker(Arg *arg) {
 	cout << "worker begin!" << endl;
 	cout << arg->data << endl;
 	
-	sleep(1);
+	//sleep(1);
 	arg->data += 1;
 	if(arg->data == 5) {
 		pthread_cond_signal(&arg->cond);
