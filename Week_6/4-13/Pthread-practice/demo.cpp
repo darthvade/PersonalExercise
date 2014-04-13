@@ -18,7 +18,7 @@ int main() {
 
 	pthread_once_t one_contr = PTHREAD_ONCE_INIT;
 
-	pthread_once(&one_contr, func);
+	pthread_once(&one_contr, (void)func);
 
 	pthread_create(&thread, NULL, func, &s);
 
