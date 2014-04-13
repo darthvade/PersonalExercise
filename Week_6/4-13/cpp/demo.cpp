@@ -3,5 +3,5 @@
 using namespace std;
 
 int main() {
-	throw cout << "hehe" << endl;
+	throw runtime_error("Error!");
 }
