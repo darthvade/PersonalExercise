@@ -12,7 +12,9 @@ void *func(void *t) {
 int main() {
 	pthread_t thread;
 
-	pthread_create(&thread, NULL, func, NULL);
+	string s = "child thread!";
+
+	pthread_create(&thread, NULL, func, );
 
 	pthread_join(thread, NULL);
 	cout << "Prog finished!" << endl;
