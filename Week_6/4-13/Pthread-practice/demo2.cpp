@@ -16,7 +16,7 @@ int main() {
 	int arg = 100;
 	pthread_create(&thread, NULL, func, &arg);
 
-	pthread_join(&thread, NULL);
+	pthread_join(thread, NULL);
 
 	return 0;
 }
