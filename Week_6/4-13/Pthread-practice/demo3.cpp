@@ -38,12 +38,10 @@ void *func_worker(Arg *arg) {
 	cout << "worker begin!" << endl;
 	cout << arg->data << endl;
 	
-	while(1) {
-		sleep(1);
-		arg->data += 1;
-		if(arg->data == 5) {
-			pthread_cond_signal(&arg->cond);
-		} 
+	sleep(1);
+	arg->data += 1;
+	if(arg->data == 5) {
+		pthread_cond_signal(&arg->cond);
 	}
 
 	cout << arg->data << endl;
