@@ -2,8 +2,8 @@ class X {
 	private:
 		int data;
 	public:
-		void setData() const{
-		
+		void setData(int &input) const{
+			this->data = input; // error!
 		}
 };
 
