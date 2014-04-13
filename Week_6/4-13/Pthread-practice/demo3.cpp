@@ -50,9 +50,9 @@ void *func_worker(Arg *arg) {
 		cout << arg->data << endl;
 		cout << "worker end!" << endl;
 		cout << endl;
-	}
 
-	pthread_mutex_unlock(&arg->mutex);
+		pthread_mutex_unlock(&arg->mutex);
+	}
 
 	pthread_exit((void *)0);
 }
