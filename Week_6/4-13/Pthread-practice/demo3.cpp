@@ -2,7 +2,7 @@
 #include <pthread.h>
 #include <unistd.h>
 
-#define NUM_WORKER_THREADS 8
+#define NUM_WORKER_THREADS 4
 
 using namespace std;
 
