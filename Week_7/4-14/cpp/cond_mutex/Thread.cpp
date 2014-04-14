@@ -27,8 +27,8 @@ void Thread::run() {
 	}
 }
 
-void* func(void *args) {
+void* Thread::func(void *args) {
 	Thread *pthread = static_cast<Thread *>(args);
 	pthread->run();
-	return (void *)0;
+	pthread_exit((void *)0);
 }
