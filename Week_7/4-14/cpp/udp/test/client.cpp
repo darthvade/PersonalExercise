@@ -31,6 +31,8 @@ int main(int argc, char *argv[]) {
 	while(fgets(sentMsg, 1024, stdin) != NULL) {
 		sendto(sockfd, sentMsg, strlen(sentMsg), 0, (SA)&servaddr, len);	
 		n = recvfrom(sockfd, getMsg, 1024, 0, NULL, NULL);
+		getMsg[n] = '\0';
+		fputs(getMsg, stdout);
 	}
 
 	return 0;
