@@ -21,6 +21,6 @@ void Thread::run() {
 }
 
 static void* func(void *args) {
-
+	Thread *pthread = static_cast<Thread>(args);
 	pthread_exit((void *)0);
 }
