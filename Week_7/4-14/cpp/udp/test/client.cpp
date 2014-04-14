@@ -22,5 +22,11 @@ int main(int argc, char *argv[]) {
 
 	sockfd = socket(AF_INET, SOCK_DGRAM, 0);
 
+	int n;
+	char sentMsg[1024], getMsg[1024];
+	while(cin > sentMsg) {
+	
+	}
+
 	return 0;
 }
