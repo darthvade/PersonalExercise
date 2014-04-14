@@ -31,6 +31,7 @@ int main(int argc, char *argv[]) {
 	while(1) {
 		len = sizeof(cliaddr);	
 		n = recvfrom(sockfd, msg, 1024, 0, (SA)&cliaddr, &len);
+		sendto(sockfd, msg, n, 0, (SA)&cliaddr, len);
 	}
 
 	return 0;
