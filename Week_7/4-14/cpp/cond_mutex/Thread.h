@@ -12,7 +12,7 @@ class Thread {
 	private:
 		pthread_t thread;
 		void run();
-		static void func();
+		static void* func(void *args);
 };
 
 #endif
