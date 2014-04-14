@@ -19,9 +19,10 @@ int &Data::getData() {
 }
 
 int main() {
-	void (*pfun)(const int &);
+	int& (*pfun)();
 	Data d;
 	d.setData(89);
+	pfun = d.getData();
 	cout << d.getData() << endl;
 	return 0;
 }
