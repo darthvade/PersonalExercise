@@ -6,7 +6,7 @@
 
 class CondVar{
 	public:
-		CondVar();
+		CondVar(Mutex &mutex);
 		~CondVar();
 		void wait();
 		void notify();
