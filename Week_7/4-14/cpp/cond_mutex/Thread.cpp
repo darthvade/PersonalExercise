@@ -17,7 +17,9 @@ void Thread::join() {
 }
 
 void Thread::run() {
-
+	for(int i = 0; i != num; ++i) {
+		cout << "Hehe?!" << endl;
+	}
 }
 
 void* func(void *args) {
