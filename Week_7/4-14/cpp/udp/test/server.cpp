@@ -3,6 +3,7 @@
 #include <netinet/in.h>
 #include <cstring>
 #include <cstdio>
+#include <cstdlib>
 
 typedef struct sockaddr * SA;
 
