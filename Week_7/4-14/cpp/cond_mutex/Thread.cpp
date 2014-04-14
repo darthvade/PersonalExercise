@@ -24,10 +24,11 @@ void Thread::join() {
 }
 
 void Thread::run() {
-	lock.lock();
 	for(int i = 0; i != num; ++i) {
+		mylock.lock();
 		sleep(1);
 		cout << s << endl;
+		mylock.unlock();
 	}
 }
 
