@@ -4,7 +4,7 @@ using namespace std;
 
 class Data {
 	public:
-		void setData(const int &data);
+		static void setData(const int &data);
 		int &getData();
 	private:
 		int _data;
@@ -21,7 +21,8 @@ int &Data::getData() {
 int main() {
 	void (*pfun)(const int &);
 	Data d;
-	d.setData(89);
+	pfun = d.setData;
+//	d.setData(89);
 	cout << d.getData() << endl;
 	return 0;
 }
