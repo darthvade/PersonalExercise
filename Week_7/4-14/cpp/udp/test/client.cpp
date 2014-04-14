@@ -39,8 +39,10 @@ int main(int argc, char *argv[]) {
 		fputs(getMsg, stdout);
 	}
 	*/
-
+	
+	strcpy(sentMsg, "Hello world!");
 	sendto(sockfd, sentMsg, strlen(sentMsg), 0, (SA)&servaddr, len);	
+	puts(sentMsg);
 	n = recvfrom(sockfd, getMsg, 1024, 0, NULL, NULL);
 
 	return 0;
