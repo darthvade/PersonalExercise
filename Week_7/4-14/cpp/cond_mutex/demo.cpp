@@ -1,8 +1,7 @@
 #include "Thread.h"
 
 int main() {
-	Thread p(5);
-	p.start();
-	p.join();
+	Thread p1(5);
+	Thread p2(10);
 	return 0;
 }

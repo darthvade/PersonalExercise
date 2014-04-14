@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Thread::Thread(int num): num(num){
+Thread::Thread(int num, string s): num(num){
 	
 }
 
