@@ -6,7 +6,7 @@ class Data {
 	public:
 		void setData(const int &data);
 		int &getData();
-		void display();
+		static void display();
 	private:
 		int _data;
 };
@@ -27,5 +27,9 @@ int main() {
 	Data d;
 	d.setData(89);
 	cout << d.getData() << endl;
+
+	void (*pfunc)();
+	pfunc = Data::display;
+
 	return 0;
 }
