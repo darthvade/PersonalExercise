@@ -13,7 +13,7 @@ void Thread::start() {
 }
 
 void Thread::join() {
-
+	pthread_join(thread, NULL);
 }
 
 void Thread::run() {
