@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 class Data {
 	public:
 		void setData(const int &data);
@@ -19,5 +21,6 @@ int &Data::getData() {
 int main() {
 	Data d;
 	d.setData(89);
+	cout << d.getData() << endl;
 	return 0;
 }
