@@ -27,6 +27,7 @@ int main(int argc, char *argv[]) {
 	char msg[1024];
 	while(1) {
 		len = sizeof(cliaddr);	
+		n = recvfrom(sockfd, msg, 1024, 0, (struct sockaddr *)&cliaddr, &len);
 	}
 
 	return 0;
