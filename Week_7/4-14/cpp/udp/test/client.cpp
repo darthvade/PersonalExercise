@@ -30,6 +30,7 @@ int main(int argc, char *argv[]) {
 	int n;
 	socklen_t len = sizeof(servaddr);
 	char sentMsg[1024], getMsg[1024];
+	/*
 	while(fgets(sentMsg, 1024, stdin) != NULL) {
 		puts(sentMsg);
 		sendto(sockfd, sentMsg, strlen(sentMsg), 0, (SA)&servaddr, len);	
@@ -37,6 +38,7 @@ int main(int argc, char *argv[]) {
 		getMsg[n] = '\0';
 		fputs(getMsg, stdout);
 	}
+	*/
 
 	return 0;
 }

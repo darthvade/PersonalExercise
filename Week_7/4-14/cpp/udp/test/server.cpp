@@ -30,12 +30,14 @@ int main(int argc, char *argv[]) {
 	int n;
 	socklen_t len;
 	char msg[1024];
+
 	while(1) {
 		len = sizeof(cliaddr);	
 		n = recvfrom(sockfd, msg, 1024, 0, (SA)&cliaddr, &len);
 		puts(msg);
 		sendto(sockfd, msg, n, 0, (SA)&cliaddr, len);
 	}
+	
 
 	return 0;
 }
