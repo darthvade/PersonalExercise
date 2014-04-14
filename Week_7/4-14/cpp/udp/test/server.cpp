@@ -18,6 +18,6 @@ int main(int argc, char *argv[]) {
 
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	servaddr.sin_port = hrons((unsigned short)argv[1]);
+	servaddr.sin_port = htons((unsigned int)argv[1]);
 	return 0;
 }
