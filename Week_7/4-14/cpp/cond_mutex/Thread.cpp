@@ -9,7 +9,7 @@ Thread::~Thread() {
 }
 
 void Thread::start() {
-
+	pthread_create(&thread, NULL, func, this);
 }
 
 void Thread::join() {
