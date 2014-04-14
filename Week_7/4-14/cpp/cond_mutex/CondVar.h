@@ -6,14 +6,14 @@
 
 class CondVar{
 	public:
-		CondVar(Mutex &mutex);
+		CondVar(Mutex *mutex);
 		~CondVar();
 		void wait();
 		void notify();
 		void notify_all();
 	private:
 		pthread_cond_t condvar;
-		pthread_mutex_t &mutex;
+		Mutex *mutex;
 };
 
 
