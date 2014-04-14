@@ -13,6 +13,7 @@ class CondVar{
 		void notify_all();
 	private:
 		pthread_cond_t condvar;
+		pthread_mutex_t &mutex;
 };
 
 
