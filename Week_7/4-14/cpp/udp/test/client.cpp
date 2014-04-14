@@ -3,7 +3,13 @@
 #include <sys/socket.h>
 #include <cstring>
 
-int main(int argc, char *argv[]) {
+using namespace std;
 
+int main(int argc, char *argv[]) {
+	if(argc != 3) {
+		cerr
+	}
+	int sockfd;
+	struct sockaddr_t servaddr;
 	return 0;
 }
