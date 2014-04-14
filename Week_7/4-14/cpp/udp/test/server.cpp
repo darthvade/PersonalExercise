@@ -38,10 +38,7 @@ int main(int argc, char *argv[]) {
 		len = sizeof(cliaddr);	
 		n = recvfrom(sockfd, msg, 1024, 0, (SA)&cliaddr, &len);
 		msg[n] = '\0';
-		string s(msg);
-		s.append(" append!");
-		cout << s << s.size() << endl;
-		sendto(sockfd, s.c_str(), s.size(), 0, (SA)&cliaddr, len);
+		sendto(sockfd, msg, n, 0, (SA)&cliaddr, len);
 	}
 
 	return 0;
