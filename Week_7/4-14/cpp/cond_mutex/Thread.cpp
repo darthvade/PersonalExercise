@@ -30,5 +30,5 @@ void Thread::run() {
 void* func(void *args) {
 	Thread *pthread = static_cast<Thread *>(args);
 	pthread->run();
-	pthread_exit((void *)0);
+	return;
 }
