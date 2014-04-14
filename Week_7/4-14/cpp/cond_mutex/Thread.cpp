@@ -1,5 +1,6 @@
 #include "Thread.h"
 #include <iostream>
+#include <unistd.h>
 
 using namespace std;
 
@@ -21,6 +22,7 @@ void Thread::join() {
 
 void Thread::run() {
 	for(int i = 0; i != num; ++i) {
+		sleep(1);
 		cout << "Hehe?!" << endl;
 	}
 }
