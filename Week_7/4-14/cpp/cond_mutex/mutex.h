@@ -6,8 +6,9 @@
 class CondVar;
 
 class Mutex {
-	friend class Condvar;
+	//friend class Condvar;
 	public:
+	friend class Condvar;
 		Mutex();
 		~Mutex();
 		void lock();
