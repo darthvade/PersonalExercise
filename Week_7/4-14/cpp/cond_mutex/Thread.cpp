@@ -1,6 +1,9 @@
 #include "Thread.h"
 #include <iostream>
 #include <unistd.h>
+#include "mutex.h"
+
+static Mutex mylock;
 
 using namespace std;
 

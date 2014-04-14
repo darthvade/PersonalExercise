@@ -3,9 +3,6 @@
 
 #include <pthread.h>
 #include <string>
-#include "mutex.h"
-
-Mutex mylock;
 
 class Thread {
 	public:
