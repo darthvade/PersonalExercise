@@ -30,6 +30,7 @@ int main() {
 
 	void (*pfunc)();
 	pfunc = Data::display;
+	pfunc();
 
 	return 0;
 }
