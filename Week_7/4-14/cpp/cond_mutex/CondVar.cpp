@@ -1,6 +1,6 @@
 #include "CondVar.h"
 
-CondVar::CondVar(Mutex &mutex) {
+CondVar::CondVar(Mutex *mutex) {
 	this->mutex = mutex;
 	pthread_cond_init(&condvar, NULL);
 }
