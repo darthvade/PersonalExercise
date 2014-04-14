@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
 
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_port = htons((unsigned int)argv[2]);
+	inet_pton(AF_INET, argv[1], &servaddr.sin_addr);
 
 	return 0;
 }
