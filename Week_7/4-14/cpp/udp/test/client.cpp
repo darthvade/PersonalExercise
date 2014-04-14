@@ -4,6 +4,8 @@
 #include <arpa/inet.h>
 #include <cstring>
 
+typedef struct sockaddr * SA;
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -25,7 +27,7 @@ int main(int argc, char *argv[]) {
 	int n;
 	char sentMsg[1024], getMsg[1024];
 	while(fgets(sentMsg, 1024, stdin) != NULL) {
-	
+		sendto(socket, sentMsg, strlen(sentMsg), 0, (SA)&servaddr, sizeof(servaddr));	
 	}
 
 	return 0;
