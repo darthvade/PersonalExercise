@@ -2,6 +2,8 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
+typedef struct sockaddr * SA;
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
