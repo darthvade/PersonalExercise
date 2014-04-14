@@ -5,6 +5,8 @@
 
 class Thread {
 	public:
+		Thread();
+		~Thread();
 	private:
 		pthread_t thread;
 };
