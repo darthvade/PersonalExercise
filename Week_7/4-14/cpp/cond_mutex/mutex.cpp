@@ -1,5 +1,13 @@
 #include "mutex.h"
 
 Mutex::Mutex() {
-	pthread_mutex_init(&mutex);
+	pthread_mutex_init(&mutex, NULL);
+}
+
+Mutex::~Mutex() {
+	pthread_mutex_destroy(&mutex);
+}
+
+void Mutex::lock() {
+	pthread_mutex_lock(&mutex);
 }
