@@ -8,9 +8,12 @@ int main(int argc, char *argv[]) {
 	if(argc != 2) {
 		cerr << "No PORT" << endl;	
 	}
-	int scokfd;
+	
+	int sockfd;
 	struct sockaddr_in servaddr, cliaddr;
+	
+	sockfd = socket(AF_INET, SOCK_DGRAM, 0);
 
-
+	bzero(&servaddr, sizeof(servaddr));
 	return 0;
 }
