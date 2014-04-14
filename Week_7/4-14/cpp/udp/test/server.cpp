@@ -21,5 +21,13 @@ int main(int argc, char *argv[]) {
 	servaddr.sin_port = htons((unsigned int)argv[1]);
 
 	bind(sockfd, (struct sockaddr *)&servaddr, sizeof(servaddr));
+
+	int n;
+	socklen_t len;
+	char msg[1024];
+	while(1) {
+		len = sizeof(cliaddr);	
+	}
+
 	return 0;
 }
