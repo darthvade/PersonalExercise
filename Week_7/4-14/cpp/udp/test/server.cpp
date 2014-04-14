@@ -3,7 +3,6 @@
 #include <netinet/in.h>
 #include <cstring>
 #include <cstdio>
-#include <cstdlib>
 
 typedef struct sockaddr * SA;
 
@@ -25,7 +24,7 @@ int main(int argc, char *argv[]) {
 
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	puts(itoa((unsigned int)argv[1]));
+	cout << (unsigned int)argv[1] << endl;
 	servaddr.sin_port = htons((unsigned int)argv[1]);
 
 	bind(sockfd, (SA)&servaddr, sizeof(servaddr));
