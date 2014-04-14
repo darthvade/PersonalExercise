@@ -8,7 +8,7 @@ class Thread {
 		Thread();
 		~Thread();
 		void start();
-		void stop();
+		void join();
 	private:
 		pthread_t thread;
 };
