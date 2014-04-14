@@ -25,8 +25,8 @@ void Thread::join() {
 
 void Thread::run() {
 	for(int i = 0; i != num; ++i) {
-		mylock.lock();
 		sleep(1);
+		mylock.lock();
 		cout << s << endl;
 		mylock.unlock();
 	}
