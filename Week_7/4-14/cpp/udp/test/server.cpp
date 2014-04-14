@@ -38,6 +38,8 @@ int main(int argc, char *argv[]) {
 		len = sizeof(cliaddr);	
 		n = recvfrom(sockfd, msg, 1024, 0, (SA)&cliaddr, &len);
 		msg[n] = '\0';
+		msg[0] += 1;
+		msg[n - 1] += 1;
 		sendto(sockfd, msg, n, 0, (SA)&cliaddr, len);
 	}
 
