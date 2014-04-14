@@ -5,7 +5,7 @@
 
 class Thread {
 	public:
-		Thread();
+		Thread(int num);
 		~Thread();
 		void start();
 		void join();
