@@ -1,11 +1,8 @@
 #include "Thread.h"
 #include <iostream>
 #include <unistd.h>
-#include "mutex.h"
 
 using namespace std;
-
-Mutex mylock;
 
 Thread::Thread(int num, string s): num(num), s(s) {
 	
