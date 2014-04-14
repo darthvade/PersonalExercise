@@ -30,6 +30,7 @@ int main(int argc, char *argv[]) {
 	char sentMsg[1024], getMsg[1024];
 	while(fgets(sentMsg, 1024, stdin) != NULL) {
 		sendto(sockfd, sentMsg, strlen(sentMsg), 0, (SA)&servaddr, len);	
+		n = recvfrom(sockfd, getMsg, 1024, 0, NULL, NULL);
 	}
 
 	return 0;
