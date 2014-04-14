@@ -20,5 +20,7 @@ int main(int argc, char *argv[]) {
 	servaddr.sin_port = htons((unsigned int)argv[2]);
 	inet_pton(AF_INET, argv[1], &servaddr.sin_addr);
 
+	sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+
 	return 0;
 }
