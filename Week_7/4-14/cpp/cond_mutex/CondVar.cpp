@@ -8,3 +8,7 @@ CondVar::CondVar(Mutex *mutex) {
 CondVar::~CondVar() {
 	pthread_cond_destroy(&condvar);
 }
+
+void CondVar::wait() {
+
+}
