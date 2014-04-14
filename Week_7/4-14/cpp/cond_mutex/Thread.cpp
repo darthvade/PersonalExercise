@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Thread::Thread(int num, string s): num(num){
+Thread::Thread(int num, string s): num(num), s(s) {
 	
 }
 
@@ -23,7 +23,7 @@ void Thread::join() {
 void Thread::run() {
 	for(int i = 0; i != num; ++i) {
 		sleep(1);
-		cout << "Hehe?!" << endl;
+		cout << s << endl;
 	}
 }
 
