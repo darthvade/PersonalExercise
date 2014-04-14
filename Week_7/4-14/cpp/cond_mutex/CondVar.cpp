@@ -16,3 +16,7 @@ void CondVar::wait() {
 void CondVar::notify() {
 	pthread_cond_signal(&condvar);
 }
+
+void CondVar::notify_all() {
+	pthread_cond_broadcast(&condvar);
+}
