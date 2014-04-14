@@ -7,6 +7,8 @@ class Thread {
 	public:
 		Thread();
 		~Thread();
+		void start();
+		void stop();
 	private:
 		pthread_t thread;
 };
