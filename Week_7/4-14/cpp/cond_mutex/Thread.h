@@ -11,6 +11,8 @@ class Thread {
 		void join();
 	private:
 		pthread_t thread;
+		void run();
+		static void func();
 };
 
 #endif
