@@ -20,6 +20,6 @@ int main(int argc, char *argv[]) {
 	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
 	servaddr.sin_port = htons((unsigned int)argv[1]);
 
-	bind(sockfd, (struct scoketaddr_in *)&servaddr, sizeof(servaddr));
+	bind(sockfd, (struct sockaddr_in *)&servaddr, sizeof(servaddr));
 	return 0;
 }
