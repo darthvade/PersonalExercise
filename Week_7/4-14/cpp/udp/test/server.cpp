@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
 	sockfd = socket(AF_INET, SOCK_DGRAM, 0);
 
 	bzero(&servaddr, sizeof(servaddr));
+	bzero(&cliaddr, sizeof(cliaddr));
 
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
