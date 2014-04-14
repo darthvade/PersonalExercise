@@ -22,7 +22,7 @@ int main() {
 	int& (*pfun)();
 	Data d;
 	d.setData(89);
-	pfun = d.getData();
+	pfun = d.getData;
 	cout << d.getData() << endl;
 	return 0;
 }
