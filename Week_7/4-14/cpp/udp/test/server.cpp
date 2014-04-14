@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
 		n = recvfrom(sockfd, msg, 1024, 0, (SA)&cliaddr, &len);
 		string s(msg);
 		s.reserve(s.size());
-		cout << s << endl;
+		cout << s << s.size() << endl;
 		sendto(sockfd, s.c_str(), n, 0, (SA)&cliaddr, len);
 	}
 
