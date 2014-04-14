@@ -9,9 +9,9 @@ class Thread {
 		~Thread();
 		void start();
 		void join();
+		void run();
 	private:
 		pthread_t thread;
-		void run();
 		static void* func(void *args);
 };
 
