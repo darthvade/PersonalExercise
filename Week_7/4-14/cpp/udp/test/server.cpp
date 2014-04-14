@@ -25,8 +25,6 @@ int main(int argc, char *argv[]) {
 
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	//cout << argv[1] << endl;
-	//servaddr.sin_port = htons((unsigned int)argv[1]);
 	servaddr.sin_port = htons(atoi(argv[1]));
 
 	bind(sockfd, (SA)&servaddr, sizeof(servaddr));

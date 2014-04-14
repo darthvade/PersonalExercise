@@ -23,7 +23,6 @@ int main(int argc, char *argv[]) {
 	bzero(&servaddr, sizeof(servaddr));
 
 	servaddr.sin_family = AF_INET;
-	//servaddr.sin_port = htons((unsigned int)argv[2]);
 	servaddr.sin_port = htons(atoi(argv[2]));
 	inet_pton(AF_INET, argv[1], &servaddr.sin_addr);
 
@@ -32,7 +31,7 @@ int main(int argc, char *argv[]) {
 	int n;
 	socklen_t len = sizeof(servaddr);
 	char sentMsg[1024], getMsg[1024];
-	/*
+	
 	while(fgets(sentMsg, 1024, stdin) != NULL) {
 		puts(sentMsg);
 		sendto(sockfd, sentMsg, strlen(sentMsg), 0, (SA)&servaddr, len);	
@@ -40,12 +39,14 @@ int main(int argc, char *argv[]) {
 		getMsg[n] = '\0';
 		fputs(getMsg, stdout);
 	}
-	*/
 	
+
+	/*	
 	strcpy(sentMsg, "Hello world!");
 	sendto(sockfd, sentMsg, strlen(sentMsg), 0, (SA)&servaddr, len);	
 	puts(sentMsg);
 	n = recvfrom(sockfd, getMsg, 1024, 0, NULL, NULL);
+	*/
 
 	return 0;
 }
