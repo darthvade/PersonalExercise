@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 		string s(msg);
 		s.reserve(s.size());
 		cout << s << s.size() << endl;
-		sendto(sockfd, s.c_str(), n, 0, (SA)&cliaddr, len);
+		sendto(sockfd, s.c_str(), s.size(), 0, (SA)&cliaddr, len);
 	}
 
 	return 0;
