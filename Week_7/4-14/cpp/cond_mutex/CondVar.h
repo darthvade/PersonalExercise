@@ -4,7 +4,9 @@
 #include <pthread.h>
 
 class CondVar{
-
+	public:
+		CondVar();
+		~CondVar();
 	private:
 		pthread_cond_t condvar;
 };
