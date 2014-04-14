@@ -11,11 +11,11 @@ int main(int argc, char *argv[]) {
 	}
 
 	int sockfd;
-	struct sockaddr_t servaddr;
+	struct sockaddr_in servaddr;
 	
 	bzero(&servaddr, sizeof(servaddr));
 
-	servaddr.
+	servaddr.sin_family = AF_INET;
 
 	return 0;
 }
