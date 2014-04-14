@@ -2,6 +2,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <cstring>
+#include <cstdio>
 
 typedef struct sockaddr * SA;
 
