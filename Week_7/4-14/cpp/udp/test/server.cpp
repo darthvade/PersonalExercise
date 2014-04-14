@@ -4,6 +4,7 @@
 #include <cstring>
 #include <cstdio>
 #include <cstdlib>
+#include <string>
 
 typedef struct sockaddr * SA;
 
@@ -36,7 +37,8 @@ int main(int argc, char *argv[]) {
 	while(1) {
 		len = sizeof(cliaddr);	
 		n = recvfrom(sockfd, msg, 1024, 0, (SA)&cliaddr, &len);
-		//puts(msg);
+		string s(msg);
+		s.reserve(s.size());
 		sendto(sockfd, msg, n, 0, (SA)&cliaddr, len);
 	}
 	
