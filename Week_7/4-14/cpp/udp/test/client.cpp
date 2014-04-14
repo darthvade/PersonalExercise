@@ -16,6 +16,7 @@ int main(int argc, char *argv[]) {
 	bzero(&servaddr, sizeof(servaddr));
 
 	servaddr.sin_family = AF_INET;
+	servaddr.sin_port = htons((unsigned int)argv[2]);
 
 	return 0;
 }
