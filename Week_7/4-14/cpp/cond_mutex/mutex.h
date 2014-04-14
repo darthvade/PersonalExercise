@@ -3,6 +3,8 @@
 
 #include <pthread.h>
 
+class CondVar;
+
 class Mutex {
 	friend class Condvar;
 	public:

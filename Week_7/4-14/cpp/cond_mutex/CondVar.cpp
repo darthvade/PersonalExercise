@@ -10,7 +10,7 @@ CondVar::~CondVar() {
 }
 
 void CondVar::wait() {
-	pthread_cond_wait(&condvar, mutex->);
+	pthread_cond_wait(&condvar, &mutex->mutex);
 }
 
 void CondVar::notify() {
