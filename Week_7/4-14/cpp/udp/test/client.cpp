@@ -40,5 +40,8 @@ int main(int argc, char *argv[]) {
 	}
 	*/
 
+	sendto(sockfd, sentMsg, strlen(sentMsg), 0, (SA)&servaddr, len);	
+	n = recvfrom(sockfd, getMsg, 1024, 0, NULL, NULL);
+
 	return 0;
 }
