@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 	socklen_t len = sizeof(servaddr);
 	char sentMsg[1024], getMsg[1024];
 	while(fgets(sentMsg, 1024, stdin) != NULL) {
-		sendto(socket, sentMsg, strlen(sentMsg), 0, (SA)&servaddr, &len);	
+		sendto(sockfd, sentMsg, strlen(sentMsg), 0, (SA)&servaddr, len);	
 	}
 
 	return 0;
