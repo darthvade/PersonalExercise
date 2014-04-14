@@ -4,6 +4,7 @@
 #include <pthread.h>
 
 class Mutex {
+	friend class Condvar;
 	public:
 		Mutex();
 		~Mutex();
