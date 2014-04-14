@@ -11,6 +11,7 @@ class Thread {
 		void join();
 		void run();
 	private:
+		int num;
 		pthread_t thread;
 		static void* func(void *args);
 };

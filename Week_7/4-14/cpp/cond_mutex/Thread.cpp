@@ -1,6 +1,9 @@
 #include "Thread.h"
+#include <iostream>
 
-Thread::Thread() {
+using namespace std;
+
+Thread::Thread(int num): num(num){
 	
 }
 
