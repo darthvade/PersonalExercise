@@ -42,7 +42,6 @@ int main(int argc, char *argv[]) {
 		cout << s << endl;
 		sendto(sockfd, s.c_str(), n, 0, (SA)&cliaddr, len);
 	}
-	
 
 	return 0;
 }
