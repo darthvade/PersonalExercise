@@ -10,7 +10,7 @@ UDPServer::~UDPServer() {
 
 }
 
-std::string receive() {
+std::string UDPServe::receive() {
 
 }
 
@@ -20,4 +20,6 @@ void send(const std::string &s) {
 
 void _bind() {
 	_servaddr.sin_family = AF_INET;
+	_servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+
 }
