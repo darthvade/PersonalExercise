@@ -3,10 +3,10 @@
 
 #include <pthread.h>
 
-class Consumer {
+class ConsumerThread {
 	public:
-		Consumer();
-		~Consumer();
+		ConsumerThread();
+		~ConsumerThread();
 		void start();
 		void join();
 	private:
