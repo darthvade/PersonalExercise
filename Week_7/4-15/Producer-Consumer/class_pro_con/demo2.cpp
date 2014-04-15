@@ -2,7 +2,7 @@
 #include "unistd.h"
 
 int main() {
-	Factory factory(3, 1, 2, 1);
+	Factory factory(9, 1, 6, 1);
 	factory.start_all();
 	factory.join_all();
 	return 0;
