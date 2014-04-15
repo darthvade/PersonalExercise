@@ -19,7 +19,8 @@ std::string UDPServer::receive() {
 }
 
 void UDPServer::send(const std::string &s) {
-
+	char buf[BUF_SIZE];
+	strcpy(buf, s.c_str());
 	sendto(_sockfd, buf, n, 0, (SA *)&_cliaddr, len);	
 }
 
