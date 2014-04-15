@@ -21,6 +21,7 @@ class Factory {
 		int _fre_producer;
 		WorkingQueue _wq;
 		Mutex _cout_lock;
+		std::vector<ProducerThread&> _vproducer;
 };
 
 #endif
