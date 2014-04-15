@@ -29,7 +29,9 @@ void ProducerThread::_run() {
 	while(true) {
 		int pro = rand() % 1024;
 		_wq->product(pro);
-		cout << "product num " << pro << endl;
+		cout << endl;
+		cout << pthread_self() << "product num " << pro << endl;
+		cout << endl;
 		sleep(_frequent);
 	}
 }
