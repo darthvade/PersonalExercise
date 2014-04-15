@@ -11,6 +11,8 @@
 #include <cstdlib>
 #include <unistd.h>
 
+#define BUF_SIZE 1024
+
 typedef struct sockaddr SA;
 
 class UDPServer {
