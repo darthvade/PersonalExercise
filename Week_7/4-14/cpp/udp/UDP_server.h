@@ -10,6 +10,12 @@
 #include <cstring>
 #include <cstdlib>
 
-using namespace std;
+class UDPServer {
+	public:
+	private:
+		int _sockfd;
+		struct sockaddr_in _servaddr;
+		int _servport;
+};
 
 #endif
