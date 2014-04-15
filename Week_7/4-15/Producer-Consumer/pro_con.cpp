@@ -1,6 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <pthread.h>
+#include <unistd.h>
 
 using namespace std;
 
