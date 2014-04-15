@@ -29,6 +29,6 @@ void ConsumerThread::_run() {
 	while(true) {
 		int con = _wq->consume();
 		cout << "consume Num " << con << endl; 
-		sleep(1);
+		sleep(_frequent);
 	}
 }
