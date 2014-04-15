@@ -7,6 +7,8 @@ class Consumer {
 	public:
 		Consumer();
 		~Consumer();
+		void start();
+		void join();
 	private:
 		pthread_t p_id;
 };
