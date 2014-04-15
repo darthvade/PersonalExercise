@@ -12,7 +12,10 @@ pthread_cond_t gcond;
 
 void *producer_func(void *args) {
 	pthread_mutex_lock(&gmutex);
-
+	
+	Q.push(1);
+	cout << "Push a num" << endl;
+	pthread_cond_signal(&gcond);
 
 	pthread_mutex_unlock(&gmutex);
 	pthread_exit((void *)0);
