@@ -2,7 +2,7 @@
 
 ProducerThread::ProducerThread(WorkingQueue *wq) : 
 	_p_id(0), _wq(wq) {
-
+	srand(10086);
 }
 
 ProducerThread::~ProducerThread() {
@@ -26,6 +26,6 @@ void* ProducerThread::_producer_action(void *args) {
 void ProducerThread::_run() {
 	while(true) {
 		int pro = rand() % 1024;
-		_wq->product();
+		_wq->product(pro);
 	}
 }
