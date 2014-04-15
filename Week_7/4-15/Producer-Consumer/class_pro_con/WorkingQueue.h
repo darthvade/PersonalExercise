@@ -3,6 +3,7 @@
 
 #include "Mutex.h"
 #include "CondVar.h"
+#include <queue>
 
 class WorkingQueue {
 	public:
@@ -10,6 +11,7 @@ class WorkingQueue {
 	private:
 		Mutex _mutex;
 		CondVar _condvar;
+		queue<int> _Q;
 };
 
 #endif
