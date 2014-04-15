@@ -10,6 +10,8 @@
 #include <cstring>
 #include <cstdlib>
 
+typedef struct sockaddr SA;
+
 class UDPServer {
 	public:
 		UDPServer(int port);
