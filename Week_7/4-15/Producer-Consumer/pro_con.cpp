@@ -11,12 +11,18 @@ pthread_mutex_t gmutex;
 pthread_cond_t gcond;
 
 void *producer_func(void *args) {
+	pthread_mutex_lock(&gmutex);
 
+
+	pthread_mutex_unlock(&gmutex);
 	pthread_exit((void *)0);
 }
 
 void *consumer_func(void *args) {
+	pthread_mutex_lock(&gmutex);
 
+
+	pthread_mutex_unlock(&gmutex);
 	pthread_exit((void *)0);
 }
 
