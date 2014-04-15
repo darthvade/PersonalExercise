@@ -4,6 +4,7 @@
 
 int main() {
 	WorkingQueue wq;
+	Mutex cout_lock;
 
 	ProducerThread pro_t(&wq, 1);
 	ProducerThread pro_t2(&wq, 1);

@@ -30,7 +30,7 @@ void ConsumerThread::_run() {
 		int con = _wq->consume();
 		_cout_lock->lock();
 		cout << endl;
-		cout << "consume Num " << con << endl; 
+		cout << "No. " << pthread_self() << "consume Num " << con << endl; 
 		cout << endl;
 		_cout_lock->unlock();
 		sleep(_frequent);
