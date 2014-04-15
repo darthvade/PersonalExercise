@@ -12,9 +12,14 @@
 
 class UDPServer {
 	public:
+		UDPServer();
+		~UDPServer();
+		std::string receive();
+		void send(const std::string&);
 	private:
 		int _sockfd;
 		struct sockaddr_in _servaddr;
+		struct sockaddr_in _cliaddr;
 		int _servport;
 };
 
