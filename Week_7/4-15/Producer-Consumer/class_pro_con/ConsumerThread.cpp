@@ -1,5 +1,9 @@
-#include "Consumer.h"
+#include "ConsumerThread.h"
 
 ConsumerThread::ConsumerThread() {
+
+}
+
+ConsumerThread::~ConsumerThread() {
 
 }
