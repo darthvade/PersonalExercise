@@ -40,5 +40,9 @@ int main() {
 	pthread_mutex_init(&gmutex, NULL);
 	pthread_cond_init(&gcond, NULL);
 
+	pthread_t thread[2];
+	
+	pthread_create(&thread[0], NULL, NULL);
+
 	return 0;
 }
