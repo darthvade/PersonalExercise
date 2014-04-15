@@ -7,6 +7,7 @@
 #include "ProducerThread.h"
 
 class WorkingQueue {
+		friend ProducerThread::_run();
 	public:
 		WorkingQueue();
 		~WorkingQueue();

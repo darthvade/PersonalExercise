@@ -1,4 +1,5 @@
 #include "ProducerThread.h"
+#include "WorkingQueue.h"
 
 using namespace std;
 
