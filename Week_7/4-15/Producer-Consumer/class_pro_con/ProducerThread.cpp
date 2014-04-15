@@ -31,7 +31,7 @@ void ProducerThread::_run() {
 		_wq->product(pro);
 		_cout_lock->lock();
 		cout << endl;
-		cout << "No. "<< pthread_self() << "product num " << pro << endl;
+		cout << "No. "<< pthread_self() << " product num " << pro << endl;
 		cout << endl;
 		_cout_lock->unlock();
 		sleep(_frequent);
