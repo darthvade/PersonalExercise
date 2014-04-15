@@ -4,6 +4,7 @@
 #include <pthread.h>
 #include "WorkingQueue.h"
 #include <iostream>
+#include <unistd.h>
 
 class ConsumerThread {
 	public:
