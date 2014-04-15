@@ -11,6 +11,8 @@ Factory::Factory(
 	_fre_producer(fre_producer) {
 	for(std::size_t i = 0; i != _num_producer; ++i) {
 		ProducerThread temp(&_wq, fre_producer, &_cout_lock);
+		ProducerThread &p = temp;
+		_vproducer.push_back(p);
 	}	
 	for(std::size_t i = 0; i != _num_consumer; ++i) {
 		ConsumerThread(&_wq, fre_producer, &_cout_lock);	
