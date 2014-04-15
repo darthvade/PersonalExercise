@@ -17,7 +17,8 @@ void ConsumerThread::join() {
 }
 
 void* ConsumerThread::_consumer_action(void *args) {
-	
+	ConsumerThread *pconsumer = static_cast<ConsumerThread *>(args);	
+	pconsumer->_run();
 	pthread_exit((void *)0);
 }
 
