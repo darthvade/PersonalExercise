@@ -13,7 +13,7 @@ Factory::Factory(
 		ProducerThread(&_wq, fre_producer, &_cout_lock);
 	}	
 	for(int i = 0; i != _num_consumer; ++i) {
-	
+		ConsumerThread(&_wq, fre_producer, &_cout_lock);	
 	}
 }
 
