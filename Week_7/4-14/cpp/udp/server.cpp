@@ -1,6 +1,8 @@
 #include "UDP_server.h"
 
 int main() {
-	UDPserver s;
+	UDPServer s(8888);
+	std::string str = s.receive();
+	s.send(str);
 	return 0;
 }
