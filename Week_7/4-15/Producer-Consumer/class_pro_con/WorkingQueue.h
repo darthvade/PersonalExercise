@@ -8,7 +8,8 @@ class WorkingQueue {
 	public:
 
 	private:
-
+		Mutex _mutex;
+		CondVar _condvar;
 };
 
 #endif
