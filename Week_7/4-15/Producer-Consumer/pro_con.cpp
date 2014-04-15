@@ -24,6 +24,12 @@ void *producer_func(void *args) {
 void *consumer_func(void *args) {
 	pthread_mutex_lock(&gmutex);
 
+	while(Q.empty()) {
+		pthread_cond_wait(&gcond, &gmutex);
+	}
+	int num = Q.front();
+	Q.pop();
+	cout << "get a num " << num << endl;
 
 	pthread_mutex_unlock(&gmutex);
 	pthread_exit((void *)0);
