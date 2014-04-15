@@ -1,7 +1,7 @@
 #include "ProducerThread.h"
 
 ProducerThread::ProducerThread(WorkingQueue *wq) : 
-	_wq(wq), _p_id(0) {
+	_p_id(0), _wq(wq) {
 
 }
 
