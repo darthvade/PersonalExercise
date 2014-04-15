@@ -16,6 +16,8 @@ int main() {
 	con_t.start();
 
 	pro_t.join();
+	pro_t2.join();
+	pro_t3.join();
 	con_t.join();
 
 	return 0;
