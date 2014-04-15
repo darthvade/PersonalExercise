@@ -10,16 +10,16 @@ UDPServer::~UDPServer() {
 
 }
 
-std::string UDPServe::receive() {
+std::string UDPServer::receive() {
 
 }
 
-void send(const std::string &s) {
+void UDPServer::send(const std::string &s) {
 
 }
 
-void _bind() {
+void UDPServer::_bind() {
 	_servaddr.sin_family = AF_INET;
 	_servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-
+	_servaddr.sin_port = htons(_servport);
 }
