@@ -30,5 +30,6 @@ void ProducerThread::_run() {
 		int pro = rand() % 1024;
 		_wq->product(pro);
 		cout << "product num " << pro << endl;
+		sleep(2);
 	}
 }
