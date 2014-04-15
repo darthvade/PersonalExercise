@@ -12,7 +12,7 @@
 
 class UDPServer {
 	public:
-		UDPServer();
+		UDPServer(int port);
 		~UDPServer();
 		std::string receive();
 		void send(const std::string&);
