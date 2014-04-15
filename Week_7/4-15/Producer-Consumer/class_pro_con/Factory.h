@@ -14,8 +14,8 @@ class Factory {
 				std::size_t num_producer,
 				std::size_t fre_producer);
 		~Factory();	
-		ProducerThread& create_one_producer();
-		ConsumerThread& create_one_consumer();
+		ProducerThread& create_one_producer(std::size_t fre_producer);
+		ConsumerThread& create_one_consumer(std::size_t fre_consumer);
 		void start_all();
 		void join_all();
 	private:

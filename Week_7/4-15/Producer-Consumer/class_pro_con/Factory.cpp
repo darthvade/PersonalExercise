@@ -39,6 +39,7 @@ void Factory::join_all() {
 	}
 }
 
-ProducerThread& Factory::create_one_producer() {
-
+ProducerThread& Factory::create_one_producer(std::size_t fre_producer) {
+	ProducerThread temp(&_wq, fre_producer, &_cout_lock);
+	_vproducer.push_back(temp);
 }
