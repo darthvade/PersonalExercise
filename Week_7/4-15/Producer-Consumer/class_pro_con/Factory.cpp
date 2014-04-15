@@ -9,7 +9,7 @@ Factory::Factory(
 	_fre_consumer(fre_consumer),
 	_num_producer(num_producer),
 	_fre_producer(fre_producer) {
-	for(int i = 0; i != _num_producer; ++i) {
+	for(std::size_t i = 0; i != _num_producer; ++i) {
 		ProducerThread(&_wq, fre_producer, &_cout_lock);
 	}	
 	for(int i = 0; i != _num_consumer; ++i) {
