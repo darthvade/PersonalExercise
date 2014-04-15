@@ -8,13 +8,14 @@
 
 class ConsumerThread {
 	public:
-		ConsumerThread(WorkingQueue *wq);
+		ConsumerThread(WorkingQueue *wq, int frequent);
 		~ConsumerThread();
 		void start();
 		void join();
 	private:
 		pthread_t _p_id;
 		WorkingQueue *_wq;
+		int _frequent;
 		static void* _consumer_action(void *args);
 		void _run();
 };

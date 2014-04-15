@@ -2,8 +2,8 @@
 
 using namespace std;
 
-ConsumerThread::ConsumerThread(WorkingQueue *wq) :
-	   	_p_id(0) , _wq(wq){
+ConsumerThread::ConsumerThread(WorkingQueue *wq, int frequent) :
+	   	_p_id(0) , _wq(wq), _frequent(frequent){
 
 }
 
