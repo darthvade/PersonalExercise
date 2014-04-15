@@ -10,9 +10,9 @@ class Consumer {
 		void start();
 		void join();
 	private:
-		pthread_t p_id;
-		static void Consumer_action();
-		void run();
+		pthread_t _p_id;
+		static void _Consumer_action();
+		void _run();
 };
 
 
