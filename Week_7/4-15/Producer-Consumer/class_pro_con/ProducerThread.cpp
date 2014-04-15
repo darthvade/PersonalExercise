@@ -1,5 +1,7 @@
 #include "ProducerThread.h"
 
+using namespace std;
+
 ProducerThread::ProducerThread(WorkingQueue *wq) : 
 	_p_id(0), _wq(wq) {
 	srand(10086);
