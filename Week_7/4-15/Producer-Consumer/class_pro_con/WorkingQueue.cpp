@@ -20,5 +20,8 @@ int WorkingQueue::consume() {
 }
 
 void WorkingQueue::product(int n) {
-
+	_mutex.lock();
+	_Q.push(n);
+	_condvar.notify();
+	_mutex.unlock();
 }
