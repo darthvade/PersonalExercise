@@ -11,7 +11,7 @@ class WorkingQueue {
 	private:
 		Mutex _mutex;
 		CondVar _condvar;
-		queue<int> _Q;
+		std::queue<int> _Q;
 };
 
 #endif
