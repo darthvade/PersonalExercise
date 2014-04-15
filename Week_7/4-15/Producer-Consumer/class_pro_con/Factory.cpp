@@ -1,10 +1,10 @@
 #include "Factory.h"
 
 Factory::Factory(
-	int num_consumer,
-	int fre_consumer,
-	int num_producer,
-	int fre_producer ) : 
+	std::size_t num_consumer,
+	std::size_t fre_consumer,
+	std::size_t num_producer,
+	std::size_t fre_producer ) : 
 	_num_consumer(num_consumer), 
 	_fre_consumer(fre_consumer),
 	_num_producer(num_producer),
@@ -12,7 +12,7 @@ Factory::Factory(
 	for(std::size_t i = 0; i != _num_producer; ++i) {
 		ProducerThread(&_wq, fre_producer, &_cout_lock);
 	}	
-	for(int i = 0; i != _num_consumer; ++i) {
+	for(std::size_t i = 0; i != _num_consumer; ++i) {
 		ConsumerThread(&_wq, fre_producer, &_cout_lock);	
 	}
 }
