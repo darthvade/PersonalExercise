@@ -26,9 +26,13 @@ void* ConsumerThread::_consumer_action(void *args) {
 }
 
 void ConsumerThread::_run() {
-	while(true) {
+		while(true) {
 		int con = _wq->consume();
+		_cout_lock->lock();
+		cout << endl;
 		cout << "consume Num " << con << endl; 
+		cout << endl;
+		_cout_lock->unlock();
 		sleep(_frequent);
 	}
 }
