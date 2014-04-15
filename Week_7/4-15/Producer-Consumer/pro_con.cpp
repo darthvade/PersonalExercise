@@ -46,6 +46,7 @@ int main() {
 	pthread_create(&thread[1], NULL, producer_func, NULL);
 
 		
-	pthread_join(thread[0]);
+	pthread_join(thread[0], NULL);
+	pthread_join(thread[1], NULL);
 	return 0;
 }
