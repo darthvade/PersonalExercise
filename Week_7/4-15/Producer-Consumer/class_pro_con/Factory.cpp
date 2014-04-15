@@ -12,12 +12,12 @@ Factory::Factory(
 	for(std::size_t i = 0; i != _num_producer; ++i) {
 		ProducerThread temp(&_wq, fre_producer, &_cout_lock);
 		ProducerThread &p = temp;
-		_vproducer[i].push_back(p);
+		_vproducer.push_back(p);
 	}	
 	for(std::size_t i = 0; i != _num_consumer; ++i) {
 		ConsumerThread temp(&_wq, fre_producer, &_cout_lock);	
 		ConsumerThread &p = temp;
-		_vconsumer[i].push_back(p);
+		_vconsumer.push_back(p);
 	}
 }
 
@@ -26,9 +26,9 @@ Factory::~Factory() {
 }
 
 void Factory::start_all() {
-	ProducerThread temp(&_wq, fre_producer, &_cout_lock);
-	ProducerThread &p = temp;
-	_vproducer[i].push_back(p);
+	for(std::size_t i = 0; i != _num_producer; ++i) {
+		_vproducer[i].start();
+	}	
 }
 
 void Factory::join_all() {
