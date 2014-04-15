@@ -2,8 +2,8 @@
 
 using namespace std;
 
-ProducerThread::ProducerThread(WorkingQueue *wq) : 
-	_p_id(0), _wq(wq) {
+ProducerThread::ProducerThread(WorkingQueue *wq, int frequent) : 
+	_p_id(0), _wq(wq), _frequent(frequent) {
 	srand(1000);
 }
 
@@ -30,6 +30,6 @@ void ProducerThread::_run() {
 		int pro = rand() % 1024;
 		_wq->product(pro);
 		cout << "product num " << pro << endl;
-		sleep(2);
+		sleep(_frequent);
 	}
 }
