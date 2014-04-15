@@ -13,6 +13,8 @@ pthread_cond_t gcond;
 
 void *producer_func(void *) {
 	while(1) {
+		sleep(1);
+
  		pthread_mutex_lock(&gmutex);
  			 
  		Q.push(1);
