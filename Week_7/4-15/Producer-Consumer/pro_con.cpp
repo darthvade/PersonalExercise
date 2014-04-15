@@ -42,7 +42,10 @@ int main() {
 
 	pthread_t thread[2];
 	
-	pthread_create(&thread[0], NULL, NULL);
+	pthread_create(&thread[0], NULL, producer_func, NULL);
+	pthread_create(&thread[1], NULL, producer_func, NULL);
 
+		
+	pthread_join(thread[0]);
 	return 0;
 }
