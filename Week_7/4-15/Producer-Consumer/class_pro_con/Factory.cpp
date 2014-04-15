@@ -14,11 +14,11 @@ Factory::Factory( std::size_t num_consumer, std::size_t fre_consumer, std::size_
 		_vconsumer.push_back(p);
 	}
 }
-
+/*
 Factory::~Factory() {
 
 }
-
+*/
 void Factory::start_all() {
 	for(std::size_t i = 0; i != _num_producer; ++i) {
 		_vproducer[i].start();
