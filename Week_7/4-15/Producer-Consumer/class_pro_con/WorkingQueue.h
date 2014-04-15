@@ -4,6 +4,7 @@
 #include "Mutex.h"
 #include "CondVar.h"
 #include <queue>
+#include "ProducerThread.h"
 
 class WorkingQueue {
 	public:
