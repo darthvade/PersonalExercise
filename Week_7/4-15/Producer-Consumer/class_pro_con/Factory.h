@@ -8,7 +8,10 @@
 
 class Factory {
 	public:
-		Factory();
+		Factory(int num_consumer,
+				int fre_consumer,
+				int num_producer,
+				int fre_producer);
 		~Factory();	
 	private:
 		int _num_consumer;
