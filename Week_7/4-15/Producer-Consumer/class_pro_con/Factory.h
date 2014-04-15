@@ -5,6 +5,7 @@
 #include "ProducerThread.h"
 #include "ConsumerThread.h"
 #include "WorkingQueue.h"
+#include <vector>
 
 class Factory {
 	public:
