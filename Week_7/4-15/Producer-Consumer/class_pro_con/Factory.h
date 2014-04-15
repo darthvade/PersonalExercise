@@ -13,7 +13,7 @@ class Factory {
 				std::size_t fre_consumer,
 				std::size_t num_producer,
 				std::size_t fre_producer);
-		//~Factory();	
+		~Factory();	
 		void start_all();
 		void join_all();
 	private:
