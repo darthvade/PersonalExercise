@@ -24,3 +24,11 @@ Factory::Factory(
 Factory::~Factory() {
 
 }
+
+void Factory::start_all() {
+
+}
+
+void Factory::join_all() {
+
+}
