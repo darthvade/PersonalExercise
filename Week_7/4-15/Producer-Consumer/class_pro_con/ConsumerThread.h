@@ -15,5 +15,4 @@ class ConsumerThread {
 		void _run();
 };
 
-
 #endif
