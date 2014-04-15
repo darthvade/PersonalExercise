@@ -15,3 +15,7 @@ std::string receive() {
 void send(const std::string &s) {
 
 }
+
+void _bind() {
+
+}

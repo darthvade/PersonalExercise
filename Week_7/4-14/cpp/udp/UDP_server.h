@@ -21,6 +21,7 @@ class UDPServer {
 		struct sockaddr_in _servaddr;
 		struct sockaddr_in _cliaddr;
 		int _servport;
+		void _bind();
 };
 
 #endif
