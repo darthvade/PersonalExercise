@@ -19,6 +19,7 @@ void ProducerThread::join() {
 
 void* ProducerThread::_producer_action(void *args) {
 	ProducerThread *pproducer = static_cast<ProducerThread *>(args);
+	pproducer->_run();
 	pthread_exit((void *)0);
 }
 
