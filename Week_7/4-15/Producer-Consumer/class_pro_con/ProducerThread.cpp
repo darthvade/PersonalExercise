@@ -19,3 +19,7 @@ void ProducerThread::join() {
 void ProducerThread::_producer_action() {
 
 }
+
+void ProducerThread::_run() {
+
+}
