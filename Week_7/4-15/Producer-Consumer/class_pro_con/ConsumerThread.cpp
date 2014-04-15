@@ -9,7 +9,7 @@ ConsumerThread::~ConsumerThread() {
 }
 
 void ConsumerThread::start() {
-	pthread_creat(&_p_id, NULL, _consumer_action, this);
+	pthread_create(&_p_id, NULL, _consumer_action, this);
 }
 
 void ConsumerThread::join() {

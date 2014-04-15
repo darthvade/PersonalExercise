@@ -11,7 +11,7 @@ class ConsumerThread {
 		void join();
 	private:
 		pthread_t _p_id;
-		static void _consumer_action();
+		static void* _consumer_action(void *);
 		void _run();
 };
 
