@@ -5,6 +5,7 @@
 #include "WorkingQueue.h"
 #include <iostream>
 #include <unistd.h>
+#include "Mutex.h"
 
 class ConsumerThread {
 	public:
@@ -15,6 +16,7 @@ class ConsumerThread {
 	private:
 		pthread_t _p_id;
 		WorkingQueue *_wq;
+		Mutex _cout_lock;
 		int _frequent;
 		static void* _consumer_action(void *args);
 		void _run();
