@@ -1,5 +1,7 @@
 #include "ConsumerThread.h"
 
+using namespace std;
+
 ConsumerThread::ConsumerThread(WorkingQueue *wq) :
 	   	_p_id(0) , _wq(wq){
 
@@ -24,5 +26,8 @@ void* ConsumerThread::_consumer_action(void *args) {
 }
 
 void ConsumerThread::_run() {
-	_wq->consume();
+	while(1) {
+		int con = _wq->consume();
+		cout << "consume Num " << con << endl; 
+	}
 }

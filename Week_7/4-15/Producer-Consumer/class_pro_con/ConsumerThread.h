@@ -3,6 +3,7 @@
 
 #include <pthread.h>
 #include "WorkingQueue.h"
+#include <iostream>
 
 class ConsumerThread {
 	public:
