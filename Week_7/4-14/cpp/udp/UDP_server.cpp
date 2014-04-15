@@ -15,11 +15,12 @@ std::string UDPServer::receive() {
 	socklen_t  len = sizeof(_cliaddr);
 	n = recvfrom(_sockfd, buf, BUF_SIZE, 0, (SA *)&_cliaddr, &len);
 	buf[n] = '\0';
-	sendto(_sockfd, buf, n, 0, (SA *)&_cliaddr, len);	
+	return std::string(buf);
 }
 
 void UDPServer::send(const std::string &s) {
 
+	sendto(_sockfd, buf, n, 0, (SA *)&_cliaddr, len);	
 }
 
 void UDPServer::_bind() {
