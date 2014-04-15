@@ -2,6 +2,7 @@
 #define __PRODUCER_H__
 
 #include <pthread.h>
+#include <iostream>
 
 class ProducerThread {
 	public:

@@ -26,7 +26,7 @@ void* ConsumerThread::_consumer_action(void *args) {
 }
 
 void ConsumerThread::_run() {
-	while(1) {
+	while(true) {
 		int con = _wq->consume();
 		cout << "consume Num " << con << endl; 
 	}
