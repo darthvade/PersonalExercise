@@ -44,3 +44,10 @@ ProducerThread& Factory::create_one_producer(std::size_t fre_producer) {
 	_vproducer.push_back(temp);
 	return _vproducer.back();
 }
+
+ConsumerThread& Factory::create_one_consumer(std::size_t fre_consumer) {
+	ConsumerThread temp(&_wq, fre_producer, &_cout_lock);	
+	_vconsumer.push_back(temp);
+	return _vconsumer.back();
+}
+
