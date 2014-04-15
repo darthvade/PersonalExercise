@@ -35,5 +35,12 @@ void Factory::start_all() {
 }
 
 void Factory::join_all() {
-
+	while(true) {
+		for(std::size_t i = 0; i != _num_producer; ++i) {
+			_vproducer[i].start();
+		}	
+		for(std::size_t i = 0; i != _num_consumer; ++i) {
+			_vconsumer[i].start();
+		}
+	}
 }
