@@ -22,8 +22,8 @@ void *consumer_func(void *args) {
 
 
 int main() {
-	pthread_mutex_init(&mutex);
-	pthread_cond_init(&cond);
+	pthread_mutex_init(&mutex, NULL);
+	pthread_cond_init(&cond, NULL);
 
 	return 0;
 }
