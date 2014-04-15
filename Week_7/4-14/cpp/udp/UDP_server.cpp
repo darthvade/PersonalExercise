@@ -1,7 +1,9 @@
 #include "UDP_server.h"
 
 UDPServer::UDPServer() {
-	_sockfd = socket();
+	_sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+	bzero(&_servaddr, sizeof(_servaddr));
+	bzero(&_cliaddr, sizeof(_cliaddr));
 }
 
 UDPServer::~UDPServer() {
