@@ -1,9 +1,13 @@
 #include "WorkingQueue.h"
 
-WorkingQueue::WorkingQueue() {
+WorkingQueue::WorkingQueue(): _condvar(&_mutex) {
 
 }
 
 WorkingQueue::~WorkingQueue() {
+
+}
+
+int WorkingQueue::consume() {
 
 }
