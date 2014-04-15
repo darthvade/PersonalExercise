@@ -8,5 +8,11 @@ int main() {
 	ProducerThread pro_t(&wq);
 	ConsumerThread con_t(&wq);
 
+	pro_t.start();
+	con_t.start();
+
+	pro_t.join();
+	con_t.join();
+
 	return 0;
 }
