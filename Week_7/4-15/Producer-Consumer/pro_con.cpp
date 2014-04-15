@@ -8,7 +8,7 @@ queue<int> Q;
 
 pthread_mutex_t gmutex;
 
-pthread_cond_t cond;
+pthread_cond_t gcond;
 
 void *producer_func(void *args) {
 
@@ -23,7 +23,7 @@ void *consumer_func(void *args) {
 
 int main() {
 	pthread_mutex_init(&gmutex, NULL);
-	pthread_cond_init(&cond, NULL);
+	pthread_cond_init(&gcond, NULL);
 
 	return 0;
 }
