@@ -19,5 +19,5 @@ void send(const std::string &s) {
 }
 
 void _bind() {
-
+	_servaddr.sin_family = AF_INET;
 }
