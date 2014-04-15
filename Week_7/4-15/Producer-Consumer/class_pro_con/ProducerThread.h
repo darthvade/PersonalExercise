@@ -9,13 +9,14 @@
 
 class ProducerThread {
 	public:
-		ProducerThread(WorkingQueue *wq);
+		ProducerThread(WorkingQueue *wq, int frequent);
 		~ProducerThread();
 		void start();
 		void join();
 	private:
 		pthread_t _p_id;
 		WorkingQueue *_wq;
+		int _frequent;
 		static void* _producer_action(void *args);
 		void _run();
 };
