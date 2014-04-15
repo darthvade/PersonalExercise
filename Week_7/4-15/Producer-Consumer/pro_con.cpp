@@ -31,6 +31,7 @@ void *consumer_func(void *args) {
 		pthread_mutex_lock(&gmutex);
 
 		while(Q.empty()) {
+			cout << "consumer begin wait" << endl;
 			pthread_cond_wait(&gcond, &gmutex);
 		}
 		int num = Q.front();
