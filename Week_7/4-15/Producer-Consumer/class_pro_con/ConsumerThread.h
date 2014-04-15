@@ -2,6 +2,7 @@
 #define __CONSUMER_H__
 
 #include <pthread.h>
+#include "WorkingQueue.h"
 
 class ConsumerThread {
 	public:
