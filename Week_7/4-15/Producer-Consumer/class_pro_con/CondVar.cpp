@@ -1,5 +1,5 @@
 #include "CondVar.h"
-#include "mutex.h"
+#include "Mutex.h"
 
 CondVar::CondVar(Mutex *mutex) {
 	this->mutex = mutex;
