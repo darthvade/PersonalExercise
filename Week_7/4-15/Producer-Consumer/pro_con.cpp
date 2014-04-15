@@ -2,6 +2,10 @@
 #include <queue>
 #include <pthread.h>
 
+using namespace std;
+
+queue<int> Q;
+
 void *producer_func(void *args) {
 
 	pthread_exit((void *)0);
