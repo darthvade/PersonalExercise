@@ -26,7 +26,9 @@ Factory::~Factory() {
 }
 
 void Factory::start_all() {
-
+	ProducerThread temp(&_wq, fre_producer, &_cout_lock);
+	ProducerThread &p = temp;
+	_vproducer[i].push_back(p);
 }
 
 void Factory::join_all() {
