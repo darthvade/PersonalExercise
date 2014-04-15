@@ -8,10 +8,12 @@
 
 class Factory {
 	public:
-
+			
 	private:
 		int _num_consumer; 
 		int _num_producer;
+		WorkingQueue _wq;
+		Mutex _cout_lock;
 };
 
 #endif
