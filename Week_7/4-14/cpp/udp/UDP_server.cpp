@@ -1,9 +1,7 @@
 #include "UDP_server.h"
 
-UDPServer::UDPServer() {
+UDPServer::UDPServer(int port): _servport(port) {
 	_sockfd = socket(AF_INET, SOCK_DGRAM, 0);
-	bzero(&_servaddr, sizeof(_servaddr));
-	bzero(&_cliaddr, sizeof(_cliaddr));
 }
 
 UDPServer::~UDPServer() {
@@ -19,6 +17,8 @@ void UDPServer::send(const std::string &s) {
 }
 
 void UDPServer::_bind() {
+	bzero(&_servaddr, sizeof(_servaddr));
+	bzero(&_cliaddr, sizeof(_cliaddr));
 	_servaddr.sin_family = AF_INET;
 	_servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
 	_servaddr.sin_port = htons(_servport);
