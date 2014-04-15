@@ -4,7 +4,7 @@ using namespace std;
 
 ProducerThread::ProducerThread(WorkingQueue *wq) : 
 	_p_id(0), _wq(wq) {
-	srand(10086);
+	srand(this->_p_id);
 }
 
 ProducerThread::~ProducerThread() {
