@@ -17,8 +17,9 @@ void ProducerThread::join() {
 
 }
 
-void ProducerThread::_producer_action() {
+void* ProducerThread::_producer_action(void *args) {
 
+	pthread_exit((void *)0);
 }
 
 void ProducerThread::_run() {
