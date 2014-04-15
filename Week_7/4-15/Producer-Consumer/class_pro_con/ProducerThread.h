@@ -18,7 +18,7 @@ class ProducerThread {
 		pthread_t _p_id;
 		WorkingQueue *_wq;
 		int _frequent;
-		Mutex _cout_lock;
+		Mutex *_cout_lock;
 		static void* _producer_action(void *args);
 		void _run();
 };

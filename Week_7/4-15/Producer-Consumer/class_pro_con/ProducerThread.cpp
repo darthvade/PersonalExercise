@@ -2,8 +2,8 @@
 
 using namespace std;
 
-ProducerThread::ProducerThread(WorkingQueue *wq, int frequent) : 
-	_p_id(0), _wq(wq), _frequent(frequent) {
+ProducerThread::ProducerThread(WorkingQueue *wq, int frequent, Mutex *cout_lock) : 
+	_p_id(0), _wq(wq), _frequent(frequent) , _cout_lock(cout_lock){
 	srand(1000);
 }
 
