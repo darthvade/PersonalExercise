@@ -12,7 +12,8 @@ UDPServer::~UDPServer() {
 std::string UDPServer::receive() {
 	char buf[BUF_SIZE];
 	int n; 	
-	socklen_t = len;
+	socklen_t = len = sizeof(_cliaddr);
+
 }
 
 void UDPServer::send(const std::string &s) {
