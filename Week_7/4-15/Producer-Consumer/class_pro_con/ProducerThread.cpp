@@ -24,5 +24,8 @@ void* ProducerThread::_producer_action(void *args) {
 }
 
 void ProducerThread::_run() {
-
+	while(true) {
+		int pro = rand() % 1024;
+		_wq->product();
+	}
 }

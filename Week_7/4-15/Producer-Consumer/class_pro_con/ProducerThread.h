@@ -4,6 +4,7 @@
 #include <pthread.h>
 #include <iostream>
 #include "WorkingQueue.h"
+#include <cstdlib>
 
 class ProducerThread {
 	public:
