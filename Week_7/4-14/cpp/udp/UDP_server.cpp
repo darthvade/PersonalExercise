@@ -1,7 +1,7 @@
 #include "UDP_server.h"
 
 UDPServer::UDPServer() {
-
+	_sockfd = socket();
 }
 
 UDPServer::~UDPServer() {
