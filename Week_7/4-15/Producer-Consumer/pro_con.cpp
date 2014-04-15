@@ -6,7 +6,7 @@ using namespace std;
 
 queue<int> Q;
 
-pthread_mutex_t mutex;
+pthread_mutex_t gmutex;
 
 pthread_cond_t cond;
 
@@ -22,7 +22,7 @@ void *consumer_func(void *args) {
 
 
 int main() {
-	pthread_mutex_init(&mutex, NULL);
+	pthread_mutex_init(&gmutex, NULL);
 	pthread_cond_init(&cond, NULL);
 
 	return 0;
