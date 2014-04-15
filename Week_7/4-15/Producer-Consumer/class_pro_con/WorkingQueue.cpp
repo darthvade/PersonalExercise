@@ -11,3 +11,7 @@ WorkingQueue::~WorkingQueue() {
 int WorkingQueue::consume() {
 
 }
+
+void WorkingQueue::product(int n) {
+
+}
