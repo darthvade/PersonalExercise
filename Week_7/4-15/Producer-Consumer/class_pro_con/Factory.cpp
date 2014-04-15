@@ -38,3 +38,7 @@ void Factory::join_all() {
 		}
 	}
 }
+
+ProducerThread& Factory::create_one_producer() {
+
+}
