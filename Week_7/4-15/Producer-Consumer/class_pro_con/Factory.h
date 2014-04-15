@@ -9,9 +9,9 @@
 class Factory {
 	public:
 
-	ptivate:
-		int _init_producer_num;
-		int _init_consumer_num;
+	private:
+		int _num_consumer; 
+		int _num_producer;
 };
 
 #endif
