@@ -11,6 +11,8 @@ class Consumer {
 		void join();
 	private:
 		pthread_t p_id;
+		static void Consumer();
+		void run();
 };
 
 
