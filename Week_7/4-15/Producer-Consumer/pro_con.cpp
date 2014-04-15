@@ -19,6 +19,8 @@ void *producer_func(void *) {
  		cout << "Push a num" << endl;
  		pthread_cond_signal(&gcond);
  
+		sleep(1);
+
  		pthread_mutex_unlock(&gmutex);
 	}
 	pthread_exit((void *)0);
@@ -35,6 +37,8 @@ void *consumer_func(void *) {
 		Q.pop();
 		cout << "get a num " << num << endl;
 
+		sleep(2);
+
 		pthread_mutex_unlock(&gmutex);
 	}
 	pthread_exit((void *)0);
@@ -48,7 +52,7 @@ int main() {
 	pthread_t thread[2];
 	
 	pthread_create(&thread[0], NULL, producer_func, NULL);
-	pthread_create(&thread[1], NULL, producer_func, NULL);
+	pthread_create(&thread[1], NULL, consumer_func, NULL);
 
 		
 	pthread_join(thread[0], NULL);
