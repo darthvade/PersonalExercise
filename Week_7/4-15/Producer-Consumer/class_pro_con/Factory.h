@@ -23,8 +23,8 @@ class Factory {
 		std::size_t _fre_producer;
 		WorkingQueue _wq;
 		Mutex _cout_lock;
-		std::vector<ProducerThread&> _vproducer;
-		std::vector<ConsumerThread&> _vconsumer;
+		std::vector<ProducerThread& > _vproducer;
+		std::vector<ConsumerThread& > _vconsumer;
 };
 
 #endif
