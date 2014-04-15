@@ -14,7 +14,7 @@ class ProducerThread {
 	private:
 		pthread_t _p_id;
 		WorkingQueue *_wq;
-		static void _producer_action();
+		static void* _producer_action(void *args);
 		void _run();
 };
 

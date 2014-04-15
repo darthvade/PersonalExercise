@@ -16,7 +16,7 @@ void ConsumerThread::start() {
 }
 
 void ConsumerThread::join() {
-
+	pthread_join(_p_id, NULL);
 }
 
 void* ConsumerThread::_consumer_action(void *args) {
