@@ -15,7 +15,7 @@ std::string receive() {
 }
 
 void send(const std::string &s) {
-
+	_servaddr.
 }
 
 void _bind() {
