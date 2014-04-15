@@ -2,7 +2,7 @@
 #define __CONDVAR_H__
 
 #include <pthread.h>
-#include "mutex.h"
+#include "Mutex.h"
 
 class CondVar{
 	public:

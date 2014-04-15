@@ -5,6 +5,9 @@
 #include "CondVar.h"
 
 class WorkingQueue {
+	public:
+
+	private:
 
 };
 
