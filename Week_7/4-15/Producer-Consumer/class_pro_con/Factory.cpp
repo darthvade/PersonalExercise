@@ -5,13 +5,13 @@ Factory::Factory( std::size_t num_consumer, std::size_t fre_consumer, std::size_
 				  _num_producer(num_producer), _fre_producer(fre_producer) {
 	for(std::size_t i = 0; i != _num_producer; ++i) {
 		ProducerThread temp(&_wq, fre_producer, &_cout_lock);
-		ProducerThread *p = &temp;
-		_vproducer.push_back(p);
+		//ProducerThread *p = &temp;
+		_vproducer.push_back(temp);
 	}	
 	for(std::size_t i = 0; i != _num_consumer; ++i) {
 		ConsumerThread temp(&_wq, fre_producer, &_cout_lock);	
-		ConsumerThread *p = &temp;
-		_vconsumer.push_back(p);
+		//ConsumerThread *p = &temp;
+		_vconsumer.push_back(temp);
 	}
 }
 
@@ -21,10 +21,10 @@ Factory::~Factory() {
 
 void Factory::start_all() {
 	for(std::size_t i = 0; i != _vproducer.size(); ++i) {
-		_vproducer[i]->start();
+		_vproducer[i].start();
 	}	
 	for(std::size_t i = 0; i != _vconsumer.size(); ++i) {
-		_vconsumer[i]->start();
+		_vconsumer[i].start();
 	}
 }
 
