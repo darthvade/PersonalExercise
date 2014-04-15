@@ -6,10 +6,10 @@ int main() {
 	WorkingQueue wq;
 	Mutex cout_lock;
 
-	ProducerThread pro_t(&wq, 1);
-	ProducerThread pro_t2(&wq, 1);
-	ProducerThread pro_t3(&wq, 2);
-	ConsumerThread con_t(&wq, 2);
+	ProducerThread pro_t(&wq, 1, &cout_lock);
+	ProducerThread pro_t2(&wq, 2,1&cout_lock);
+	ProducerThread pro_t3(&wq, 2&cout_lock);
+	ConsumerThread con_t(&wq, 2&cout_lock);
 
 	pro_t.start();
 	pro_t2.start();
