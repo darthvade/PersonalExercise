@@ -4,10 +4,8 @@
 #include "Mutex.h"
 #include "CondVar.h"
 #include <queue>
-#include "ProducerThread.h"
 
 class WorkingQueue {
-		friend void ProducerThread::_run();
 	public:
 		WorkingQueue();
 		~WorkingQueue();
