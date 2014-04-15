@@ -10,7 +10,9 @@ UDPServer::~UDPServer() {
 }
 
 std::string UDPServer::receive() {
-
+	char buf[BUF_SIZE];
+	int n; 	
+	socklen_t = len;
 }
 
 void UDPServer::send(const std::string &s) {
