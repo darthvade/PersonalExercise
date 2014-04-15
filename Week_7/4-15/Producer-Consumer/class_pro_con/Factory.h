@@ -14,6 +14,8 @@ class Factory {
 				std::size_t num_producer,
 				std::size_t fre_producer);
 		~Factory();	
+		void start_all();
+		void join_all();
 	private:
 		std::size_t _num_consumer;
 	   	std::size_t _fre_consumer;	
