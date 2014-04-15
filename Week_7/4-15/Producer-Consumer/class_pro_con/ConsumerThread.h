@@ -6,12 +6,13 @@
 
 class ConsumerThread {
 	public:
-		ConsumerThread();
+		ConsumerThread(WorkingQueue *wq);
 		~ConsumerThread();
 		void start();
 		void join();
 	private:
 		pthread_t _p_id;
+		WorkingQueue *_wq;
 		static void* _consumer_action(void *args);
 		void _run();
 };
