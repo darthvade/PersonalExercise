@@ -13,7 +13,7 @@ class ProducerThread {
 		void join();
 	private:
 		pthread_t _p_id;
-		WorkingQueue *wq;
+		WorkingQueue *_wq;
 		static void _producer_action();
 		void _run();
 };
