@@ -6,4 +6,12 @@
 #include "ConsumerThread.h"
 #include "WorkingQueue.h"
 
+class Factory {
+	public:
+
+	ptivate:
+		int _init_producer_num;
+		int _init_consumer_num;
+};
+
 #endif
