@@ -20,10 +20,10 @@ Factory::~Factory() {
 }
 
 void Factory::start_all() {
-	for(std::size_t i = 0; i != _num_producer; ++i) {
+	for(std::size_t i = 0; i != _vproducer.size(); ++i) {
 		_vproducer[i]->start();
 	}	
-	for(std::size_t i = 0; i != _num_consumer; ++i) {
+	for(std::size_t i = 0; i != _vproducer.size(); ++i) {
 		_vconsumer[i]->start();
 	}
 }
