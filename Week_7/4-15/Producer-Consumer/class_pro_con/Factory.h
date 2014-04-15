@@ -9,16 +9,16 @@
 
 class Factory {
 	public:
-		Factory(int num_consumer,
-				int fre_consumer,
-				int num_producer,
-				int fre_producer);
+		Factory(std::size_t num_consumer,
+				std::size_t fre_consumer,
+				std::size_t num_producer,
+				std::size_t fre_producer);
 		~Factory();	
 	private:
-		int _num_consumer;
-	   	int _fre_consumer;	
-		int _num_producer;
-		int _fre_producer;
+		std::size_t _num_consumer;
+	   	std::size_t _fre_consumer;	
+		std::size_t _num_producer;
+		std::size_t _fre_producer;
 		WorkingQueue _wq;
 		Mutex _cout_lock;
 		std::vector<ProducerThread&> _vproducer;

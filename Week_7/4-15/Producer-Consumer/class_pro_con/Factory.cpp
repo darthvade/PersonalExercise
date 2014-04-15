@@ -15,7 +15,9 @@ Factory::Factory(
 		_vproducer.push_back(p);
 	}	
 	for(std::size_t i = 0; i != _num_consumer; ++i) {
-		ConsumerThread(&_wq, fre_producer, &_cout_lock);	
+		ConsumerThread temp(&_wq, fre_producer, &_cout_lock);	
+		ConsumerThread &p = temp;
+		_vconsumer.push_back(p);
 	}
 }
 
