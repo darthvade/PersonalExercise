@@ -37,7 +37,7 @@ void *consumer_func(void *args) {
 		}
 		int num = Q.front();
 		Q.pop();
-		cout << "consumer" << args << " get a num " << num << endl;
+		cout << "consumer" << (int)args << " get a num " << num << endl;
 
 		sleep(2);
 
@@ -54,8 +54,8 @@ int main() {
 	pthread_t thread[3];
 	
 	pthread_create(&thread[0], NULL, producer_func, NULL);
-	pthread_create(&thread[1], NULL, consumer_func, (int)1);
-	pthread_create(&thread[2], NULL, consumer_func, (int)2);
+	pthread_create(&thread[1], NULL, consumer_func, (void *)1);
+	pthread_create(&thread[2], NULL, consumer_func, (void *)2);
 
 		
 	pthread_join(thread[0], NULL);
