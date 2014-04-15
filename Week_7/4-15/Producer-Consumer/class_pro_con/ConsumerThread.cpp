@@ -19,3 +19,7 @@ void ConsumerThread::join() {
 void ConsumerThread::_consumer_action() {
 
 }
+
+void ConsumerThread::_run() {
+
+}
