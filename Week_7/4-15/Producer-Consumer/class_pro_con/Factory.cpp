@@ -23,7 +23,7 @@ void Factory::start_all() {
 	for(std::size_t i = 0; i != _vproducer.size(); ++i) {
 		_vproducer[i]->start();
 	}	
-	for(std::size_t i = 0; i != _vproducer.size(); ++i) {
+	for(std::size_t i = 0; i != _vconsumer.size(); ++i) {
 		_vconsumer[i]->start();
 	}
 }
