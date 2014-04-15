@@ -7,7 +7,10 @@
 
 class WorkingQueue {
 	public:
-
+		WorkingQueue();
+		~WorkingQueue();
+		void consume();
+		int product(int n);
 	private:
 		Mutex _mutex;
 		CondVar _condvar;
