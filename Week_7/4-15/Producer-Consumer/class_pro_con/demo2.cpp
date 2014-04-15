@@ -3,6 +3,6 @@
 int main() {
 	Factory factory(1, 1, 1, 1);
 	factory.start_all();
-	factory.join_all();
+//	factory.join_all();
 	return 0;
 }
