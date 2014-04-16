@@ -9,7 +9,7 @@ void callback(int sig) {
 
 int main() {
 
-	signal(SIGUSR1, callback);
+	signal(SIGINT, callback);
 	while(1);
 	return 0;
 }
