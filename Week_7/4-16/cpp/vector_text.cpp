@@ -22,7 +22,9 @@ int main() {
 		cout << vec3[ix] << endl;
 	}
 
-	vector<int> vec4(10, 88);
+	cout << "__________" << endl;
+	vector<int> vec4(5, 99);
+	vec1 = vec4;
 	for(std::size_t ix = 0; ix != vec1.size(); ++ix) {
 		cout << vec1[ix] << endl;
 	}
