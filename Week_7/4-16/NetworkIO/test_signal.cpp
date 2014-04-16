@@ -3,8 +3,8 @@
 
 using namespace std;
 
-void callback(int sig) {
-	cout << sig << endl;
+void callback(int ) {
+	cout << "catch the C-t signal!" << endl;
 }
 
 int main() {
