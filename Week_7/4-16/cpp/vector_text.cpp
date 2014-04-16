@@ -13,7 +13,13 @@ int main() {
 	cout << "__________" << endl;
 	vector<int> vec2(vec1);
 	for(std::size_t ix = 0; ix != vec1.size(); ++ix) {
-		cout << vec1[ix] << endl;
+		cout << vec2[ix] << endl;
+	}
+	
+	cout << "__________" << endl;
+	vector<int> vec2(vec1);
+	for(std::size_t ix = 0; ix != vec1.size(); ++ix) {
+		cout << vec2[ix] << endl;
 	}
 
 }
