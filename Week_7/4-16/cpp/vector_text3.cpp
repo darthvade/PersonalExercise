@@ -13,8 +13,10 @@ int main() {
 	vec.push_back(5);
 	
 	for(vector<int>::const_iterator iter = vec.begin(); iter != vec.end(); ++iter) {
-	
+		cout << *iter <<  endl;	
 	}
+
+	vec.insrt(vec.begin() + 2, 999);
 
 	return 0;
 }
