@@ -11,7 +11,7 @@ int main() {
 	try {
 		vec.at(3);
 	} catch (exception e) {
-		e.what();
+		cout << e.what() << endl;
 	}
 
 	return 0;
