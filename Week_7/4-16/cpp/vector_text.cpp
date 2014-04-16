@@ -12,14 +12,14 @@ int main() {
 
 	cout << "__________" << endl;
 	vector<int> vec2(vec1);
-	for(std::size_t ix = 0; ix != vec1.size(); ++ix) {
+	for(std::size_t ix = 0; ix != vec2.size(); ++ix) {
 		cout << vec2[ix] << endl;
 	}
 	
 	cout << "__________" << endl;
-	vector<int> vec2(vec1);
-	for(std::size_t ix = 0; ix != vec1.size(); ++ix) {
-		cout << vec2[ix] << endl;
+	vector<int> vec3(vec1.);
+	for(std::size_t ix = 0; ix != vec3.size(); ++ix) {
+		cout << vec3[ix] << endl;
 	}
 
 }
