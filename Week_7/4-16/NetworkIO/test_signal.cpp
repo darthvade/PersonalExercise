@@ -10,5 +10,6 @@ void callback(int sig) {
 int main() {
 
 	signal(SIGUSR1, callback);
-
+	while(1);
+	return 0;
 }
