@@ -43,9 +43,9 @@ int main() {
 
 	cout << "-----------------" << endl;
 
-	pair<multimap<string, string>::value_type, multimap<string, string>::value_type> low_high;
+	pair<multimap<string, string>::iterator, multimap<string, string>::iterator> low_high;
 
-	for(multimap<string, string>::iterator iter = itlow; iter != ithigh; ++iter) {
+	for(multimap<string, string>::iterator iter = low_high.first; iter != low_high.second; ++iter) {
 		cout << iter->first << " " << iter->second <<  endl; 
 	}
 
