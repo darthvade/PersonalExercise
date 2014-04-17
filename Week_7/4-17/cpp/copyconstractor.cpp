@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -19,7 +20,8 @@ Demo func(Demo d) {
 }
 
 int main() {
-	Demo d = Demo();
-	func(d);
+//	Demo d = Demo();
+//	func(d);
+	vector<Demo> vect(5);
 	return 0;
 }
