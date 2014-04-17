@@ -6,6 +6,7 @@ using namespace std;
 int main() {
 
 	multimap<string, string> mp;
+	mp.insert(make_pair("", ""));
 	mp.insert("aaa", "hehe1");
 	mp.insert("aaa", "hehe2");
 	mp.insert("aaa", "hehe3");
