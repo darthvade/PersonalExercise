@@ -25,7 +25,7 @@ int main() {
 		istringstream is(line);		
 		string word;
 		while(is >> word) {
-			
+			map<string, string>::iterator rent = mp.find(word);	
 		}
 	}
 
