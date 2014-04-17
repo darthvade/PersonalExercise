@@ -15,9 +15,9 @@ int main() {
 	while(fs >> left >> right) {
 		mp.insert(make_pair(left, right));	
 	}
+	fs.clear();
 	fs.close();
 
-	fstream 
-
+	fs = file_open("./input.txt");
 	return 0;
 }
