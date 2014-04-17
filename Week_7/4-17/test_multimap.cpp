@@ -16,7 +16,7 @@ int main() {
 	mp.insert("bbb", "hello!3");
 	
 	for(multimap<string, string>::iterator iter = mp.begin(); iter != mp.end(); ++iter) {
-		cout << *iter->first << " " << *iter->second <<  endl; 
+		cout << iter->first << " " << iter->second <<  endl; 
 	}
 
 	return 0;
