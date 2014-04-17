@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void TextQuery::store_file(std::ifstream &is) {
+void TextQuery::store_file(std::istream &is) {
 	std::string textline;
 	while(getline(textline, is)) {
 		lines_of_text.push_back(textline);
