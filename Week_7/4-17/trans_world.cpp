@@ -20,7 +20,8 @@ int main() {
 	fs.clear();
 
 	fstream fs2("./input.txt");
-	fstream fs3("./output.txt");
+	fstream fs3;
+	fs3.open("./output", fstream::out);
 	string line;
 	while(getline(fs2, line)) {
 		istringstream is(line);		
