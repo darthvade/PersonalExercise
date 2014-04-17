@@ -13,5 +13,9 @@ void TextQuery::build_map() {
 	for(line_no line_num = 0; line_num != lines_of_text.size();
 					++line_num) {
 		istringstream line(lines_of_text[line_num]);	
+		string word;
+		while(line >> word) {
+			word_map[word].insert(line_num);
+		}
 	}
 }

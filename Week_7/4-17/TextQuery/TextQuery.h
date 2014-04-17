@@ -4,6 +4,7 @@
 #include <vector>
 #include <set>
 #include <string>
+#include <sstream>
 #include <map>
 
 class TextQuery {
