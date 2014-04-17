@@ -5,10 +5,10 @@ using namespace std;
 class Demo {
 public:
 	Demo() {
-		cout <<	"constractor" << endl;
+		cout <<	"constructor" << endl;
 	}
 	Demo(const Demo&) {
-		cout <<	"copy constractor" << endl;
+		cout <<	"copy constructor" << endl;
 	}
 };
 
