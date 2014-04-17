@@ -24,6 +24,6 @@ int main() {
 //	func(d);
 	vector<Demo> vect(5);
 	cout << "-----------------" << endl;
-	Demo array[] = { , , , , };
+	Demo array[] = { Demo(), Demo(), Demo(), Demo(), Demo()};
 	return 0;
 }
