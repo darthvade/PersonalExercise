@@ -18,5 +18,6 @@ int main() {
 	for(map<string, int>::const_iterator iter = counter.begin(); iter != counter.end(); ++iter) {
 		cout << iter->first << " " << iter->second << endl;
 	}
+	cout << counter.find() << endl;
 	return 0;
 }
