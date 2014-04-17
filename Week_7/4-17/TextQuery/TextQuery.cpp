@@ -31,4 +31,8 @@ TextQuery::run_query(const std::string query_word) const {
 	}
 }
 
-
+string TextQuery::text_line(line_no line) const {
+	if(line < lines_of_text.size()) {
+		return lines_of_text[line];
+	}
+}
