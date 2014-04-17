@@ -33,5 +33,8 @@ int main() {
 
 	cout << "-----------------" << endl;
 
+	multimap<string, string>::iterator itlow = mp.lower_bound("bbb");
+	multimap<string, string>::iterator ithigh = mp.lower_bound("bbb");
+	
 	return 0;
 }
