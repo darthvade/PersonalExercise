@@ -17,7 +17,9 @@ public:
 	std::string text_line(line_no) const;
 private:
 	void store_file(std::ifstream&);
-	
+	void build_map();
+	std::vector<std::string> line_of_text;
+	std::map< std::string, std::set<line_no> > word_map;
 };
 
 
