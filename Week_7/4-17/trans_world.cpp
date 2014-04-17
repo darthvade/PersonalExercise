@@ -21,7 +21,7 @@ int main() {
 	fstream fs2("./input.txt");
 	string line;
 	while(getline(fs2, line)) {
-	
+		istringstream is(line);		
 	}
 
 	return 0;
