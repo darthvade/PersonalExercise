@@ -1,6 +1,8 @@
 #include "TextQuery.h"
 #include <fstream>
 
+void print_results(const set<TextQuery::line_no>, const string& sought, const TextQuery &file);
+
 using namespace std;
 
 int main() {
