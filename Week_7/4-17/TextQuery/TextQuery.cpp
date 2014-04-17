@@ -1,11 +1,10 @@
 #include "TextQuery.h"
 #include <exception>
 
-using namespace std;
 
-void TextQuery::store_file(ifstream& is) {
-	string textline;
-	while(getline(is, textline)) {
+void TextQuery::store_file(std::ifstream& is) {
+	std::string textline;
+	while(std::getline(is, textline)) {
 		lines_of_text.push_back(textline);
 	}
 }
