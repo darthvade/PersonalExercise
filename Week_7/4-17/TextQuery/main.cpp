@@ -1,6 +1,8 @@
 #include "TextQuery.h"
 #include <fstream>
 
+std::string make_plural(std::size_t ctr, const std::string &word, const std::string &ending);
+
 void print_results(const std::set<TextQuery::line_no>& locs, const std::string& sought, const TextQuery &file);
 
 std::ifstream& open_file(std::ifstream &in, const std::string &file);
@@ -31,6 +33,7 @@ int main(int argc, char *argv[]) {
 void print_results(const std::set<TextQuery::line_no>& locs, const std::string& sought, const TextQuery &file) {
 	typedef set<TextQuery::line_no> line_num;
 	line_num::size_type size = locs.size();
+	cout << "\n" << sought << " occurs" << size << " " << 
 }
 
 std::ifstream& open_file(std::ifstream &in, const std::string &file) {
