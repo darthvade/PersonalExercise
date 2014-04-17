@@ -1,7 +1,7 @@
 #include "TextQuery.h"
 #include <fstream>
 
-void print_results(const set<TextQuery::line_no>, const string& sought, const TextQuery &file);
+void print_results(const std::set<TextQuery::line_no>, const std::string& sought, const TextQuery &file);
 
 using namespace std;
 
@@ -24,4 +24,8 @@ int main() {
 		print_results(locs, s, tq);
 	}
 	return 0;
+}
+
+void print_results(const std::set<TextQuery::line_no>, const std::string& sought, const TextQuery &file) {
+
 }
