@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <istream>
 #include <map>
 #include <string>
 #include <utility>
@@ -28,8 +29,10 @@ int main() {
 			map<string, string>::iterator rent = mp.find(word);	
 			if(rent != mp.end()) {
 				fs3 << rent->second;	
+				fs3 << " ";
 			}
 		}
+		fs3 << endl;
 	}
 
 	return 0;
