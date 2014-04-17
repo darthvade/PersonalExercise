@@ -40,5 +40,14 @@ int main() {
 		cout << iter->first << " " << iter->second <<  endl; 
 	}
 
+	cout << "-----------------" << endl;
+
+	multimap<string, string>::iterator itlow = mp.lower_bound("bbb");
+	multimap<string, string>::iterator ithigh = mp.upper_bound("bbb");
+
+	for(multimap<string, string>::iterator iter = itlow; iter != ithigh; ++iter) {
+		cout << iter->first << " " << iter->second <<  endl; 
+	}
+
 	return 0;
 }
