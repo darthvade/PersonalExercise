@@ -26,4 +26,9 @@ TextQuery::run_query(const std::string query_word) const {
 	if(iter == word_map.end()) {
 		return set<line_no>();
 	}
+	else {
+		return iter->second;
+	}
 }
+
+
