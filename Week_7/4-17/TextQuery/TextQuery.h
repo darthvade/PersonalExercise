@@ -15,6 +15,8 @@ public:
 	}
 	std::set<line_no> run_query(const std::string) const;
 	std::string text_line(line_no) const;
+private:
+	void store_file(std::string);
 };
 
 
