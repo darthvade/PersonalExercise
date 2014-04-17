@@ -29,6 +29,7 @@ int main() {
 			map<string, string>::iterator rent = mp.find(word);	
 			if(rent != mp.end()) {
 				fs3 << rent->second;	
+				cout << rent->second;	
 				fs3 << " ";
 			}
 		}
