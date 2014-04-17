@@ -1,4 +1,5 @@
 #include "TextQuery.h"
+#include <exception>
 
 using namespace std;
 
