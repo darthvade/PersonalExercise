@@ -2,6 +2,7 @@
 #include <fstream>
 #include <map>
 #include <string>
+#include <utility>
 
 using namespace std;
 
@@ -10,6 +11,10 @@ int main() {
 	map<string, string> mp;
 
 	fstream fs("./code.txt");
+	string left, right;
+	while(fs >> left >> right) {
+		mp.insert(make_pair(left, right));	
+	}
 
 	return 0;
 }
