@@ -1,11 +1,11 @@
 #include "TextQuery.h"
 #include <fstream>
 
-void print_results(const std::set<TextQuery::line_no>, const std::string& sought, const TextQuery &file);
+void print_results(const std::set<TextQuery::line_no>& locs, const std::string& sought, const TextQuery &file);
 
 using namespace std;
 
-int main() {
+int main(int argc, char *argv[]) {
 	ifstream infile;
 	if(argc < 2 || !open_file(infile, argv[1])) {
 		cerr << "No input file!" << endl;
@@ -26,6 +26,6 @@ int main() {
 	return 0;
 }
 
-void print_results(const std::set<TextQuery::line_no>, const std::string& sought, const TextQuery &file) {
+void print_results(const std::set<TextQuery::line_no>& locs, const std::string& sought, const TextQuery &file) {
 
 }
