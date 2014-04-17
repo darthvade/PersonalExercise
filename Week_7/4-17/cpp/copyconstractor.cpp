@@ -23,5 +23,7 @@ int main() {
 //	Demo d = Demo();
 //	func(d);
 	vector<Demo> vect(5);
+	cout << "-----------------" << endl;
+	Demo array[] = { , , , , };
 	return 0;
 }
