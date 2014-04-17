@@ -42,3 +42,7 @@ std::ifstream& open_file(std::ifstream &in, const std::string &file) {
 	in.open(file.c_str());
 	return in;
 }
+
+std::string make_plural(std::size_t ctr, const std::string &word, const std::string &ending) {
+	return (ctr == 1) ? word : word + ending;
+}
