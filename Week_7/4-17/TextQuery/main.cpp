@@ -9,4 +9,6 @@ int main() {
 		cerr << "No input file!" << endl;
 		return EXIT_FAILURE;
 	}
+	TextQuery tq;
+	tq.read_file(infile);
 }
