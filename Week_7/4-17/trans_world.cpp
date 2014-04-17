@@ -34,6 +34,10 @@ int main() {
 		}
 		fs3 << endl;
 	}
+	fs2.clear();
+	fs2.close();
+	fs3.clear();
+	fs3.close();
 
 	return 0;
 }
