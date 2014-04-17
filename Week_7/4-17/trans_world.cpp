@@ -15,6 +15,9 @@ int main() {
 	while(fs >> left >> right) {
 		mp.insert(make_pair(left, right));	
 	}
+	fs.close();
+
+	fstream 
 
 	return 0;
 }
