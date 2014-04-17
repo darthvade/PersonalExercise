@@ -25,5 +25,7 @@ int main() {
 		cout << iter->first << " " << iter->second <<  endl; 
 	}
 
+	cout << mp.count("bbb") << endl;;
+
 	return 0;
 }
