@@ -1,11 +1,11 @@
 #ifndef __TEXTQUERY_H__
 #define __TEXTQUERY_H__
 
-#include <iostream>
+//#include <iostream>
 #include <vector>
 #include <set>
 #include <string>
-#include <sstream>
+//#include <sstream>
 #include <map>
 
 class TextQuery {
