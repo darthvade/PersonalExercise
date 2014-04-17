@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 	ifstream infile;
 	if(argc < 2 || !open_file(infile, argv[1])) {
 		cerr << "No input file!" << endl;
-		return EXIT_FAILURE;
+		return -1;
 	}
 	TextQuery tq;
 	tq.read_file(infile);
