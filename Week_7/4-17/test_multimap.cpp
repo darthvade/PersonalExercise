@@ -45,6 +45,8 @@ int main() {
 
 	pair<multimap<string, string>::iterator, multimap<string, string>::iterator> low_high;
 
+	low_high = mp.equal_range("aaa");
+
 	for(multimap<string, string>::iterator iter = low_high.first; iter != low_high.second; ++iter) {
 		cout << iter->first << " " << iter->second <<  endl; 
 	}
