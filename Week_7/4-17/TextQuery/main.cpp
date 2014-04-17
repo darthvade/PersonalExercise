@@ -31,3 +31,8 @@ int main(int argc, char *argv[]) {
 void print_results(const std::set<TextQuery::line_no>& locs, const std::string& sought, const TextQuery &file) {
 
 }
+
+std::ifstream& open_file(std::ifstream &in, const std::string &file) {
+	in.close();
+	in.clear();
+}
