@@ -8,7 +8,7 @@
 
 class TextQuery {
 public:
-	typedef std::
+	typedef std::vector<std::string>::size_type line_no;
 };
 
 
