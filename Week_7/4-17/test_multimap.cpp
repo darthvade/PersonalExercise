@@ -8,15 +8,16 @@ int main() {
 
 	multimap<string, string> mp;
 	mp.insert(make_pair(string("aaa"), string("hehe1")));
-	mp.insert("aaa", "hehe1");
-	mp.insert("aaa", "hehe2");
-	mp.insert("aaa", "hehe3");
-	mp.insert("aaa", "hehe4");
+	mp.insert(make_pair(string("aaa"), string("hehe2")));
+	mp.insert(make_pair(string("aaa"), string("hehe3")));
+	mp.insert(make_pair(string("aaa"), string("hehe4")));
+	mp.insert(make_pair(string("aaa"), string("hehe5")));
 
-	mp.insert("bbb", "hello!1");
-	mp.insert("bbb", "hello!2");
-	mp.insert("bbb", "hello!3");
 	
+	mp.insert(make_pair(string("bbb"), string("hello1")));
+	mp.insert(make_pair(string("bbb"), string("hello2")));
+	mp.insert(make_pair(string("bbb"), string("hello3")));
+
 	for(multimap<string, string>::iterator iter = mp.begin(); iter != mp.end(); ++iter) {
 		cout << iter->first << " " << iter->second <<  endl; 
 	}
