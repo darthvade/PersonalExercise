@@ -9,5 +9,7 @@ int main() {
 
 	map<string, string> mp;
 
+	fstream fs("./code.txt");
+
 	return 0;
 }
