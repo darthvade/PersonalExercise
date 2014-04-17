@@ -16,8 +16,8 @@ int main() {
 	while(fs >> left >> right) {
 		mp.insert(make_pair(left, right));	
 	}
-	fs.clear();
 	fs.close();
+	fs.clear();
 
 	fstream fs2("./input.txt");
 	fstream fs3("./output.txt");
@@ -34,10 +34,10 @@ int main() {
 		}
 		fs3 << endl;
 	}
-	fs2.clear();
 	fs2.close();
-	fs3.clear();
+	fs2.clear();
 	fs3.close();
+	fs3.clear();
 
 	cout << "hehe" << endl;
 	return 0;
