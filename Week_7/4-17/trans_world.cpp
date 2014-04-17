@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <istream>
+#include <sstream>
 #include <map>
 #include <string>
 #include <utility>
