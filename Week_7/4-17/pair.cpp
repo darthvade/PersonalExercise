@@ -9,4 +9,5 @@ int main() {
 	p.first = string("apple");
 	p.second = string("苹果");
 
+	cout << p.first << " " << p.second <<  endl;
 }
