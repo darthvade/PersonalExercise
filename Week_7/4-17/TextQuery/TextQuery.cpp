@@ -1,6 +1,7 @@
 #include "TextQuery.h"
 #include <exception>
 
+using namespace std;
 
 void TextQuery::store_file(std::ifstream& is) {
 	std::string textline;
