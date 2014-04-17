@@ -29,7 +29,8 @@ int main(int argc, char *argv[]) {
 }
 
 void print_results(const std::set<TextQuery::line_no>& locs, const std::string& sought, const TextQuery &file) {
-
+	typedef set<TextQuery::line_no> line_num;
+	line_num::size_type size = locs.size();
 }
 
 std::ifstream& open_file(std::ifstream &in, const std::string &file) {
