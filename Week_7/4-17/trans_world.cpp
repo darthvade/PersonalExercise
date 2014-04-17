@@ -19,5 +19,10 @@ int main() {
 	fs.close();
 
 	fstream fs2("./input.txt");
+	string line;
+	while(getline(fs2, line)) {
+	
+	}
+
 	return 0;
 }
