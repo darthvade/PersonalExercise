@@ -19,3 +19,8 @@ void TextQuery::build_map() {
 		}
 	}
 }
+
+set<TextQuery::line_no>
+TextQuery::run_query(const std::string) const {
+
+}
