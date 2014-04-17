@@ -8,11 +8,7 @@
 
 class TextQuery {
 public:
-	typedef std::vector<std::string>::size_type line_no;
-	void read_file(std::string &is) {
-		store_file(is);
-		build_map();
-	}
+
 };
 
 
