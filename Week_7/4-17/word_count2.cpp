@@ -20,6 +20,6 @@ int main() {
 	}
 	cout << counter.count("aaa") << endl;
 	map<string, int>::iterator iter2 = counter.find("aaa");
-	cout << iter2->first << " " << endl;
+	cout << iter2->first << " " << iter2->second << endl;
 	return 0;
 }
