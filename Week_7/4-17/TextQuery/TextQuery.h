@@ -2,6 +2,7 @@
 #define __TEXTQUERY_H__
 
 #include <vector>
+#include <iostream>
 #include <set>
 #include <string>
 #include <sstream>
