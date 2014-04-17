@@ -5,6 +5,6 @@
 using namespace std;
 
 int main() {
-	
+	fstream fs("./input.txt");	
 	return 0;
 }
