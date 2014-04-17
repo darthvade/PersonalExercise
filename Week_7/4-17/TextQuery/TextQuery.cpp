@@ -21,6 +21,6 @@ void TextQuery::build_map() {
 }
 
 set<TextQuery::line_no>
-TextQuery::run_query(const std::string) const {
-
+TextQuery::run_query(const std::string query_word) const {
+	map< string, set<line_no> >::const_iterator iter = word_map.find(query_word);
 }
