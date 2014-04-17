@@ -3,7 +3,7 @@
 
 void print_results(const std::set<TextQuery::line_no>& locs, const std::string& sought, const TextQuery &file);
 
-ifstream& open_file(ifstream &in, const string &file);
+std::ifstream& open_file(std::ifstream &in, const std::string &file);
 
 using namespace std;
 
