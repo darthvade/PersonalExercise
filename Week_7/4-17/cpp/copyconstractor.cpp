@@ -12,7 +12,14 @@ public:
 	}
 };
 
+
+Demo func(Demo d) {
+
+	return d;
+}
+
 int main() {
 	Demo d = Demo();
+	func(d);
 	return 0;
 }
