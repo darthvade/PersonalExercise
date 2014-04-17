@@ -18,5 +18,8 @@ int main() {
 		if(!cin || s == "q") {
 			break;
 		}
+		set<TextQuery::line_no> locs = tq.run_query(s);
+		print_results(locs, s, tq);
 	}
+	return 0;
 }
