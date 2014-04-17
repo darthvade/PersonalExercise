@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <utility>
 
 using namespace std;
 
@@ -42,8 +43,7 @@ int main() {
 
 	cout << "-----------------" << endl;
 
-	multimap<string, string>::iterator itlow = mp.lower_bound("bbb");
-	multimap<string, string>::iterator ithigh = mp.upper_bound("bbb");
+	pair<multimap<string, string>::value_type, multimap<string, string>::value_type> low_high;
 
 	for(multimap<string, string>::iterator iter = itlow; iter != ithigh; ++iter) {
 		cout << iter->first << " " << iter->second <<  endl; 
