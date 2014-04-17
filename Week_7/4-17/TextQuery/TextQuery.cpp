@@ -8,3 +8,7 @@ void TextQuery::store_file(std::ifstream& is) {
 		lines_of_text.push_back(textline);
 	}
 }
+
+void TextQuery::build_map() {
+
+}
