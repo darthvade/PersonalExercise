@@ -26,6 +26,9 @@ int main() {
 		string word;
 		while(is >> word) {
 			map<string, string>::iterator rent = mp.find(word);	
+			if(rent != mp.end()) {
+				fs3 << rent->second;	
+			}
 		}
 	}
 
