@@ -18,6 +18,6 @@ int main() {
 	fs.clear();
 	fs.close();
 
-	fs = file_open("./input.txt");
+	fstream fs2("./input.txt");
 	return 0;
 }
