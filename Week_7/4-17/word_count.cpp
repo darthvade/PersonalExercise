@@ -11,5 +11,8 @@ int main() {
 	while(fs >> temp) {
 		++counter[temp];
 	}
+	for(map<string, int>::const_iterator iter = counter.begin(); iter != counter.end(); ++iter) {
+		cout << iter->first << iter->second << endl;
+	}
 	return 0;
 }
