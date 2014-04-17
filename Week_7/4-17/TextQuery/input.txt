@@ -1,0 +1,11 @@
+etline() gives these errors:
+
+C:\C++\C++.cpp In function `int main()': 
+
+6 C:\C++\C++.cpp no matching function for call to `std::basic_istream<char, std::char_traits<char> >::getline(std::string&, int)' 
+
+note C:\Dev-Cpp\include\c++\3.4.2\bits\istream.tcc:582 candidates are: std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::getline(_CharT*, std::streamsize, _CharT) [with _CharT = char, _Traits = std::char_traits<char>] 
+
+note C:\Dev-Cpp\include\c++\3.4.2\bits\istream.tcc:582 std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::getline(_CharT*, std::streamsize) [with _CharT = char, _Traits = std::char_traits<char>] 
+
+In the other hand getline() works well with a variable decleared as char.
