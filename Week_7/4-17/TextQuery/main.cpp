@@ -11,4 +11,12 @@ int main() {
 	}
 	TextQuery tq;
 	tq.read_file(infile);
+	while(true) {
+		cout << "enter word to look for, or q to quit: " << endl;
+		string s;
+		cin >> s;
+		if(!cin || s == 'q') {
+			break;
+		}
+	}
 }
