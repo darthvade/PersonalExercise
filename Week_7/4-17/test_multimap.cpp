@@ -25,9 +25,13 @@ int main() {
 		cout << iter->first << " " << iter->second <<  endl; 
 	}
 
+	cout << "-----------------" << endl;
+
 	cout << mp.count("bbb") << endl;;
 	multimap<string, string>::iterator it = mp.find("bbb");
 	cout << it->first << " " << it->second <<  endl; 
+
+	cout << "-----------------" << endl;
 
 	return 0;
 }
