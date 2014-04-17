@@ -4,7 +4,7 @@ using namespace std;
 
 void TextQuery::store_file(std::ifstream &is) {
 	std::string textline;
-	while(std::getline(is, textline, '\n')) {
+	while(getline(is, textline, '\n')) {
 		lines_of_text.push_back(textline);
 	}
 }
