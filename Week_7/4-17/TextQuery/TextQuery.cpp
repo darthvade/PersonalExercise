@@ -36,5 +36,5 @@ string TextQuery::text_line(line_no line) const {
 	if(line < lines_of_text.size()) {
 		return lines_of_text[line];
 	}
-	throw std::out_of_range("line number out of range");
+	//throw std::out_of_range("line number out of range");
 }
