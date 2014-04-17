@@ -34,6 +34,10 @@ void print_results(const std::set<TextQuery::line_no>& locs, const std::string& 
 	typedef set<TextQuery::line_no> line_num;
 	line_num::size_type size = locs.size();
 	cout << "\n" << sought << " occurs" << size << " " << make_plural(size, "time", "s") << endl;
+	line_num::const_iterator it = locs.begin();
+	for(; it != locs.end(); ++it) {
+		cout << "\t(line" << (*it) + 1 << ")" << file.text_line(*it) << endl;
+	}
 }
 
 std::ifstream& open_file(std::ifstream &in, const std::string &file) {
