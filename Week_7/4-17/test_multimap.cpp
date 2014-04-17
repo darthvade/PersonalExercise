@@ -11,7 +11,7 @@ int main() {
 	mp.insert(make_pair(string("aaa"), string("hehe2")));
 	mp.insert(make_pair(string("aaa"), string("hehe3")));
 
-	mp.insert(make_pair(string("bbb"), string("hello1")));
+	mp.insert(make_pair(string("bbb"), string("hello4")));
 
 	mp.insert(make_pair(string("aaa"), string("hehe4")));
 	mp.insert(make_pair(string("aaa"), string("hehe5")));
