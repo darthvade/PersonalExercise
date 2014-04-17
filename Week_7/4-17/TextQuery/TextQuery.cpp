@@ -10,5 +10,8 @@ void TextQuery::store_file(std::ifstream& is) {
 }
 
 void TextQuery::build_map() {
-
+	for(line_no line_num = 0; line_num != lines_of_text.size();
+					++line_num) {
+	
+	}
 }
