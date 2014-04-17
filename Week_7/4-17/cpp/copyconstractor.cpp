@@ -8,6 +8,11 @@ public:
 		cout <<	"constractor" << endl;
 	}
 	Demo(const Demo&) {
-	
+		cout <<	"copy constractor" << endl;
 	}
 };
+
+int main() {
+	Demo d = Demo();
+	return 0;
+}
