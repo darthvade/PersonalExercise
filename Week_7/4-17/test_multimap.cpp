@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 
-	map<string, string> mp;
+	multimap<string, string> mp;
 	mp.insert("aaa", "hehe1");
 	mp.insert("aaa", "hehe2");
 	mp.insert("aaa", "hehe3");
@@ -14,5 +14,6 @@ int main() {
 	mp.insert("bbb", "hello!1");
 	mp.insert("bbb", "hello!2");
 	mp.insert("bbb", "hello!3");
+	
 	return 0;
 }
