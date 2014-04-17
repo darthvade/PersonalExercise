@@ -19,5 +19,7 @@ int main() {
 		cout << iter->first << " " << iter->second << endl;
 	}
 	cout << counter.count("aaa") << endl;
+	map<string, int>::iterator iter2 = counter.find("aaa");
+	cout << iter2->first << " " << endl;
 	return 0;
 }
