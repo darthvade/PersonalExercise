@@ -1,5 +1,5 @@
 #include "TextQuery.h"
-#include <ifstream>
+#include <fstream>
 
 int main() {
 	ifstream infile;
