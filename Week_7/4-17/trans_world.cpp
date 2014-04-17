@@ -39,5 +39,6 @@ int main() {
 	fs3.clear();
 	fs3.close();
 
+	cout << "hehe" << endl;
 	return 0;
 }
