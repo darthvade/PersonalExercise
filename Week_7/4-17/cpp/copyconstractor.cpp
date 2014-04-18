@@ -31,5 +31,6 @@ int main() {
 	Demo array[] = { Demo(), Demo(), Demo(), Demo(), Demo()};
 	cout << "-----------------" << endl;
 	Demo d = Demo();
+	Demo a = d;
 	return 0;
 }
