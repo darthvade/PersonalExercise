@@ -37,9 +37,9 @@ private:
 
 class U_ptr {
 	friend class Smartpointer;
-	Integer *ip;
+	int *ip;
 	std::size_t counter;
-	U_ptr(Integer *p) : ip(p), counter(1) {}
+	U_ptr(int *p) : ip(p), counter(1) {}
 	~U_ptr() {
 		delete ip;
 	}
@@ -79,11 +79,11 @@ int main() {
 	i1 = i2;
 	i1.debug();
 	*/
-	/*
+	
 	int *i = new int(99);
 	Smartpointer smpt1 = Smartpointer(i);
 	Smartpointer smpt2 = Smartpointer(smpt1);
 	Smartpointer smpt3 = Smartpointer(smpt2);
-	*/
+	
 	return 0;
 }
