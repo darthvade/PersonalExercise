@@ -9,7 +9,7 @@ class U_ptr {
 	friend class Smartpointer;
 	Integer *ip;
 	std::size_t counter;
-	U_ptr(int *p) : ip(p), counter(1) {}
+	U_ptr(Integer *p) : ip(p), counter(1) {}
 	~U_ptr() {
 		delete ip;
 	}
