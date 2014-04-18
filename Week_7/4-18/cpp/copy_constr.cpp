@@ -28,7 +28,7 @@ private:
 
 int main() {
 	String s("Hello");
-	String(s2);
+	String(s);
 	s2.debug();
 	return 0;
 }
