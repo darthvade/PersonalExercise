@@ -19,8 +19,11 @@ public:
 	Smartpointer(const Smartpointer & smpt) : ptr(smpt.ptr){
 		smpt.ptr->counter++;
 	}
+	Smartpointer& operator=(const Smartpointer &smpt) {
+	
+	}
 	~Smartpointer() {
-		if(ptr->counter == 0) {
+		if(--ptr->counter == 0) {
 			delete ptr;
 		}
 	}
