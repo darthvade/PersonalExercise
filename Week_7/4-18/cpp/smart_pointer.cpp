@@ -16,8 +16,7 @@ class U_ptr {
 class Smartpointer {
 public:
 	Smartpointer(int *p) : ptr(new U_ptr(p)) {}
-	Smartpointer(const Smartpointer & smpt) {
-		ptr = smpt.ptr;	
+	Smartpointer(const Smartpointer & smpt) : ptr(smpt.ptr){
 		smpt.ptr->counter++;
 	}
 private:
