@@ -18,6 +18,7 @@ private:
 class Integer {
 public:
 	//默认构造函数
+	
 	//显式构造函数
 	//拷贝构造函数
 	//复制运算符
