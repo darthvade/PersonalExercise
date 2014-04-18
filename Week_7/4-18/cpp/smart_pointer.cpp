@@ -22,10 +22,9 @@ public:
 	Smartpointer& operator=(const Smartpointer &smpt) {
 		if(--ptr->counter == 0) {
 			delete ptr;
-		} else {
-		 	ptr = smpt.ptr;
-			ptr->counter++;	
-		}
+		} 
+	 	ptr = smpt.ptr;
+		ptr->counter++;	
 		return *this;
 	}
 	~Smartpointer() {
@@ -35,7 +34,7 @@ public:
 	}
 private:
 	U_ptr *ptr;
-//	int val;
+//	int val; //做什么用？
 };
 
 class Integer {
