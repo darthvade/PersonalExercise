@@ -4,7 +4,12 @@
 using namespace std;
 
 class U_ptr {
-
+	int *ip;
+	std::size_t counter;
+	U_ptr(int *p) : ip(p), counter(1) {}
+	~U_ptr() {
+		delete ip;
+	}
 };
 
 class Integer {
