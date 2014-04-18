@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 class Integer {
 public:
 	//默认构造函数
@@ -24,12 +26,15 @@ public:
 	~Integer() {
 		delete _iptr;
 	}
+	//debug
+	void debug() {
+		cout << *_iptr << endl;
+	}
 private:
 	int *_iptr;
 };
 
 int main() {
-
-
+	Integer i1;
 	return 0;
 }
