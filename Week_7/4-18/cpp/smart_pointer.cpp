@@ -4,6 +4,12 @@
 
 using namespace std;
 
+class Smartptr {
+private:
+	std::size_t _counter;
+	int *_iptr;
+};
+
 class Integer {
 public:
 	//默认构造函数
