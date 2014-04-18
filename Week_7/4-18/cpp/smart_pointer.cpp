@@ -12,8 +12,12 @@ public:
 	Integer(const Integer &i) {
 		_iptr = i._iptr;
 	}
-	Interger& operator=(const Interger &i) {
-	
+	Integer& operator=(const Integer &i) {
+		_iptr = i._iptr;	
+		return *this;
+	}
+	~Integer() {
+		delete _iptr;
 	}
 private:
 	int *_iptr;
