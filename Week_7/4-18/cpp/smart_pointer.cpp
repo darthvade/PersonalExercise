@@ -4,6 +4,7 @@
 using namespace std;
 
 class U_ptr {
+	friend class Smartpointer;
 	int *ip;
 	std::size_t counter;
 	U_ptr(int *p) : ip(p), counter(1) {}
@@ -14,6 +15,7 @@ class U_ptr {
 
 class Smartpointer {
 public:
+	Smartpointer(int *p) : ptr(new U_ptr(p)) {}
 private:
 	U_ptr *ptr;
 //	int val;
