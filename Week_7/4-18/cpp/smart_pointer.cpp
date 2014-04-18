@@ -39,5 +39,7 @@ int main() {
 	i1.debug();
 	Integer i2(99);
 	i2.debug();
+	i1 = i2;
+	i1.debug();
 	return 0;
 }
