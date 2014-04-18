@@ -78,9 +78,11 @@ int main() {
 	i1 = i2;
 	i1.debug();
 	*/
+	/*
 	int *i = new int(99);
 	Smartpointer smpt1 = Smartpointer(i);
 	Smartpointer smpt2 = Smartpointer(smpt1);
 	Smartpointer smpt3 = Smartpointer(smpt2);
+	*/
 	return 0;
 }
