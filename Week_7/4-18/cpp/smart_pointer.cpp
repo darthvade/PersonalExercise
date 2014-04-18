@@ -12,6 +12,9 @@ public:
 	Integer(const Integer &i) {
 		_iptr = i._iptr;
 	}
+	Interger& operator=(const Interger &i) {
+	
+	}
 private:
 	int *_iptr;
 };
