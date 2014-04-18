@@ -11,6 +11,10 @@ public:
 	Demo(const Demo&) {
 		cout <<	"copy constructor" << endl;
 	}
+	Demo& operator=(const Demo&) {
+		cout << "operator =" << endl;
+		return *this;
+	}
 };
 
 
@@ -25,5 +29,7 @@ int main() {
 	vector<Demo> vect(5);
 	cout << "-----------------" << endl;
 	Demo array[] = { Demo(), Demo(), Demo(), Demo(), Demo()};
+	cout << "-----------------" << endl;
+	Demo d = Demo();
 	return 0;
 }
