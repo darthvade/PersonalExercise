@@ -7,11 +7,11 @@ using namespace std;
 class Smartptr {
 	friend class Integer;
 private:
-	int *_iptr;
+	int *_sptr;
 	std::size_t _counter;
-	Smartptr(int *p):_iptr(p), _counter(1) {}
+	Smartptr(int *p):_sptr(p), _counter(1) {}
 	~Smartptr() {
-		delete _iptr;
+		delete _sptr;
 	}
 };
 
@@ -19,8 +19,8 @@ class Integer {
 public:
 	//默认构造函数
 	Integer() {
-		_iptr._iptr = new int;	
-		*_iptr = 0;
+		_iptr._sptr = new int;	
+		*_iptr._sptr = 0;
 	}
 	//显式构造函数
 	Integer(const int i) {
