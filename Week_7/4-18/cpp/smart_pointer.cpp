@@ -7,12 +7,12 @@ using namespace std;
 class Smartptr {
 	friend class Integer;
 private:
+	int *_iptr;
+	std::size_t _counter;
 	Smartptr(int *p):_iptr(p), _counter(1) {}
 	~Smartptr() {
 		delete _iptr;
 	}
-	int *_iptr;
-	std::size_t _counter;
 };
 
 class Integer {
