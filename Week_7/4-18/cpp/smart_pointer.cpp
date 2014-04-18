@@ -37,5 +37,7 @@ private:
 int main() {
 	Integer i1;
 	i1.debug();
+	Integer i2(99);
+	i2.debug();
 	return 0;
 }
