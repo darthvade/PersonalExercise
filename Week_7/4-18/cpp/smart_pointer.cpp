@@ -41,5 +41,6 @@ int main() {
 	i2.debug();
 	i1 = i2;
 	i1.debug();
+	while(1);
 	return 0;
 }
