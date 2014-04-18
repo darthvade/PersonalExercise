@@ -7,7 +7,7 @@ class String {
 public:
 	String() {
 		_pstr = new char;
-		_pstr = '\0';
+		_pstr[0] = '\0';
 	}
 	String(const char *copy) {
 		_pstr = new char[strlen(copy) + 1];
@@ -39,5 +39,7 @@ int main() {
 	s2.debug();
 	String s3("Hou are you?");
 	s3.debug();
+	s2 = s3;
+	s2.debug();
 	return 0;
 }
