@@ -12,6 +12,13 @@ class U_ptr {
 	}
 };
 
+class Smartpointer {
+public:
+private:
+	U_ptr *ptr;
+//	int val;
+};
+
 class Integer {
 public:
 	//默认构造函数
