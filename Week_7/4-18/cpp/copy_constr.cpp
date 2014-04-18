@@ -13,8 +13,8 @@ public:
 		strcpy(_pstr, copy);
 	}
 	String(const String& copy) {
-	//	_pstr = new char[strlen(copy._pstr) + 1];
-	//	strcpy(_pstr, copy._pstr);
+		_pstr = new char[strlen(copy._pstr) + 1];
+		strcpy(_pstr, copy._pstr);
 	}
 	~String() {
 		delete _pstr;
