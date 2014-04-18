@@ -23,8 +23,10 @@ public:
 		if(--ptr->counter == 0) {
 			delete ptr;
 		} else {
-			
+		 	ptr = smpt.ptr;
+			ptr->counter++;	
 		}
+		return *this;
 	}
 	~Smartpointer() {
 		if(--ptr->counter == 0) {
