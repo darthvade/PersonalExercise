@@ -30,12 +30,6 @@ private:
 };
 
 int main() {
-	Integer i1;
-	i1.debug();
-	Integer i2(99);
-	i2.debug();
-	i1 = i2;
-	i1.debug();
 	while(1);
 	return 0;
 }
