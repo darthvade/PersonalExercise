@@ -9,6 +9,9 @@ public:
 	Integer(const int i) {
 		_iptr = new int(i);
 	}
+	Integer(const Integer &i) {
+		_iptr = i._iptr;
+	}
 private:
 	int *_iptr;
 };
