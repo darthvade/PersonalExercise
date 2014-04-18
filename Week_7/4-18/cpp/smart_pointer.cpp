@@ -36,5 +36,6 @@ private:
 
 int main() {
 	Integer i1;
+	i1.debug();
 	return 0;
 }
