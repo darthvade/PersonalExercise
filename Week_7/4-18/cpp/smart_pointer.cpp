@@ -18,14 +18,9 @@ private:
 class Integer {
 public:
 	//默认构造函数
-	Integer() {
-		_iptr(new int);	
-		*_iptr._sptr = 0;
-	}
+	Integer():_iptr(new int(0)){}
 	//显式构造函数
-	Integer(const int i) {
-		_iptr = new int(i);
-	}
+	Integer(const int i):_iptr(new int(i)) {}
 	//拷贝构造函数
 	Integer(const Integer &i) {
 		_iptr = i._iptr;
