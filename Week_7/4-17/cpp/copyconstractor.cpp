@@ -38,5 +38,6 @@ int main() {
 	cout << "-----------------" << endl;
 	Demo aa, bb;
 	aa = bb;
+	aa.fun();
 	return 0;
 }
