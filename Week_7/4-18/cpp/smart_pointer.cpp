@@ -16,6 +16,9 @@ class U_ptr {
 class Smartpointer {
 public:
 	Smartpointer(int *p) : ptr(new U_ptr(p)) {}
+	Smartpointer(const Smartpointer & smpt) {
+	
+	}
 private:
 	U_ptr *ptr;
 //	int val;
