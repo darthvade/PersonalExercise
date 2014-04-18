@@ -3,9 +3,11 @@
 
 using namespace std;
 
+class Integer;
+
 class U_ptr {
 	friend class Smartpointer;
-	int *ip;
+	Integer *ip;
 	std::size_t counter;
 	U_ptr(int *p) : ip(p), counter(1) {}
 	~U_ptr() {
