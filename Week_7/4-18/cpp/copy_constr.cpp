@@ -17,7 +17,10 @@ public:
 		strcpy(_pstr, copy._pstr);
 	}
 	String& operator=(const String& s) {
-	
+		delete _pstr;
+		_pstr = new char[strlen(s._pstr) + 1];
+		strcpy(_pstr, s._pstr);	
+		return *this;
 	}
 	~String() {
 		delete _pstr;
