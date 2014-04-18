@@ -32,5 +32,8 @@ int main() {
 	cout << "-----------------" << endl;
 	Demo d = Demo();
 	Demo a = d;
+	cout << "-----------------" << endl;
+	Demo aa, bb;
+	aa = bb;
 	return 0;
 }
