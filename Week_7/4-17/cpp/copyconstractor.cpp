@@ -15,6 +15,9 @@ public:
 		cout << "operator =" << endl;
 		return *this;
 	}
+	void fun() {
+		cout << "inner func"<< endl;
+	}
 };
 
 
