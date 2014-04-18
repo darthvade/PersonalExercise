@@ -4,9 +4,10 @@ class Integer {
 public:
 	Integer() {
 		_iptr = new int;	
+		*_iptr = 0;
 	}
 private:
-	*_iptr;
+	int *_iptr;
 };
 
 int main() {
