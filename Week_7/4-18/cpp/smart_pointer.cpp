@@ -19,7 +19,7 @@ class Integer {
 public:
 	//默认构造函数
 	Integer() {
-		_iptr._sptr = new int;	
+		_iptr(new int);	
 		*_iptr._sptr = 0;
 	}
 	//显式构造函数
