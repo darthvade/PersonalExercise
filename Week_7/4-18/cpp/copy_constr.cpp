@@ -16,6 +16,9 @@ public:
 		_pstr = new char[strlen(copy._pstr) + 1];
 		strcpy(_pstr, copy._pstr);
 	}
+	String& operator=(const String& s) {
+	
+	}
 	~String() {
 		delete _pstr;
 	}
