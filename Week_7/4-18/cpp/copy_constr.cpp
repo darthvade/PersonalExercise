@@ -19,11 +19,16 @@ public:
 	~String() {
 		delete _pstr;
 	}
+	void debug() {
+		cout << _pstr << endl;
+	}
 private:
 	char *_pstr;
 };
 
 int main() {
-	String s("");
+	String s("Hello");
+	String(s2);
+	s2.debug();
 	return 0;
 }
