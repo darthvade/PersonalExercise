@@ -39,7 +39,7 @@ public:
 		cout << *_iptr << endl;
 	}
 private:
-	Smartptr _iptr;
+	Smartptr *_iptr;
 };
 
 int main() {
