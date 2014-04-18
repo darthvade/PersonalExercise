@@ -3,7 +3,37 @@
 
 using namespace std;
 
-class Integer;
+class Integer {
+public:
+	//默认构造函数
+	Integer() {
+		_iptr = new int;	
+		*_iptr = 0;
+	}
+	//显式构造函数
+	Integer(const int i) {
+		_iptr = new int(i);
+	}
+	//拷贝构造函数
+	Integer(const Integer &i) {
+		_iptr = i._iptr;
+	}
+	//复制运算符
+	Integer& operator=(const Integer &i) {
+		_iptr = i._iptr;	
+		return *this;
+	}
+	//析构函数
+	~Integer() {
+		delete _iptr;
+	}
+	//debug
+	void debug() {
+		cout << *_iptr << endl;
+	}
+private:
+	int *_iptr;
+};
 
 class U_ptr {
 	friend class Smartpointer;
@@ -39,37 +69,6 @@ private:
 //	int val; //做什么用？
 };
 
-class Integer {
-public:
-	//默认构造函数
-	Integer() {
-		_iptr = new int;	
-		*_iptr = 0;
-	}
-	//显式构造函数
-	Integer(const int i) {
-		_iptr = new int(i);
-	}
-	//拷贝构造函数
-	Integer(const Integer &i) {
-		_iptr = i._iptr;
-	}
-	//复制运算符
-	Integer& operator=(const Integer &i) {
-		_iptr = i._iptr;	
-		return *this;
-	}
-	//析构函数
-	~Integer() {
-		delete _iptr;
-	}
-	//debug
-	void debug() {
-		cout << *_iptr << endl;
-	}
-private:
-	int *_iptr;
-};
 
 int main() {
 	/*
