@@ -5,6 +5,7 @@
 using namespace std;
 
 class Smartptr {
+	friend class Integer;
 private:
 	Smartptr(int *p):_iptr(p), _counter(1) {}
 	~Smartptr() {
