@@ -20,7 +20,11 @@ public:
 		smpt.ptr->counter++;
 	}
 	Smartpointer& operator=(const Smartpointer &smpt) {
-	
+		if(--ptr->counter == 0) {
+			delete ptr;
+		} else {
+			
+		}
 	}
 	~Smartpointer() {
 		if(--ptr->counter == 0) {
