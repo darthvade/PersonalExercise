@@ -1,3 +1,5 @@
+//未使用智能指针或定义值类型，存在内存泄漏风险
+
 #include <iostream>
 
 using namespace std;
