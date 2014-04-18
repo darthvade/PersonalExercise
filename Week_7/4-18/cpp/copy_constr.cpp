@@ -6,7 +6,8 @@ using namespace std;
 class String {
 public:
 	String() {
-		_pstr = new char[10];
+		_pstr = new char;
+		_pstr = '\0';
 	}
 	String(const char *copy) {
 		_pstr = new char[strlen(copy) + 1];
@@ -36,5 +37,7 @@ int main() {
 	String s("Hello");
 	String s2(s);
 	s2.debug();
+	String s3("Hou are you?");
+	s3.debug();
 	return 0;
 }
