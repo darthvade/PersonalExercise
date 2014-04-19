@@ -29,8 +29,9 @@ int main(int argc, char *argv[]) {
 	
 	int connfd;
 	struct sockadd_in cliaddr;
+	int cliaddrlen;
 	bzero(&cliaddr, sizeof(cliaddr));
-	connfd = accept(listen, )
+	connfd = accept(listen, (SA *)&cliaddr, )
 
 
 	return 0;
