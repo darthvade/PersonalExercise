@@ -22,6 +22,8 @@ int main(int argc, char *argv[]) {
 	myaddr.sin_addr.s_addr = htonl(INADDR_ANY);
 	myaddr.sin_port = htons(atoi(argv[1]));
 	bind(serverfd, (SA *)&myaddr, sizeof(myaddr));
+	
+	listen(serverfd, 1024);
 
 	return 0;
 }
