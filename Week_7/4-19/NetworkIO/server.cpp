@@ -18,6 +18,7 @@ int main(int argc, char *argv[]) {
 	bzero(&myaddr, sizeof(myaddr));
 	myaddr.sin_family = AF_INET;
 	myaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+	myaddr.sin_port = htons(atoi(argv[1]));
 	//bind(serverfd, );
 
 	return 0;
