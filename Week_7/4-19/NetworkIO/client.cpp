@@ -5,7 +5,8 @@
 
 int main() {
 
-	int 	
+	int clientfd;
+	clientfd = socket(AF_INET, SOCK_STREAM, 0);
 
 	return 0;
 }
