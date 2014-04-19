@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 
 	//event
 	char buf[1024];
-	int n = read(connfd, buf, sizeof(buf));
+	int n = read(connfd, buf, strlen(buf) + 1);
 	cout << n << endl;
 	write(connfd, buf, n);
 
