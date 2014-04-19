@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
 	serverfd = socket(AF_INET, SOCK_STREAM, 0);
 
 
-	sockaddr_in myaddr;
+	struct sockaddr_in myaddr;
 	bind(serverfd, );
 
 	return 0;
