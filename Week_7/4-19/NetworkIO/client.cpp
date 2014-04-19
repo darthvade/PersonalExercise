@@ -5,6 +5,8 @@
 #include <arpa/inet.h>
 #include <iostream>
 
+using namespace std;
+
 typedef struct sockaddr SA;
 
 int main(int argc, char *argv[]) {
@@ -18,6 +20,10 @@ int main(int argc, char *argv[]) {
 	inet_aton(argv[1], &seraddr.sin_addr);
 	seraddr.sin_port = htons(atoi(argv[2]));
 	connect(clientfd, (SA *)&seraddr, sizeof(seraddr));
+
+	//event
+	char buf[1024];
+	cin >> buf;
 
 	return 0;
 }
