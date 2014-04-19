@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 	char buf[1024];
 	cin >> buf;
 	write(clientfd, buf, sizeof(buf));
-	read(clientfd, buf, sizeof(buf));
+	int n = read(clientfd, buf, sizeof(buf));
 
 	close(clientfd);
 	return 0;
