@@ -39,5 +39,8 @@ int main(int argc, char *argv[]) {
 	char buf[1024];
 	int n = read(connfd, buf, sizeof(buf));
 	write(connfd, buf, n);
+
+	close(serverfd);
+	close(connfd);
 	return 0;
 }
