@@ -6,6 +6,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <cstring>
+#include <string>
 
 using namespace std;
 
@@ -25,7 +26,9 @@ int main(int argc, char *argv[]) {
 
 	//event
 	char buf[1024];
-	cin >> buf;
+	string str;
+	cin >> str;
+	strcpy(buf, str.c_str());
 	write(clientfd, buf, strlen(buf) + 1);
 	int n = read(clientfd, buf, sizeof(buf));
 	cout << buf << n << endl;
