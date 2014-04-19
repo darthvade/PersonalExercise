@@ -13,6 +13,7 @@ int main(int argc, char *argv[]) {
 
 	struct sockaddr_in seraddr;
 	bzero(&seraddr, sizeof(seraddr));
+	seraddr.sin_family = AF_INET;
 
 	return 0;
 }
