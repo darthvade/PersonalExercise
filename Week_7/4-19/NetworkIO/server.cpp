@@ -42,7 +42,6 @@ int main(int argc, char *argv[]) {
 	char buf[1024];
 	int n = read(connfd, buf, sizeof(buf));
 	cout << n << endl;
-	sleep(2);
 	write(connfd, buf, n);
 
 	close(serverfd);

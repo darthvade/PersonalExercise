@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
 	cin >> buf;
 	write(clientfd, buf, strlen(buf) + 1);
 	int n = read(clientfd, buf, sizeof(buf));
-	cout << n << endl;
+	cout << buf << endl;
 
 	close(clientfd);
 	return 0;
