@@ -5,6 +5,7 @@
 #include <arpa/inet.h>
 #include <iostream>
 #include <unistd.h>
+#include <cstring>
 
 using namespace std;
 
