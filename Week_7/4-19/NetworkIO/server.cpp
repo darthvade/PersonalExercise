@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 	struct sockaddr_in cliaddr;
 	int cliaddrlen;
 	bzero(&cliaddr, sizeof(cliaddr));
-	connfd = accept(listen, (SA *)&cliaddr, &cliaddrlen);
+	connfd = accept(listenfd, (SA *)&cliaddr, &cliaddrlen);
 
 
 	return 0;
