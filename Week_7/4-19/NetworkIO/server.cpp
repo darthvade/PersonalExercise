@@ -10,6 +10,8 @@
 #include <cstdlib>
 #include <cstring>
 
+using namespace std;
+
 typedef sockaddr SA;
 
 int main(int argc, char *argv[]) {
@@ -39,6 +41,7 @@ int main(int argc, char *argv[]) {
 	//event
 	char buf[1024];
 	int n = read(connfd, buf, sizeof(buf));
+	cout << n << endl;
 	write(connfd, buf, n);
 
 	close(serverfd);
