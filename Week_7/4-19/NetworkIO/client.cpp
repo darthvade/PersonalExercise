@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
 	seraddr.sin_family = AF_INET;
 	inet_aton(argv[1], &seraddr.sin_addr);
 	seraddr.sin_port = htons(atoi(argv[2]));
-
+	connect(clientfd, (SA *)&seraddr, sizeof(seraddr));
 
 	return 0;
 }
