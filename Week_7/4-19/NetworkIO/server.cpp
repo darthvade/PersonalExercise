@@ -16,6 +16,7 @@ int main(int argc, char *argv[]) {
 
 	struct sockaddr_in myaddr;
 	bzero(&myaddr, sizeof(myaddr));
+	myaddr.sin_family = AF_INET;
 	//bind(serverfd, );
 
 	return 0;
