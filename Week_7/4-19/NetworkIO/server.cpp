@@ -6,6 +6,7 @@
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <netinet/in.h>
+#include <unistd.h>
 #include <cstring>
 
 typedef sockaddr SA;
@@ -36,6 +37,7 @@ int main(int argc, char *argv[]) {
 
 	//event
 	char buf[1024];
-	read(connfd, buf, sizeof(buf));
+	int n = read(connfd, buf, sizeof(buf));
+	write(connfd, buf, n);
 	return 0;
 }
