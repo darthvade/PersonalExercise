@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 	
 	int connfd;
 	struct sockaddr_in cliaddr;
-	int cliaddrlen;
+	socklen_t cliaddrlen;
 	bzero(&cliaddr, sizeof(cliaddr));
 	connfd = accept(serverfd, (SA *)&cliaddr, &cliaddrlen);
 
