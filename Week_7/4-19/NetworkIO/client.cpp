@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 	struct sockaddr_in seraddr;
 	bzero(&seraddr, sizeof(seraddr));
 	seraddr.sin_family = AF_INET;
-	inet_aton(argv[1], &seraddr.sin_addr.s_addr);
+	inet_aton(argv[1], &seraddr.sin_addr.in_addr);
 
 	return 0;
 }
