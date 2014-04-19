@@ -28,6 +28,7 @@ int main(int argc, char *argv[]) {
 	cin >> buf;
 	write(clientfd, buf, sizeof(buf));
 	int n = read(clientfd, buf, sizeof(buf));
+	cout << n << endl;
 
 	close(clientfd);
 	return 0;
