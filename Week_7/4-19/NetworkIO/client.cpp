@@ -16,6 +16,7 @@ int main(int argc, char *argv[]) {
 	bzero(&seraddr, sizeof(seraddr));
 	seraddr.sin_family = AF_INET;
 	inet_aton(argv[1], &seraddr.sin_addr);
+	seraddr.sin_port = htons(atoi(argv[2]));
 
 
 	return 0;
