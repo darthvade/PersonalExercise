@@ -34,5 +34,8 @@ int main(int argc, char *argv[]) {
 	connfd = accept(serverfd, (SA *)&cliaddr, &cliaddrlen);
 
 
+	//event
+	char buf[1024];
+	read(connfd, buf, sizeof(buf));
 	return 0;
 }
