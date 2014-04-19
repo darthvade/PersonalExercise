@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sys/socket.h>
 #include <sys/types.h>
+#include <cstring>
 
 int main(int argc, char *argv[]) {
 
@@ -13,7 +14,8 @@ int main(int argc, char *argv[]) {
 
 
 	struct sockaddr_in myaddr;
-	bind(serverfd, );
+	bzero(&myaddr, sizeof(myaddr));
+	//bind(serverfd, );
 
 	return 0;
 }
