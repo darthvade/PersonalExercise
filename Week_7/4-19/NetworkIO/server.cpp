@@ -23,7 +23,15 @@ int main(int argc, char *argv[]) {
 	myaddr.sin_port = htons(atoi(argv[1]));
 	bind(serverfd, (SA *)&myaddr, sizeof(myaddr));
 	
-	listen(serverfd, 1024);
+
+	listen(serverfd, 1024); //主动套接字->监听套接字
+
+	
+	int connfd;
+	struct sockadd_in cliaddr;
+	bzero(&cliaddr, sizeof(cliaddr));
+	connfd = accept(listen, )
+
 
 	return 0;
 }
