@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <arpa/inet.h>
 #include <iostream>
+#include <unistd.h>
 
 using namespace std;
 
@@ -24,6 +25,7 @@ int main(int argc, char *argv[]) {
 	//event
 	char buf[1024];
 	cin >> buf;
+	write(clientfd, buf, sizeof(buf));
 
 	return 0;
 }
