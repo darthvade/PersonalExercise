@@ -28,10 +28,10 @@ int main(int argc, char *argv[]) {
 
 	
 	int connfd;
-	struct sockadd_in cliaddr;
+	struct sockaddr_in cliaddr;
 	int cliaddrlen;
 	bzero(&cliaddr, sizeof(cliaddr));
-	connfd = accept(listen, (SA *)&cliaddr, )
+	connfd = accept(listen, (SA *)&cliaddr, &cliaddrlen);
 
 
 	return 0;
