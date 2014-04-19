@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
 
 
 	struct sockaddr_in myaddr;
-	bzero(&myaddr, sizeof(myaddr));
+	bzero((char *)&myaddr, sizeof(myaddr));
 	//bind(serverfd, );
 
 	return 0;
