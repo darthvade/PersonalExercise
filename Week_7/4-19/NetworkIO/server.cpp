@@ -7,6 +7,7 @@
 #include <sys/types.h>
 #include <netinet/in.h>
 #include <unistd.h>
+#include <cstdlib>
 #include <cstring>
 
 typedef sockaddr SA;
