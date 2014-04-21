@@ -2,6 +2,6 @@
 #include "String.h"
 
 int main() {
-	String s("hehe");
+	Smartptr p(new String("hehe"));
 	return 0;
 }
