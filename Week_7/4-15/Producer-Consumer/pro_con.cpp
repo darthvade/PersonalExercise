@@ -9,7 +9,7 @@ queue<int> Q;
 
 pthread_mutex_t gmutex;
 
-pthread_cond_t gcond;
+pthread_cond_t full;
 
 void *producer_func(void *) {
 	while(1) {
@@ -19,7 +19,7 @@ void *producer_func(void *) {
  			 
  		Q.push(1);
  		cout << "Push a num" << endl;
- 		pthread_cond_signal(&gcond);
+ 		pthread_cond_signal(&full);
  
  		pthread_mutex_unlock(&gmutex);
 	}
@@ -32,7 +32,7 @@ void *consumer_func(void *args) {
 
 		while(Q.empty()) {
 			cout << "consumer" << (int)args << " begin wait" << endl;
-			pthread_cond_wait(&gcond, &gmutex);
+			pthread_cond_wait(&full, &gmutex);
 		}
 		int num = Q.front();
 		Q.pop();
@@ -48,7 +48,7 @@ void *consumer_func(void *args) {
 
 int main() {
 	pthread_mutex_init(&gmutex, NULL);
-	pthread_cond_init(&gcond, NULL);
+	pthread_cond_init(&full, NULL);
 
 	pthread_t thread[3];
 	
