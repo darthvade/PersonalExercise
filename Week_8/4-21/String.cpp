@@ -36,6 +36,7 @@ String& String::operator=(const String &s) {
 
 String& String::operator=(const char *s) {
 	String tmp(s);
+	return 
 }
 
 String String::operator+(const String &s) const{
