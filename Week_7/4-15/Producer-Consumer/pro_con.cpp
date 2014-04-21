@@ -21,7 +21,7 @@ void *producer_func(void *) {
 		while(Q.size() == 5) {
  			Q.push(1);
  			cout << "Push a num" << endl;
- 			pthread_cond_signal(&full);
+			pthread_cond_wait(&empty, &gmutex);
  		}
 
  		pthread_mutex_unlock(&gmutex);
