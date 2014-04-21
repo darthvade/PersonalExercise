@@ -26,8 +26,8 @@ private:
 	char *_str;
 };
 
-inline bool String::operator<(const String &, const String &) {
-	
+inline bool String::operator>(const String &a, const String &b) {
+	return 	(strcmp(a._str, b._str) > 0 ) ? true : false ; 
 }
 
 #endif
