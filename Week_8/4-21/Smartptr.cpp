@@ -9,11 +9,11 @@ Smartptr::Smartptr() : _ptr(NULL){
 }
 
 Smartptr::Smartptr(String *p) : _ptr(p) {
-	cout << "constractor!" << endl;
+	cout << "smartptr constractor!" << endl;
 }
 
 Smartptr::~Smartptr() {
-	cout << "destractor!" << endl;
+	cout << "smartptr destractor!" << endl;
 	delete _ptr;
 }
 
