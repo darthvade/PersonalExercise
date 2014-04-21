@@ -70,7 +70,7 @@ char &String::operator[](const int &n) {
 }
 	
 const char &String::operator[](const int &n) const {
-
+	return this->_str[n];
 }
 
 
