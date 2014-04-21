@@ -12,6 +12,7 @@ public:
 	~String();
 	String& operator=(const String &);
 	String operator+(const String &);
+	std::size_t size();
 	void debug();
 private:
 	char *_str;
