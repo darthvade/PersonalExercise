@@ -6,7 +6,10 @@ public:
 	String();
 	String(const char *);
 	String(const String&);
-
+	~String();
+	String& operator=(const String &);
+	String operator+(const String &);
+	void debug();
 private:
 	char *_str;
 };
