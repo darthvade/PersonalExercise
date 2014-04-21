@@ -1,6 +1,9 @@
 #include "String.h"
 
+using namespace std;
+
 String::String() : _str(new char[1]){
+	cout << "default constractor" << endl;
 	*_str = '\0';
 }
 
