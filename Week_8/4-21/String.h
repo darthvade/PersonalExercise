@@ -53,7 +53,8 @@ inline std::ostream& operator<<(std::ostream &os, const String &s) {
 inline std::istream& operator>>(std::istream &os, String &s) {
 	char buf[1024];
 	os >> buf;
-	s = new String(buf);
+	s = buf;
+	return os;
 }
 
 #endif
