@@ -7,6 +7,5 @@ using namespace std;
 int main() {
 	Smartptr p(new String("hehe"));
 	cout << *p << endl;
-	cout << p << endl;
 	return 0;
 }
