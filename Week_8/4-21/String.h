@@ -18,6 +18,8 @@ public:
 	std::size_t size() const;
 	const char * c_str() const;
 	void debug() const;
+	char &operator[](const String &);
+	const char &operator[](const String &) const;
 
 	friend bool operator<(const String &, const String &);
 	friend bool operator>(const String &, const String &);
