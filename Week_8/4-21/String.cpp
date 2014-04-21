@@ -65,6 +65,6 @@ void String::debug() const {
 	std::cout << this->_str << std::endl;
 }
 
-char &operator[](const int n) {
-	return *this[n];
+char &operator[](const int &n) {
+	return this[n];
 }
