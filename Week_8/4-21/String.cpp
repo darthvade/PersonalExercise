@@ -34,6 +34,10 @@ String& String::operator=(const String &s) {
 	return *this;
 }
 
+String& String::operator=(const char *s) {
+	String tmp(s);
+}
+
 String String::operator+(const String &s) const{
 	cout << "redef +" << endl;
 	String tmp;
