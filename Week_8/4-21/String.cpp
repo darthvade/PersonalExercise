@@ -20,7 +20,7 @@ String::String(const String& s) {
 }
 
 String& String::operator=(const char *s) {
-	String(s);
+	String tmp(s);
 }
 
 String::~String() {
