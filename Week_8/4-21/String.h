@@ -23,7 +23,7 @@ public:
 	friend bool operator<=(const String &, const String &);
 	friend bool operator>=(const String &, const String &);
 
-	friend std::iostream& operator<<(std::iostream &, const String &);
+	friend std::ostream& operator<<(std::ostream &, const String &);
 private:
 	char *_str;
 };
@@ -44,7 +44,7 @@ inline bool operator<=(const String &a, const String &b) {
 	return !(a > b);
 }
 
-inline std::iostream& operator<<(std::iostream &os, const String &s) {
+inline std::ostream& operator<<(std::ostream &os, const String &s) {
 	os << s._str;
 	return os;
 }
