@@ -41,8 +41,8 @@ String String::operator+(const String &s) const{
 	return tmp;
 }
 
-bool String::operator==(const String &) const {
-	
+bool String::operator==(const String &s) const {
+	return (strcmp(this->_str, s._str) == 0) ? true : false;
 }
 
 std::size_t String::size() const{
