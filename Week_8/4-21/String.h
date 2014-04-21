@@ -26,5 +26,8 @@ private:
 	char *_str;
 };
 
+inline bool String::operator<(const String &, const String &) {
+	
+}
 
 #endif
