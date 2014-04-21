@@ -19,10 +19,12 @@ void *producer_func(void *) {
 
  		pthread_mutex_lock(&gmutex);
  			 
+		while(Q.size() == 5) {
  		Q.push(1);
  		cout << "Push a num" << endl;
  		pthread_cond_signal(&full);
- 
+ 		}
+
  		pthread_mutex_unlock(&gmutex);
 	}
 	pthread_exit((void *)0);
