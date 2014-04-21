@@ -13,3 +13,7 @@ String::String(const String& s) {
 	_str = new char[s.size() + 1];
 	strcpy(_str, s._str);
 }
+
+String::~String() {
+	delete[] _str;
+}
