@@ -10,5 +10,6 @@ String::String(const char *s) {
 }
 
 String::String(const String& s) {
-
+	_str = new char[s.size() + 1];
+	strcpy(_str, s._str);
 }
