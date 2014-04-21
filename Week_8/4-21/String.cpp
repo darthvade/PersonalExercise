@@ -42,5 +42,5 @@ const char *String::c_str() const {
 }
 
 void String::debug() const {
-	cout << this->_str << endl;
+	std::cout << this->_str << std::endl;
 }
