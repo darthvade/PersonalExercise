@@ -11,6 +11,9 @@ public:
 
 	void reset(String *);
 	const String *getptr() const;
+
+	String* operator->();
+	const String* operator->() const;
 private:
 	String *_ptr;
 
