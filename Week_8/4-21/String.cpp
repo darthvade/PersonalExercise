@@ -24,3 +24,7 @@ String& String::operator=(const String &s) {
 	strcpy(_str, s._str);
 	return *this;
 }
+
+String String::operator+(const String &s) const{
+
+}
