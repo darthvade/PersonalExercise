@@ -11,5 +11,7 @@ int main() {
 	String s1 = "test";
 	s1 = s1;
 	s1.debug();
+	s1 = "hehe";
+	s1.debug();
 	return 0;
 }
