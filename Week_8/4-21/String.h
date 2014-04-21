@@ -14,7 +14,7 @@ public:
 	String operator+(const String &) const;
 	std::size_t size() const;
 	const char * c_str() const;
-	void debug();
+	void debug() const;
 private:
 	char *_str;
 };

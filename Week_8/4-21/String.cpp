@@ -37,4 +37,6 @@ std::size_t String::size() const{
 	return strlen(this->_str);
 }
 
-
+const char *String::c_str() const {
+	return _str;
+}
