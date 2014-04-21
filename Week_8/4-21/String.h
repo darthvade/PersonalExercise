@@ -49,4 +49,9 @@ inline std::ostream& operator<<(std::ostream &os, const String &s) {
 	os << s._str;
 	return os;
 }
+
+inline std::istream& operator>>(std::istream &, String &) {
+
+}
+
 #endif
