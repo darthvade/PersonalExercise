@@ -41,6 +41,10 @@ String String::operator+(const String &s) const{
 	return tmp;
 }
 
+bool String::operator==(const String &) const {
+	
+}
+
 std::size_t String::size() const{
 	return strlen(this->_str);
 }
