@@ -25,10 +25,12 @@ String::~String() {
 }
 
 String& String::operator=(const String &s) {
-	cout << "redef =" << endl;
-	delete[] this->_str;
-	this->_str = new char[s.size() + 1];
-	strcpy(_str, s._str);
+	if(!(*this == s)) {
+		cout << "redef =" << endl;
+		delete[] this->_str;
+		this->_str = new char[s.size() + 1];
+		strcpy(_str, s._str);
+	}
 	return *this;
 }
 
