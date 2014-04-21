@@ -13,6 +13,9 @@ public:
 	const String *getptr() const;
 private:
 	String *_ptr;
+
+	Smartptr(const Smartptr&);
+	Smartptr &operator=(const Smartptr&);
 };
 
 
