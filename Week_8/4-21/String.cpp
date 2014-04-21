@@ -40,3 +40,7 @@ std::size_t String::size() const{
 const char *String::c_str() const {
 	return _str;
 }
+
+void String::debug() const {
+	cout << this->_str << endl;
+}
