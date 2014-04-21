@@ -13,5 +13,8 @@ Smartptr::~Smartptr() {
 }
 
 void Smartptr::reset(String *p) {
-	
+	if(p != _ptr) {
+		delete _ptr;
+		_ptr = p;
+	}	
 }
