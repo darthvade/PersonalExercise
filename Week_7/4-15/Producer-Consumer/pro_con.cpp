@@ -43,6 +43,7 @@ void *consumer_func(void *args) {
 		cout << "consumer" << (int)args << " get a num " << num << endl;
 
 		pthread_cond_signal(&empty);
+
 		pthread_mutex_unlock(&gmutex);
 	}
 	pthread_exit((void *)0);
