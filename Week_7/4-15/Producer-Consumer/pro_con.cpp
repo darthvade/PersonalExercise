@@ -22,7 +22,6 @@ void *producer_func(void *) {
 			cout << "Buffer is full!" << endl;
  			pthread_cond_wait(&empty, &gmutex);
  		}
-
 		Q.push(1);
 		pthread_cond_signal(&full);
 								
