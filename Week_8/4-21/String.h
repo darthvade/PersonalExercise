@@ -19,7 +19,7 @@ public:
 	const char * c_str() const;
 	void debug() const;
 	char &operator[](const int &);
-	const char &operator[](const String &) const;
+	const char &operator[](const int &) const;
 
 	friend bool operator<(const String &, const String &);
 	friend bool operator>(const String &, const String &);
