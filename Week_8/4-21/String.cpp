@@ -69,7 +69,7 @@ char &String::operator[](const int &n) {
 	return this->_str[n];
 }
 	
-const char &String::operator[](const int &) const {
+const char &String::operator[](const int &n) const {
 
 }
 
