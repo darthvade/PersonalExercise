@@ -17,6 +17,8 @@ public:
 	std::size_t size() const;
 	const char * c_str() const;
 	void debug() const;
+
+	friend bool operator<(const String &, const String &);
 private:
 	char *_str;
 };
