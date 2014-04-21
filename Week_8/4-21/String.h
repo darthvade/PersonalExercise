@@ -22,6 +22,8 @@ public:
 	friend bool operator>(const String &, const String &);
 	friend bool operator<=(const String &, const String &);
 	friend bool operator>=(const String &, const String &);
+
+	friend bool operator<<(std::iostream &, const String &);
 private:
 	char *_str;
 };
