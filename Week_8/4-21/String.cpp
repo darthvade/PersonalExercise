@@ -32,3 +32,9 @@ String String::operator+(const String &s) const{
 	strcat(tmp._str, s._str);
 	return tmp;
 }
+
+std::size_t String::size() const{
+	return strlen(this->_str);
+}
+
+
