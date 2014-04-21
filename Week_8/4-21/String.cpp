@@ -20,10 +20,12 @@ String::String(const String& s) {
 }
 
 String::~String() {
+	cout << "destructor" << endl;
 	delete[] _str;
 }
 
 String& String::operator=(const String &s) {
+	cout << "redef =" << endl;
 	delete[] this->_str;
 	this->_str = new char[s.size() + 1];
 	strcpy(_str, s._str);
@@ -31,6 +33,7 @@ String& String::operator=(const String &s) {
 }
 
 String String::operator+(const String &s) const{
+	cout << "redef +" << endl;
 	String tmp;
 	tmp._str = new char[this->size() + s.size() + 1];
 	strcpy(tmp._str, this->_str);
