@@ -64,6 +64,7 @@ int main() {
 		
 	pthread_join(thread[0], NULL);
 	pthread_join(thread[1], NULL);
+	pthread_join(thread[2], NULL);
 	pthread_mutex_destroy(&gmutex);
 	pthread_cond_destroy(&full);
 	pthread_cond_destroy(&empty);
