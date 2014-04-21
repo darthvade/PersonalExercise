@@ -19,6 +19,9 @@ public:
 	void debug() const;
 
 	friend bool operator<(const String &, const String &);
+	friend bool operator>(const String &, const String &);
+	friend bool operator<=(const String &, const String &);
+	friend bool operator>=(const String &, const String &);
 private:
 	char *_str;
 };
