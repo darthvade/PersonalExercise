@@ -6,4 +6,9 @@ String::String() : _str(new char[1]){
 
 String::String(const char *s) {
 	_str = new char[strlen(s) + 1];	
+	strcpy(_str, s);
+}
+
+String::String(const String& s) {
+
 }
