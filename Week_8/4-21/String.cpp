@@ -19,6 +19,10 @@ String::String(const String& s) {
 	strcpy(_str, s._str);
 }
 
+String& String::operator=(const char *s) {
+	String(s);
+}
+
 String::~String() {
 	cout << "destructor" << endl;
 	delete[] _str;
