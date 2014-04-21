@@ -6,8 +6,11 @@
 class Smartptr {
 public:
 	Smartptr();
-	Smartptr(String &);
+	Smartptr(String *);
 	~Smartptr();
+
+	void reset(String *);
+	const String *getptr() const;
 private:
 	String *_ptr;
 };
