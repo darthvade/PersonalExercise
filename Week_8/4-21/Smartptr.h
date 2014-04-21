@@ -6,6 +6,7 @@
 class Smartptr {
 public:
 	Smartptr();
+	Smartptr(String &);
 	~Smartptr();
 private:
 	String *_ptr;
