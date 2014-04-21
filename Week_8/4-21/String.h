@@ -38,7 +38,7 @@ inline bool operator>=(const String &a, const String &b) {
 	return !(a < b);
 }
 
-inline bool operatorr<=(const String &a, const String &b) {
+inline bool operator<=(const String &a, const String &b) {
 	return !(a > b);
 }
 
