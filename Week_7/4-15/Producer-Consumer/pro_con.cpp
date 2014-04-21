@@ -11,6 +11,8 @@ pthread_mutex_t gmutex;
 
 pthread_cond_t full;
 
+pthread_cond_t empty;
+
 void *producer_func(void *) {
 	while(1) {
 		sleep(1);
@@ -49,6 +51,7 @@ void *consumer_func(void *args) {
 int main() {
 	pthread_mutex_init(&gmutex, NULL);
 	pthread_cond_init(&full, NULL);
+	pthread_cond_init(&empty, NULL);
 
 	pthread_t thread[3];
 	
