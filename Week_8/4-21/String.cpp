@@ -28,4 +28,7 @@ String& String::operator=(const String &s) {
 String String::operator+(const String &s) const{
 	String tmp;
 	tmp._str = new char[this->size() + s.size() + 1];
+	strcpy(tmp._str, this->_str);
+	strcat(tmp._str, s._str);
+	return tmp;
 }
