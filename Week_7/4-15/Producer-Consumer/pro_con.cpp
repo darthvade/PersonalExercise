@@ -42,6 +42,7 @@ void *consumer_func(void *args) {
 
 		sleep(4);
 
+		pthread_cond_signal(&empty);
 		pthread_mutex_unlock(&gmutex);
 	}
 	pthread_exit((void *)0);
