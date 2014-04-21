@@ -19,6 +19,3 @@ void Smartptr::reset(String *p) {
 	}	
 }
 
-Smartptr &Smartptr::operator=(const Smartptr& p) {
-	
-}
