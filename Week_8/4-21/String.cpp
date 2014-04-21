@@ -8,11 +8,13 @@ String::String() : _str(new char[1]){
 }
 
 String::String(const char *s) {
+	cout << "userdef constractor" << endl;
 	_str = new char[strlen(s) + 1];	
 	strcpy(_str, s);
 }
 
 String::String(const String& s) {
+	cout << "copy constractor" << endl;
 	_str = new char[s.size() + 1];
 	strcpy(_str, s._str);
 }
