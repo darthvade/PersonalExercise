@@ -1,6 +1,9 @@
 #ifndef __STRING_H__
 #define __STRING_H__
 
+#include <cstddef>
+#include <cstring>
+
 class String {
 public:
 	String();
