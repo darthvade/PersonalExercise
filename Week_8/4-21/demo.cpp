@@ -15,5 +15,6 @@ int main() {
 	s1.debug();
 	s1 = "hehe";
 	s1.debug();
+	cout << s1[3] << endl;
 	return 0;
 }
