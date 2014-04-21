@@ -44,7 +44,8 @@ inline bool operator<=(const String &a, const String &b) {
 	return !(a > b);
 }
 
-inline std::iostream& operator<<(std::iostream &, const String &) {
-	
+inline std::iostream& operator<<(std::iostream &os, const String &s) {
+	os << s._str;
+	return os;
 }
 #endif
