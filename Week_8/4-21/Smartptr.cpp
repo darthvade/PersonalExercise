@@ -31,3 +31,7 @@ String* Smartptr::operator->() {
 const String* Smartptr::operator->() const{
 	return _ptr;
 }
+
+String& Smartptr::operator*() {
+	return *_ptr;
+}
