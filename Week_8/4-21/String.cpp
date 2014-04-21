@@ -17,3 +17,7 @@ String::String(const String& s) {
 String::~String() {
 	delete[] _str;
 }
+
+String& String::operator=(const String &) {
+	delete[] this->_str;
+}
