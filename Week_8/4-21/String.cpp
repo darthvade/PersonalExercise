@@ -18,6 +18,9 @@ String::~String() {
 	delete[] _str;
 }
 
-String& String::operator=(const String &) {
+String& String::operator=(const String &s) {
 	delete[] this->_str;
+	this->_str = new char[s.size() + 1];
+	strcpy(_str, s._str);
+	return *this;
 }
