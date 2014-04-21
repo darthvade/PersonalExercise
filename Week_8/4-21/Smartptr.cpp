@@ -27,3 +27,7 @@ void Smartptr::reset(String *p) {
 String* Smartptr::operator->() {
 	return _ptr;
 }
+
+const String* Smartptr::operator->() const{
+	return _ptr;
+}
