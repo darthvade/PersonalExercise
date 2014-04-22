@@ -35,5 +35,8 @@ int main() {
 	s.setschool("UUUU");
 	s.Person::print();
 	s.print();
+
+	Person *p = &s;
+	p->print();
 	return 0;
 }
