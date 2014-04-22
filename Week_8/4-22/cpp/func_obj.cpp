@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class Absint {
+struct Absint {
 	int operator() (int val) {
 		return (val > 0) ? val : -val;
 	}
