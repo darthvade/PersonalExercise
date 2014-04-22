@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 class Absint {
 	int operator() (int val) {
 		return (val > 0) ? val : -val;
@@ -8,5 +10,8 @@ class Absint {
 
 int main() {
 
+	int i = -99;
+	Absint abs;
+	cout << abs(i) << endl;
 	return 0;
 }
