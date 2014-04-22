@@ -28,3 +28,10 @@ public:
 private:
 	string _school;
 };
+
+int main() {
+	Student s;
+	s.setinfo(1, "Kevin");
+	s.setschool("UUUU");
+	return 0;
+}
