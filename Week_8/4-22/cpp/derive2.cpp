@@ -5,7 +5,7 @@ using namespace std;
 
 class Person {
 public:
-	void print() { 
+	virtual void print() { 
 		cout << "id: " << _id << " name: " << _name << endl;   
 	}	
 	void setinfo(int id, const string &s) {
