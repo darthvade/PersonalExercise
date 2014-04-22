@@ -20,6 +20,6 @@ int main() {
 	A a;
 	a.test();
 	B b;
-	b.num = 1000;
+	b.test();
 	return 0;
 }
