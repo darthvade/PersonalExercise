@@ -13,7 +13,10 @@ protected:
 };
 
 class B : public A {
-		A::num = 10000;
+private:
+	void setNum() {
+		num = 1000000;
+	}
 };
 
 int main() {
