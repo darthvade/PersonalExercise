@@ -13,7 +13,7 @@ protected:
 };
 
 class B : public A {
-private:
+public:
 	void setNum() {
 		num = 1000000;
 	}
@@ -23,6 +23,7 @@ int main() {
 	A a;
 	a.test();
 	B b;
+	b.setNum();
 	b.test();
 	return 0;
 }
