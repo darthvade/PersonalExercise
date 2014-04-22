@@ -12,7 +12,12 @@ private:
 	int num;
 };
 
-int main() {
+class B : public A {
 
+};
+
+int main() {
+	A a(99);
+	a.test();
 	return 0;
 }
