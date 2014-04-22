@@ -19,9 +19,12 @@ private:
 
 class Student : public Person {
 public:
+	void print() {
+		cout << "school: " << _school << endl;
+	}
 	void setschool(const string& s) {
-		school = s;
+		_school = s;
 	}
 private:
-	string school;
+	string _school;
 };
