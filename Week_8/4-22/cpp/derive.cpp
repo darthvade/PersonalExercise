@@ -19,5 +19,7 @@ class B : public A {
 int main() {
 	A a(99);
 	a.test();
+	B b(1000);
+	b.test();
 	return 0;
 }
