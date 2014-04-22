@@ -33,5 +33,7 @@ int main() {
 	Student s;
 	s.setinfo(1, "Kevin");
 	s.setschool("UUUU");
+	s.Person::print();
+	s.print();
 	return 0;
 }
