@@ -4,8 +4,9 @@ using namespace std;
 
 class A {
 public:
+	A(int a) : num(a){};
 	void test() {
-		cout << "in Class A " << endl;
+		cout << "in Class A " << num << endl;
 	}
 private:
 	int num;
