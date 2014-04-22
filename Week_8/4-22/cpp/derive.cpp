@@ -4,11 +4,11 @@ using namespace std;
 
 class A {
 public:
-	A(int a) : num(a){};
 	void test() {
+		num = 999;
 		cout << "in Class A " << num << endl;
 	}
-private:
+protected:
 	int num;
 };
 
@@ -17,9 +17,8 @@ class B : public A {
 };
 
 int main() {
-	A a(99);
+	A a;
 	a.test();
-	B b;
-	b.test();
+
 	return 0;
 }
