@@ -38,5 +38,8 @@ int main() {
 
 	Person *p = &s;
 	p->print();
+
+	Person &pp = s;
+	pp.print();
 	return 0;
 }
