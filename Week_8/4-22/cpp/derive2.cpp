@@ -18,6 +18,10 @@ private:
 };
 
 class Student : public Person {
+public:
+	void setschool(const string& s) {
+		school = s;
+	}
 private:
 	string school;
 };
