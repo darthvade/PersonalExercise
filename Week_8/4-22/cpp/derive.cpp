@@ -19,6 +19,7 @@ class B : public A {
 int main() {
 	A a;
 	a.test();
-
+	B b;
+	b.num = 1000;
 	return 0;
 }
