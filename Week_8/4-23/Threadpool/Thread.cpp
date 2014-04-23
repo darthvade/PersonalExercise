@@ -7,3 +7,9 @@ Thread::Thread() {
 Thread::~Thread() {
 
 }
+
+void Thread::start() {
+
+}
+
+
