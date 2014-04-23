@@ -3,6 +3,9 @@
 
 #include <pthread.h>
 #include "Noncopyable.h"
+#include "Condition.h"
+
+class Condition;
 
 class Mutex : public Noncopyable {
 public:
