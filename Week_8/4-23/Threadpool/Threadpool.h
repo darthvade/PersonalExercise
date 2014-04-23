@@ -25,6 +25,9 @@ public:
 
 	bool is_task_queue_empty() const;
 	std::queue<Task>::size_type get_task_queue_size() const;
+private:
+	std::queue<Task> _task_queue;
+	std::vector<Workthread>::size_type _max_thread;
 };
 
 #endif
