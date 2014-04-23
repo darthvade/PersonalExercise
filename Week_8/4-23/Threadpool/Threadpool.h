@@ -29,6 +29,11 @@ private:
 	std::queue<Task> _task_queue;
 	std::vector<Workthread>::size_type _max_thread;
 	std::vector<Workthread> _thread_vector;
+
+	bool _is_started;
+
+	mutable Mutexlock _lock;
+	mutable Condition _cond;
 };
 
 #endif
