@@ -21,5 +21,5 @@ void *Thread::thread_func(void *args) {
 }
 
 pthread_t Thread::get_tid() const {
-
+	return _tid;
 }
