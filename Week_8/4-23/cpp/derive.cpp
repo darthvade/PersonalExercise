@@ -11,7 +11,7 @@ public:
 		cout << "Base destractor!" << endl;
 	}
 	void test() {
-		cout << "" << endl;	
+		cout << "Base test()" << endl;	
 	}
 };
 
@@ -23,10 +23,15 @@ public:
 	~Child() {
 		cout << "Child destractor!" << endl;
 	}
+	void test() {
+		cout << "Child test()" << endl;	
+	}
+
 };
 
 
 int main() {
 	Child d;
+	d.test();
 	return 0;
 }
