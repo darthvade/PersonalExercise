@@ -6,7 +6,10 @@
 class Theadpool;
 
 class Workthread : public Thread {
+public:
 
+private:
+	Threadpool *_pThreadpool;
 };
 
 #endif
