@@ -67,3 +67,10 @@ bool Threadpool::is_task_queue_empty() const {
 	_lock.unlock();
 	return ret;
 }
+
+std::queue<Task>::size_type Threadpool::get_task_queue_size() const {
+	_lock.lock();
+	std::queue<Task>::size_type ret = _task_queue.size();
+	_lock.unlock();
+	return ret;
+}
