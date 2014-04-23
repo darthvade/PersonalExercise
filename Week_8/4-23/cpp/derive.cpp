@@ -4,7 +4,7 @@ using namespace std;
 
 class Base {
 public:
-	Base() {
+	Base(int a) : _in_base(a) {
 		cout << "Base constractor!" << endl;
 	}
 	~Base() {
@@ -28,7 +28,8 @@ public:
 	void test() {
 		cout << "Child test()" << endl;	
 	}
-
+private:
+	int _in_child;
 };
 
 
