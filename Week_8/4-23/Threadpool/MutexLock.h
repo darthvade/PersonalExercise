@@ -4,7 +4,11 @@
 #include <pthread.h>
 #include "Noncopyable.h"
 
-class Mutex
+class Mutex : public Noncopyable {
+public:
+private:
+	pthread_mutex_t _mutex;
+};
 
 
 #endif
