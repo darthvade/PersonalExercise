@@ -9,11 +9,8 @@ public:
 	static void test2(){};
 	void test3(){};
 	void debug() {
-		char buf[32];
 		cout << "a: " << &a << endl;
 		cout << "b: " << &b << endl;
-		sprintf(buf, "%u", &Base::test1);
-		printf("%u\n", &Base::test1);
 	}
 private:
 	int a;
