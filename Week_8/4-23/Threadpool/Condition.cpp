@@ -9,7 +9,7 @@ Condition::~Condition() {
 }
 
 void Condition::wait() {
-
+	pthread_cond_wait(&_cond, &_pMutex->_mutex);
 }
 
 void Condition::notify() {
