@@ -6,6 +6,10 @@
 
 class Mutex : public Noncopyable {
 public:
+	Mutex();
+	~Mutex();
+	void lock();
+	void unlock();
 private:
 	pthread_mutex_t _mutex;
 };
