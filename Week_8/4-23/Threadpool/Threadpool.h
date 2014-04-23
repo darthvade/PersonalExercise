@@ -22,6 +22,8 @@ public:
 
 	bool add_task_queue(Task task);
 	bool get_task_queue(Task &task);
+
+	bool is_task_queue_empty() const;
 };
 
 #endif
