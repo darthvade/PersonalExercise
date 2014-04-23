@@ -10,7 +10,7 @@ public:
 	~Base() {
 		cout << "Base destractor!" << endl;
 	}
-	virtual void test() {
+	void test() {
 		cout << "Base test()" <<  " " << _in_base << endl;	
 	}
 private:
