@@ -15,9 +15,10 @@ public:
 class Child : public Base {
 public:
 	Child() {
-		cout << "Base constractor!" << endl;
+		cout << "Child constractor!" << endl;
 	}
 	~Child() {
+		cout << "Child destractor!" << endl;
 	}
 };
 
