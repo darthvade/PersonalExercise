@@ -8,7 +8,7 @@ public:
 		cout << "Base constractor!" << endl;
 	}
 	Base(const Base& b) {
-	
+		_in_base = b._in_base;	
 	}
 	virtual ~Base() {
 		cout << "Base destractor!" << endl;
