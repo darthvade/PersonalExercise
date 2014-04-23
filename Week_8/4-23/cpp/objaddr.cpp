@@ -10,7 +10,7 @@ public:
 	void debug() {
 		cout << "a: " << &a << endl;
 		cout << "b: " << &b << endl;
-		printf("%p \n", (void *)&Base::test1);
+		printf("%p \n", &test1);
 	}
 private:
 	int a;
