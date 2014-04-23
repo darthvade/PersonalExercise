@@ -34,9 +34,12 @@ private:
 
 
 int main() {
+	/*
 	Child d(1, 99);
 	d.test();
 	Base &p = d;
 	p.test();
+	*/
+	Base &p = new Child(1, 99);
 	return 0;
 }
