@@ -1,3 +1,9 @@
 #include "MutexLock.h"
 
-Mutex::Mutex() {};
+Mutex::Mutex() {
+	pthread_mutex_init(&_mutex, NULL);
+};
+
+Mutex::~Mutex() {
+
+};
