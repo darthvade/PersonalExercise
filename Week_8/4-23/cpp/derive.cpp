@@ -32,7 +32,7 @@ public:
 		cout << "Child destractor!" << endl;
 	}
 	void test() {
-		cout << "Child test()" <<  " " << _in_child << endl;	
+		cout << "Child test()" <<  " " << _in_child  <<  " " << _in_base << endl;	
 	}
 private:
 	int _in_child;
@@ -52,5 +52,6 @@ int main() {
 	*/
 	Child c(1, 2);
 	Child d(c);
+	d.test();
 	return 0;
 }
