@@ -9,7 +9,8 @@ void *func(void *) {
 
 int main() {
 	
-	pthread_t pthread_create(NULL, NULL, func, NULL);
+	pthread_t tid;
+	pthread_create(&tid, NULL, func, NULL);
 
 	return 0;
 }
