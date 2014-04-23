@@ -2,7 +2,11 @@
 
 using namespace std;
 
-
+class Noncopyable {
+protected:
+	Noncopyable(){};
+	~Noncopyable(){};
+};
 
 int main() {
 
