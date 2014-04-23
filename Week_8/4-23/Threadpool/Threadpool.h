@@ -24,6 +24,7 @@ public:
 	bool get_task_queue(Task &task);
 
 	bool is_task_queue_empty() const;
+	std::queue<Task>::size_type get_task_queue_size() const;
 };
 
 #endif
