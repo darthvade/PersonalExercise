@@ -44,4 +44,7 @@ bool Threadpool::get_task_queue(Task &task) {
 		return false;
 	}
 	task = _task_queue.front();
+	_task_queue.pop();
+	_lock.unlock();
+	return true;
 }
