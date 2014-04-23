@@ -1,10 +1,10 @@
 #include "MutexLock.h"
 
-Mutex::Mutex() {
+Mutexlock::Mutexlock() {
 	pthread_mutex_init(&_mutex, NULL);
 }
 
-Mutex::~Mutex() {
+Mutexlock::~Mutexlock() {
 	pthread_mutex_destroy(&_mutex);
 }
 

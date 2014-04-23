@@ -7,11 +7,11 @@
 
 class Condition;
 
-class Mutex : public Noncopyable {
+class Mutexlock : public Noncopyable {
 	friend class Condition;
 public:
-	Mutex();
-	~Mutex();
+	Mutexlock();
+	~Mutexlock();
 	void lock();
 	void unlock();
 private:
