@@ -1,6 +1,6 @@
 #include "Condition.h"
 
-Condition::Condition() {
+Condition::Condition(Mutexlock *) {
 	pthread_cond_init(&_cond, NULL);
 }
 
