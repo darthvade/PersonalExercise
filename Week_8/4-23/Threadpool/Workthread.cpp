@@ -1,5 +1,6 @@
 #include "Workthread.h"
 #include <iostream>
+#include "Threadpool.h"
 
 using namespace std;
 
@@ -7,6 +8,10 @@ void Workthread::run() {
 	while(true) {
 		Task task;
 		bool ret = _pThreadpool->get_task_queue(task);
+		if(ret == false) {
+			return;
+		}
+		compute_task(task._num);
 	}
 }
 
