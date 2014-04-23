@@ -33,5 +33,7 @@ public:
 int main() {
 	Child d;
 	d.test();
+	Base &p = d;
+	p.test();
 	return 0;
 }
