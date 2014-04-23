@@ -13,7 +13,7 @@ void Condition::wait() {
 }
 
 void Condition::notify() {
-
+	pthread_cond_signal(&_cond, &_pMutex->_mutex);
 }
 
 void Condition::notifyall() {
