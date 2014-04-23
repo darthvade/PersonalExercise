@@ -13,9 +13,9 @@ void Condition::wait() {
 }
 
 void Condition::notify() {
-	pthread_cond_signal(&_cond, &_pMutex->_mutex);
+	pthread_cond_signal(&_cond);
 }
 
 void Condition::notifyall() {
-
+	pthread_cond_broadcast(&_cond);
 }
