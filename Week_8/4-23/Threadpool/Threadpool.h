@@ -14,7 +14,11 @@ struct Task {
 
 class Threadpool : public Noncopyable {
 public:
-	Threadpool(std::vector<Wor>)
+	Threadpool(std::vector<Workthread>::size_type max_thread);
+	~Threadpool();
+
+	void start_threadpool();
+	void stop_threadpool();
 };
 
 #endif
