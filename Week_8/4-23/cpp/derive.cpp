@@ -15,7 +15,7 @@ public:
 		cout << "Base destractor!" << endl;
 	}
 	virtual void test() {
-		cout << "Base test()" <<  " " << _in_base << endl;	
+		cout << "Base test()" << " " << _in_base << endl;	
 	}
 protected:
 	int _in_base;
@@ -33,7 +33,7 @@ public:
 		cout << "Child destractor!" << endl;
 	}
 	void test() {
-		cout << "Child test()" <<  " " << _in_child  <<  " " << _in_base << endl;	
+		cout << "Child test()" << " " << _in_child  << " " << _in_base << endl;	
 	}
 private:
 	int _in_child;
