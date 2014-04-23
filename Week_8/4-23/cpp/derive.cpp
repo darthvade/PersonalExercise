@@ -13,7 +13,12 @@ public:
 };
 
 class Child : public Base {
-	
+public:
+	Child() {
+		cout << "Base constractor!" << endl;
+	}
+	~Child() {
+	}
 };
 
 
