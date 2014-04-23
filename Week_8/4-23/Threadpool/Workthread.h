@@ -8,7 +8,8 @@ class Threadpool;
 class Workthread : public Thread {
 public:
 	void run();
-	register_threadpool(Threadpool *);
+	void register_threadpool(Threadpool *);
+	void compute_task(int num);
 private:
 	Threadpool *_pThreadpool;
 };
