@@ -1,3 +1,8 @@
+/*打印成员地址
+ *成员函数暂时地址无法打印
+ *
+ */
+
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
