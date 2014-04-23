@@ -11,8 +11,9 @@ private:
 	Noncopyable& operator=(const Noncopyable&);
 };
 
-int main() {
+class Base : public Noncopyable {};
 
-	Noncopyable a;
+int main() {
+	Base b;
 	return 0;
 }
