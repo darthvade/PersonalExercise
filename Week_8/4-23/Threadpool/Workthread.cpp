@@ -4,7 +4,10 @@
 using namespace std;
 
 void Workthread::run() {
-
+	while(true) {
+		Task task;
+		bool ret = _pThreadpool->get_task_queue(task);
+	}
 }
 
 void Workthread::register_threadpool(Threadpool *pThreadpool) {
