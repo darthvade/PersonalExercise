@@ -13,7 +13,7 @@ public:
 	void notify();
 	void notifyall();
 private:
-	Mutex *_pMutex;
+	Mutexlock *_pMutex;
 	pthread_cond_t _cond;
 };
 

@@ -8,6 +8,7 @@
 class Condition;
 
 class Mutex : public Noncopyable {
+	friend class Condition;
 public:
 	Mutex();
 	~Mutex();
