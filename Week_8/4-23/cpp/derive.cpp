@@ -13,6 +13,8 @@ public:
 	virtual void test() {
 		cout << "Base test()" << endl;	
 	}
+private:
+	int _in_base;
 };
 
 class Child : public Base {
