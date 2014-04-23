@@ -22,6 +22,8 @@ void Threadpool::start_threadpool() {
 
 void Threadpool::stop_threadpool() {
 	if(_is_started == false) {
-		_is_started = false;
+		return;
 	}
+	_is_started = false;
+	_cond.notifyall();
 }
