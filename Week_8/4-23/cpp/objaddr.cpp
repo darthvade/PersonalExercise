@@ -12,6 +12,7 @@ public:
 		char buf[32];
 		cout << "a: " << &a << endl;
 		cout << "b: " << &b << endl;
+		sprintf(buf, "%u", &Base::test1);
 		printf("%u\n", &Base::test1);
 	}
 private:
