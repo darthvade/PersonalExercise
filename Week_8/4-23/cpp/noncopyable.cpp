@@ -7,11 +7,12 @@ protected:
 	Noncopyable(){};
 	~Noncopyable(){};
 private:
-	Noncopyable(const Noncopyable&) {};
-	Noncopyable& operator=(const Noncopyable&) { return *this};
+	Noncopyable(const Noncopyable&);
+	Noncopyable& operator=(const Noncopyable&);
 };
 
 int main() {
 
+	Noncopyable a;
 	return 0;
 }
