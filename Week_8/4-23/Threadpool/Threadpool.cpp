@@ -26,4 +26,10 @@ void Threadpool::stop_threadpool() {
 	}
 	_is_started = false;
 	_cond.notifyall();
+	for(std::vector<Workthread>::iterator iter = _thread_vector.begin(); iter != _thread_vector.end(); ++iter) {
+		iter->join();	
+	}
+	while(!_task_queue.empty()) {
+		_task_queue.pop();
+	}
 }
