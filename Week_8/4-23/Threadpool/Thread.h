@@ -2,6 +2,7 @@
 #define __THREAD_H__
 
 #include <pthread.h>
+#include <cstddef>
 
 class Thread {
 public:
