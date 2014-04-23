@@ -7,7 +7,7 @@ public:
 	Base(int a) : _in_base(a) {
 		cout << "Base constractor!" << endl;
 	}
-	~Base() {
+	virtual ~Base() {
 		cout << "Base destractor!" << endl;
 	}
 	virtual void test() {
