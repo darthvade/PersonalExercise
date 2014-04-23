@@ -39,4 +39,9 @@ bool Threadpool::get_task_queue(Task &task) {
 	while(_is_started && _task_queue.empty()) {
 		_cond.wait();
 	}
+	if(_is_started == false) {
+		_lock.unlock();
+		return false;
+	}
+	task = _task_queue.front();
 }
