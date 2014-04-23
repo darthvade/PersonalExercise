@@ -55,5 +55,8 @@ bool Threadpool::add_task_queue(Task task) {
 	if(_is_started) {
 		_task_queue.push(task);
 		_cond.notify();
+		ret = true;
 	}
+	_lock.unlock();
+	return ret;
 }
