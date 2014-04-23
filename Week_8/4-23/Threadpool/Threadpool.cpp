@@ -10,3 +10,12 @@ Threadpool::Threadpool(std::vector<Workthread>::size_type max_thread) :
 Threadpool::~Threadpool() {
 	stop_threadpool();
 }
+
+void Threadpool::start_threadpool() {
+	if(_is_started == false) {
+		_is_started = true;
+		for(std::vector<Workthread>::iterator iter = _thread_vector.begin(); iter != _thread_vector.end(); ++iter) {
+			iter->start();	
+		}
+	}
+}
