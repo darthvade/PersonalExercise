@@ -7,7 +7,7 @@
 
 class Condition : public Noncopyable {
 public:
-	Condition();
+	Condition(Mutexlock *);
 	~Condition();
 	void wait();
 	void notify();
