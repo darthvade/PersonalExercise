@@ -25,6 +25,9 @@ public:
 	Child(int base, int child) : Base(base), _in_child(child) {
 		cout << "Child constractor!" << endl;
 	}
+	Child(const Child& c) : Base(c) {
+		_in_child = c._in_child;
+	}
 	~Child() {
 		cout << "Child destractor!" << endl;
 	}
@@ -43,7 +46,10 @@ int main() {
 	Base &p = d;
 	p.test();
 	*/
+	/*
 	Base *p = new Child(1, 99);
 	delete p;
+	*/
+	Child c(1, 2);
 	return 0;
 }
