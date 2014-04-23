@@ -7,7 +7,7 @@ class Threadpool;
 
 class Workthread : public Thread {
 public:
-
+	void run();
 private:
 	Threadpool *_pThreadpool;
 };
