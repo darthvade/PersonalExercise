@@ -10,6 +10,9 @@ public:
 	~Base() {
 		cout << "Base destractor!" << endl;
 	}
+	void test() {
+		cout << "" << endl;	
+	}
 };
 
 class Child : public Base {
