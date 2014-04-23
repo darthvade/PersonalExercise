@@ -48,3 +48,12 @@ bool Threadpool::get_task_queue(Task &task) {
 	_lock.unlock();
 	return true;
 }
+
+bool Threadpool::add_task_queue(Task task) {
+	_lock.lock();
+	bool ret = false;
+	if(_is_started) {
+		_task_queue.push(task);
+		_cond.notify();
+	}
+}
