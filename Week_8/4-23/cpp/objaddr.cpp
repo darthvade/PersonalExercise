@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <cstdlib>
 #include <iostream>
 using namespace std;
 
@@ -8,6 +9,7 @@ public:
 	static void test2(){};
 	void test3(){};
 	void debug() {
+		char buf[32];
 		cout << "a: " << &a << endl;
 		cout << "b: " << &b << endl;
 		printf("%u\n", &Base::test1);
