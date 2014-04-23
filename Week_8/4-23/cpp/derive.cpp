@@ -12,8 +12,12 @@ public:
 	}
 };
 
+class Child : public Base {
+	
+};
+
 
 int main() {
-
+	Child d;
 	return 0;
 }
