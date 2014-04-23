@@ -19,6 +19,7 @@ void Thread::join() {
 void *Thread::thread_func(void *args) {
 	Thread *pthread = static_cast<Thread *>(args);
 	pthread->run();
+	pthread_exit(0);
 }
 
 pthread_t Thread::get_tid() const {
