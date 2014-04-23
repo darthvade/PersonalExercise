@@ -19,7 +19,7 @@ private:
 
 class Child : public Base {
 public:
-	Child() {
+	Child(int base, int child) : Base(base), _in_child(child) {
 		cout << "Child constractor!" << endl;
 	}
 	~Child() {
