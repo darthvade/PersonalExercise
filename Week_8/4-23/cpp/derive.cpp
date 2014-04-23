@@ -11,7 +11,7 @@ public:
 		cout << "Base destractor!" << endl;
 	}
 	virtual void test() {
-		cout << "Base test()" << endl;	
+		cout << "Base test()" <<  " " << _in_base << endl;	
 	}
 private:
 	int _in_base;
@@ -26,7 +26,7 @@ public:
 		cout << "Child destractor!" << endl;
 	}
 	void test() {
-		cout << "Child test()" << endl;	
+		cout << "Child test()" <<  " " << _in_child << endl;	
 	}
 private:
 	int _in_child;
@@ -34,7 +34,7 @@ private:
 
 
 int main() {
-	Child d;
+	Child d(1, 99);
 	d.test();
 	Base &p = d;
 	p.test();
