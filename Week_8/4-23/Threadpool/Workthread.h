@@ -3,7 +3,7 @@
 
 #include "Thread.h"
 
-class Theadpool;
+class Threadpool;
 
 class Workthread : public Thread {
 public:
