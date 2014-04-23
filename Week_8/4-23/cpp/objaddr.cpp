@@ -1,5 +1,5 @@
 #include <cstdio>
-//#include <iostream>
+#include <iostream>
 using namespace std;
 
 class Base {
@@ -8,9 +8,9 @@ public:
 	static void test2(){};
 	void test3(){};
 	void debug() {
-//		cout << "a: " << &a << endl;
-//		cout << "b: " << &b << endl;
-		printf("%#p \n", &Base::test1);
+		cout << "a: " << &a << endl;
+		cout << "b: " << &b << endl;
+		printf("%p \n", (void *)&Base::test1);
 	}
 private:
 	int a;
