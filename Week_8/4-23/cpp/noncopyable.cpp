@@ -15,5 +15,6 @@ class Base : public Noncopyable {};
 
 int main() {
 	Base b;
+	//Base a = b; //error!
 	return 0;
 }
