@@ -25,7 +25,7 @@ public:
 	Child(int base, int child) : Base(base), _in_child(child) {
 		cout << "Child constractor!" << endl;
 	}
-	Child(const Child& c) : Base(c) {
+	Child(const Child& c) /*: Base(c) */{
 		_in_child = c._in_child;
 	}
 	~Child() {
