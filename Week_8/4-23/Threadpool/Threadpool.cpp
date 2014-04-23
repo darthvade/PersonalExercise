@@ -33,3 +33,10 @@ void Threadpool::stop_threadpool() {
 		_task_queue.pop();
 	}
 }
+
+bool Threadpool::get_task_queue(Task &task) {
+	_lock.lock();
+	while(_is_started && _task_queue.empty()) {
+		_cond.wait();
+	}
+}
