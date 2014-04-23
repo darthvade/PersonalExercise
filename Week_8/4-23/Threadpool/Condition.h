@@ -5,8 +5,11 @@
 #include "Noncopyable.h"
 
 class Condition : public Noncopyable {
+public:
+	Condition();
+	~Condition();
 private:
-	pthread_mutex_t *_pMutex;
+	Mutex *_pMutex;
 	pthread_cond_t _cond;
 };
 
