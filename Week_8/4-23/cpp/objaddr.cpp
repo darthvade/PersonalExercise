@@ -11,7 +11,7 @@ public:
 	void debug() {
 		cout << "a: " << &a << endl;
 		cout << "b: " << &b << endl;
-		printf("%p \n", &Base::test1);
+		printf("%#p \n", &Base::test1);
 		cout << "test1: " << &Base::test1 << endl;
 		cout << "test2: " << &Base::test2 << endl;
 		cout << "test3: " << &Base::test3 << endl;
