@@ -9,6 +9,8 @@ public:
 	void test3(){};
 	void debug() {
 		cout << "a: " << &a << endl;
+		cout << "b: " << &b << endl;
+		cout << "test1: " << &this->test1 << endl;
 	}
 private:
 	int a;
