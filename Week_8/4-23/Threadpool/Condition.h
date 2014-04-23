@@ -2,8 +2,11 @@
 #define __CONDITION_H__
 
 #include <pthread.h>
+#include "Noncopyable.h"
 
-class
+class Condition : public Noncopyable {
+
+};
 
 
 #endif
