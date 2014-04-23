@@ -8,6 +8,7 @@ class Condition : public Noncopyable {
 public:
 	Condition();
 	~Condition();
+void wait();
 private:
 	Mutex *_pMutex;
 	pthread_cond_t _cond;
