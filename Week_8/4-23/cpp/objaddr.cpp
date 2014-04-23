@@ -7,6 +7,9 @@ public:
 	void test1(){};
 	static void test2(){};
 	void test3(){};
+	void debug() {
+		cout << "a: " << &a << endl;
+	}
 private:
 	int a;
 	int b;
