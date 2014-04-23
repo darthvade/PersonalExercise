@@ -16,7 +16,7 @@ public:
 	virtual void test() {
 		cout << "Base test()" <<  " " << _in_base << endl;	
 	}
-private:
+protected:
 	int _in_base;
 };
 
@@ -51,5 +51,6 @@ int main() {
 	delete p;
 	*/
 	Child c(1, 2);
+	Child d(c);
 	return 0;
 }
