@@ -1,5 +1,6 @@
 #include <iostream>
 #include <pthread.h>
+#include <cstddef>
 
 void *func(void *) {
 
@@ -7,9 +8,8 @@ void *func(void *) {
 }
 
 int main() {
-
 	
-
+	pthread_t pthread_create(NULL, NULL, func, NULL);
 
 	return 0;
 }
