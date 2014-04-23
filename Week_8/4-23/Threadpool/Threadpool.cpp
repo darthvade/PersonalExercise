@@ -60,3 +60,10 @@ bool Threadpool::add_task_queue(Task task) {
 	_lock.unlock();
 	return ret;
 }
+
+bool Threadpool::is_task_queue_empty() const {
+	_lock.lock();
+	bool ret = _task_queue.empty();
+	_lock.unlock();
+	return ret;
+}
