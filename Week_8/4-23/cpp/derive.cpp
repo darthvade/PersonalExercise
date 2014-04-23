@@ -40,6 +40,7 @@ int main() {
 	Base &p = d;
 	p.test();
 	*/
-	Base &p = new Child(1, 99);
+	Base *p = new Child(1, 99);
+	delete p;
 	return 0;
 }
