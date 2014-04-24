@@ -17,7 +17,9 @@ private:
 };
 
 std::ostream& operator<< (std::ostream& os, const MyComplex& cplx) {
-	os <<  cplx.
+	if(cplx._i != 0) {
+		os <<  cplx._r << "+" << "i" << cplx._i;
+	}
 }
 
 #endif
