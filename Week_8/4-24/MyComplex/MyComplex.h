@@ -5,7 +5,7 @@
 
 class MyComplex {
 	friend std::ostream& operator<< (std::ostream&, const MyComplex&);
-	friend std::istream& operator>> (std::istream&, const MyComplex&);
+	friend std::istream& operator>> (std::istream&, MyComplex&);
 public:
 	MyComplex();
 	MyComplex(int, int);
