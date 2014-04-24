@@ -17,3 +17,7 @@ MyVector::MyVector(int *begin, int *end) {
 		memcpy(_myptr, begin, n);
 	}
 }
+
+MyVector::~MyVector() {
+	delete[] _myptr;
+}
