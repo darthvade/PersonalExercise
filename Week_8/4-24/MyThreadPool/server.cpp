@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <cstdlib>
 #include <cstring>
+#include "Threadpool.h"
 
 using namespace std;
 
@@ -39,10 +40,7 @@ int main(int argc, char *argv[]) {
 
 
 	//event
-	char buf[1024];
-	int n = read(connfd, buf, strlen(buf) + 1);
-	cout << n << endl;
-	write(connfd, buf, n);
+	Thread
 
 	close(serverfd);
 	close(connfd);
