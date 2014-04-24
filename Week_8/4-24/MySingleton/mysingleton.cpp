@@ -4,7 +4,7 @@ using namespace std;
 
 class Base {
 public:
-	static Base& Instanc() {
+	static Base& Instance() {
 		static Base single;
 		return single;
 	}
@@ -19,6 +19,6 @@ private:
 };
 
 int main() {
-	Base::Instanc().print();
+	Base::Instance().print();
 	return 0;
 }
