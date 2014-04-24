@@ -4,6 +4,8 @@
 class MyVector {
 public:
 	MyVector();
+	MyVector(int n);
+	MyVector(int *, int *);
 	~MyVector();
 	MyVector(const MyVector&);
 	MyVector& operator= (const MyVector&);
