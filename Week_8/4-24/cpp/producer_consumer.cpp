@@ -4,6 +4,8 @@
 
 #define N 5
 
+using namespace std;
+
 pthread_mutex_t mutex;
 pthread_cond_t empty;
 pthread_cond_t full;
@@ -22,6 +24,7 @@ void *consumer(void *) {
 		if(source.size() == N) {
 			pthread_cond_wait(&full, &mutex);
 		}
+		cout << "push 999" << endl;
 		source.push(999);
 		/***********************************/
 
@@ -35,7 +38,7 @@ void *producer(void *) {
 		pthread_mutex_lock(&mutex);	
 
 		/***********************************/
-
+		while()
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
