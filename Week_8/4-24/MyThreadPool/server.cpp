@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
 	pool.start_threadpool();
 	while(true) {
 		n = read(connfd, buf, 1024);	
-		pool.add_task_queue(new string(buf, n));
+		pool.add_task_queue(string(buf, n));
 	}
 
 	close(serverfd);
