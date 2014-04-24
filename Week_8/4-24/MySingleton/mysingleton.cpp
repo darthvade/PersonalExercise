@@ -20,5 +20,7 @@ private:
 
 int main() {
 	Base::Instance();
+	Base::Instance();
+	Base::Instance();
 	return 0;
 }
