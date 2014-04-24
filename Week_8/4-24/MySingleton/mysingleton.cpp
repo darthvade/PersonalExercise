@@ -12,10 +12,10 @@ public:
 		cout << "Singleton!" << endl;	
 	}
 private:
-	Base();
+	Base() {};
 	Base(const Base &);
 	Base& operator=(const Base&);
-	~Base();
+	~Base() {};
 };
 
 int main() {
