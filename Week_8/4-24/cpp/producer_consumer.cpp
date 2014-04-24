@@ -17,8 +17,10 @@ void *consumer(void *) {
 
 		/***********************************/
 		while(source.empty()) {
-		
+			pthread_cond_wait(&full, &mutex);	
 		}
+		source.pop();
+
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
