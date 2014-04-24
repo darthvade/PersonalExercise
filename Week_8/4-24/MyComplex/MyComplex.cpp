@@ -8,3 +8,7 @@ MyComplex::MyComplex(const MyComplex& other) {
 	_r = other._r;
 	_i = other._i;
 }
+
+MyComplex& MyComplex::operator=(const MyComplex& other) {
+
+}
