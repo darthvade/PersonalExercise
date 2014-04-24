@@ -10,6 +10,8 @@ public:
 	MyVector(const MyVector&);
 	MyVector& operator= (const MyVector&);
 	bool operator!= (const MyVector&) const;
+	unsigned int size();
+	unsigned int capacity();
 private:
 	int *_myptr;
 	unsigned int _size;
