@@ -7,9 +7,10 @@
 #include "Condition.h"
 #include "Noncopyable.h"
 #include "Workthread.h"
+#include <string>
 
 struct Task {
-	int _num;
+	std::string solve;
 };
 
 class Threadpool : public Noncopyable {
