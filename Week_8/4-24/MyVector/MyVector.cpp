@@ -75,6 +75,7 @@ void MyVector::insert(unsigned int n, int elem) {
 		memcpy(_myptr, temp._myptr, _capacity * 2 * sizeof(int));
 		_myptr[n] = elem;	
 		_size++;
+		_capacity = _capacity * 2;
 	} else {
 		unsigned int i = this->_size;
 		while(i > n) {
