@@ -1,5 +1,6 @@
 #include <iostream>
 #include <pthread.h>
+#include <unistd.h>
 #include <queue>
 
 #define N 5
@@ -22,6 +23,7 @@ void *consumer(void *) {
 		}
 		std::cout << "consumer run!" << std::endl;
 		source.pop();
+		sleep(1);
 		pthread_cond_signal(&empty);
 		/***********************************/
 
@@ -41,6 +43,7 @@ void *producer(void *) {
 		}
 		std::cout << "producer run!" << std::endl;
 		source.push(999);
+		sleep(5);
 		pthread_cond_signal(&full);
 		/***********************************/
 
