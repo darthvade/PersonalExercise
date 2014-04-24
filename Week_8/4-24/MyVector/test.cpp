@@ -16,5 +16,8 @@ int main() {
 	cout << vec1.size() << " " << vec1.capacity() << endl; 
 	cout << vec2.size() << " " << vec2.capacity() << endl; 
 	cout << vec3.size() << " " << vec3.capacity() << endl; 
+	cout << vec1 << endl;
+	cout << vec2 << endl;
+	cout << vec3 << endl;
 	return 0;
 }
