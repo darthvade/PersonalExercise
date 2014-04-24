@@ -35,7 +35,11 @@ MyComplex MyComplex::operator*(const MyComplex& other) {
 }
 
 bool MyComplex::operator==(const MyComplex& other) {
-	if()
+	if(this->_r == other._r && this->_i == other._i) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 std::ostream& operator<< (std::ostream& os, const MyComplex& cplx) {
