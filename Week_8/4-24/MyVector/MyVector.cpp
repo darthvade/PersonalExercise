@@ -62,8 +62,10 @@ int& MyVector::operator[] (const unsigned int index){
 	return this->_myptr[index];
 }
 
-void MyVector::insert(int n, int elem) {
-	if(n > this->_size)
+void MyVector::insert(unsigned int n, int elem) {
+	if(n > this->_size) {
+		return;	
+	}
 }
 
 
