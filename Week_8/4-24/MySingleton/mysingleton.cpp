@@ -19,8 +19,8 @@ private:
 };
 
 int main() {
-	Base::Instance();
-	Base::Instance();
-	Base::Instance();
+	Base::Instance().print();
+	Base::Instance().print();
+	Base::Instance().print();
 	return 0;
 }
