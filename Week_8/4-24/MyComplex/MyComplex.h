@@ -14,6 +14,7 @@ public:
 	MyComplex operator+(const MyComplex&);
 	MyComplex operator-(const MyComplex&);
 	MyComplex operator*(const MyComplex&);
+	bool operator==(const MyComplex&);
 	~MyComplex();
 private:
 	int _r;
