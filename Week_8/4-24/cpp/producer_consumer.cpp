@@ -11,8 +11,10 @@ pthread_cond_t full;
 
 void *consumer(void *) {
 	while(true) {
+		pthread_mutex_lock(&mutex);	
 	
-	
+
+		pthread_mutex_unlock(&mutex);
 	}
 	pthread_exit(0);
 }
