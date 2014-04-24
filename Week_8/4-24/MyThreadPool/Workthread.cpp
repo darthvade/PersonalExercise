@@ -20,7 +20,7 @@ void Workthread::register_threadpool(Threadpool *pThreadpool) {
 	_pThreadpool = pThreadpool;
 }
 
-void Workthread::compute_task(int num) {
+void Workthread::compute_task(string &solve) {
 	cout << "I'm thread --->" << pthread_self() << endl;
 	cout << pthread_self() << " -> strat ! " << endl;
 	sleep(5);
