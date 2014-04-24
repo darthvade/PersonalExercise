@@ -57,6 +57,7 @@ unsigned int MyVector::size() {
 unsigned int MyVector::capacity() {
 	return _capacity;
 }
-
-
-
+	
+int& operator[] (const unsigned int index){
+	return this[index];
+}
