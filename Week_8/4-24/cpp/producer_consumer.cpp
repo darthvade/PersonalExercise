@@ -15,7 +15,7 @@ void *consumer(void *) {
 	while(true) {
 		pthread_mutex_lock(&mutex);	
 		while(source.empty()) {
-		
+			pthread_cond_signal(&empty, &mutex);	
 		}	
 
 		pthread_mutex_unlock(&mutex);
@@ -36,8 +36,8 @@ void *producer(void *) {
 
 int main() {
 	pthread_mutex_init(&mutex, NULL);
-	pthread_cond_init(&empty, NULL);
-	pthread_cond_init(&full, NULL);
+	pthread_cond_init(&empty, &mutex);
+	pthread_cond_init(&full, &mutex);
 
 
 	pthread_t t_cons, t_prot;
