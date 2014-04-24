@@ -41,12 +41,13 @@ int main(int argc, char *argv[]) {
 
 	//event
 	char buf[1024];
-	int n;
+	unsigned int n;
 	Threadpool pool(10);
 	pool.start_threadpool();
 	while(true) {
 		n = read(connfd, buf, 1024);	
-		pool.add_task_queue(string(buf, n));
+		string temp(buf, n);
+		pool.add_task_queue(temp);
 	}
 
 	close(serverfd);
