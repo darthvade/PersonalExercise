@@ -21,5 +21,6 @@ void Workthread::register_threadpool(Threadpool *pThreadpool) {
 }
 
 void Workthread::compute_task(int num) {
-	cout << "num: " << num * num << endl;
+	cout << pthread_self() << endl;
+	//cout << "num: " << num * num << endl;
 }
