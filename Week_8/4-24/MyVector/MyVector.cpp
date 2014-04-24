@@ -70,6 +70,8 @@ void MyVector::insert(unsigned int n, int elem) {
 		_size++;
 	} else if (this->_size + 1 > this->_capacity) {
 		MyVector temp(*this);
+		delete[] _myptr;
+		_myptr = new int[this->_capacity * 2];
 	} else {
 		unsigned int i = this->_size;
 		while(i > n) {
