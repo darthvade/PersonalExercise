@@ -38,13 +38,13 @@ int main(int argc, char *argv[]) {
 	bzero(&cliaddr, sizeof(cliaddr));
 	connfd = accept(serverfd, (SA *)&cliaddr, &cliaddrlen);
 
+	cout << "accept --> " << connfd << endl;
 
 	//event
 	char buf[1024];
 	int n;
 	Threadpool pool(10);
 	pool.start_threadpool();
-	sleep(1);
 	while(true) {
 		n = read(connfd, buf, strlen(buf) + 1);	
 		cout << "read --> " << n << endl;
