@@ -39,6 +39,7 @@ void *producer(void *) {
 			std::cout << "queue is FULL!" << std::endl;
 			pthread_cond_wait(&empty, &mutex);	
 		}
+		std::cout << "producer run!" << std::endl;
 		source.push(999);
 		pthread_cond_signal(&full);
 		/***********************************/
