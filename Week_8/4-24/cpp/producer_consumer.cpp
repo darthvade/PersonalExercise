@@ -16,14 +16,6 @@ void *consumer(void *) {
 		pthread_mutex_lock(&mutex);	
 
 		/***********************************/
-		while(source.empty()) {
-			pthread_cond_wait(&empty, &mutex);	
-		}	
-		if(source.size() == N) {
-			pthread_cond_wait(&full, &mutex);
-		}
-		std::cout << "push A 999" << std::endl;
-		source.push(999);
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
@@ -36,9 +28,6 @@ void *producer(void *) {
 		pthread_mutex_lock(&mutex);	
 
 		/***********************************/
-		while(source.empty()) {
-				
-		}
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
