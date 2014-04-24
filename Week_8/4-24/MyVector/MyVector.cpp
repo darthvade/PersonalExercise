@@ -30,3 +30,7 @@ MyVector::MyVector(const MyVector& other) {
 	_size = other._size;
 	_capacity = other._capacity;
 }
+
+MyVector& MyVector::operator= (const MyVector& other) {
+	
+}
