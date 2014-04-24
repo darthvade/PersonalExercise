@@ -41,10 +41,11 @@ int main(int argc, char *argv[]) {
 
 	//event
 	char buf[1024];
+	int n;
 	Threadpool pool(10);
 	pool.start_threadpool();
 	while(true) {
-		readn(connfd, buf, 1024);	
+		n = read(connfd, buf, 1024);	
 	}
 
 	close(serverfd);
