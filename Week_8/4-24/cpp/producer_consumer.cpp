@@ -10,12 +10,18 @@ pthread_cond_t full;
 
 
 void *consumer(void *) {
-
+	while(true) {
+	
+	
+	}
 	pthread_exit(0);
 }
 
 void *producer(void *) {
+	while(true) {
+	
 
+	}
 	pthread_exit(0);
 }
 
