@@ -26,13 +26,13 @@ int main(int argc, char *argv[]) {
 
 	//event
 	while(true) {
-	char buf[1024];
-	string str;
-	cin >> str;
-	strcpy(buf, str.c_str());
-	write(clientfd, buf, strlen(buf) + 1);
-	int n = read(clientfd, buf, sizeof(buf));
-	cout << buf << n << endl;
+		char buf[1024];
+		string str;
+		cin >> str;
+		strcpy(buf, str.c_str());
+		write(clientfd, buf, strlen(buf) + 1);
+		//int n = read(clientfd, buf, sizeof(buf));
+		//cout << buf << n << endl;
 	}
 
 	close(clientfd);
