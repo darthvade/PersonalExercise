@@ -29,7 +29,7 @@ MyComplex MyComplex::operator-(const MyComplex& other) {
 
 MyComplex MyComplex::operator*(const MyComplex& other) {
 	MyComplex result;
-	result._r = this->_r + other._r;
+	result._r = this->_r + other._r - (this->_i * other._i);
 	return result;
 }
 
