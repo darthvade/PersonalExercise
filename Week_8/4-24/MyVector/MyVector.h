@@ -10,7 +10,7 @@ public:
 	MyVector(const MyVector&);
 	MyVector& operator= (const MyVector&);
 	bool operator!= (const MyVector&) const;
-	int& operator[] () const;
+	int& operator[] (const unsigned int index) const;
 	unsigned int size();
 	unsigned int capacity();
 private:
