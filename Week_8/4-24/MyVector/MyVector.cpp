@@ -96,4 +96,6 @@ std::ostream& operator<< (std::ostream& os, const MyVector &print) {
 	return os;	
 }
 
+void MyVector::push_back(int elem) {
 
+}
