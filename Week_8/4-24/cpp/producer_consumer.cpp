@@ -15,6 +15,7 @@ void *consumer(void *) {
 	while(true) {
 		pthread_mutex_lock(&mutex);	
 
+		/***********************************/
 		while(source.empty()) {
 			pthread_cond_wait(&empty, &mutex);	
 		}	
@@ -22,6 +23,7 @@ void *consumer(void *) {
 			pthread_cond_wait(&full, &mutex);
 		}
 		source.push(999);
+		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
 	}
@@ -32,6 +34,9 @@ void *producer(void *) {
 	while(true) {
 		pthread_mutex_lock(&mutex);	
 
+		/***********************************/
+
+		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
 	}
