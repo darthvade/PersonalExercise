@@ -42,11 +42,11 @@ int main(int argc, char *argv[]) {
 	//event
 	char buf[1024];
 	int n;
-	string solve;
 	Threadpool pool(10);
 	pool.start_threadpool();
 	while(true) {
 		n = read(connfd, buf, 1024);	
+		pool.add_task_queue(string(buf, buf + n));
 	}
 
 	close(serverfd);
