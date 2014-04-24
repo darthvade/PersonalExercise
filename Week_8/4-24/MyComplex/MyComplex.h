@@ -15,8 +15,8 @@ private:
 	int _i;
 };
 
-std::ostream& operator<< (std::ostream& os, const MyComplex&) {
-	
+std::ostream& operator<< (std::ostream& os, const MyComplex& cplx) {
+	os <<  
 }
 
 #endif
