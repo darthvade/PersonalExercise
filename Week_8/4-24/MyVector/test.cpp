@@ -19,6 +19,5 @@ int main() {
 	cout << vec1 << endl;
 	cout << vec2 << endl;
 	cout << vec3 << endl;
-	cout << vec3[7] << endl;
 	return 0;
 }
