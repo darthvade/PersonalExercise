@@ -68,11 +68,13 @@ void MyVector::insert(unsigned int n, int elem) {
 	} else if (n == this->_size && this->_size + 1 == this->_capacity) {
 		_myptr[n] = elem;	
 		_size++;
-	} else if (this->_size + 1 > this->_capacity) {
+	} else if (n == this->_size && this->_size + 1 > this->_capacity) {
 		MyVector temp(*this);
 		delete[] _myptr;
 		_myptr = new int[this->_capacity * 2];
 		memcpy(_myptr, temp._myptr, _capacity * 2 * sizeof(int));
+		_myptr[n] = elem;	
+		_size++;
 	} else {
 		unsigned int i = this->_size;
 		while(i > n) {
