@@ -13,6 +13,8 @@ MyVector::MyVector(int n) : _size(n), _capacity(n) {
 MyVector::MyVector(int *begin, int *end) {
 	if(begin <= end) {
 		unsigned int n = end - begin;
+		_size = n;
+		_capacity = n;
 		_myptr = new int[n];
 		memcpy(_myptr, begin, n);
 	}
