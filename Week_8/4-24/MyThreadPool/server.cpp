@@ -40,10 +40,11 @@ int main(int argc, char *argv[]) {
 
 
 	//event
+	char buf[1024];
 	Threadpool pool(10);
 	pool.start_threadpool();
 	while(true) {
-		
+				
 	}
 
 	close(serverfd);
