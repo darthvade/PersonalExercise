@@ -19,6 +19,6 @@ private:
 };
 
 int main() {
-	Base::Instanc().Instanc().Instanc();
+	Base::Instanc().print();
 	return 0;
 }
