@@ -1,6 +1,8 @@
 #ifndef __MYCOMPLEX_H__
 #define __MYCOMPLEX_H__
 
+#include <iostream>
+
 class MyComplex {
 public:
 	MyComplex();
@@ -13,6 +15,8 @@ private:
 	int _i;
 };
 
-
+ostream& operator<< (ostream& os, const MyComplex&) {
+	
+}
 
 #endif
