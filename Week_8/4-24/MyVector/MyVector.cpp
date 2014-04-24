@@ -73,6 +73,7 @@ void MyVector::insert(unsigned int n, int elem) {
 			_myptr[i] = _myptr[i - 1];
 			i--;
 		}
+		_myptr[i] = elem;
 	}
 }
 
