@@ -16,6 +16,9 @@ void *consumer(void *) {
 		pthread_mutex_lock(&mutex);	
 
 		/***********************************/
+		while(source.empty()) {
+		
+		}
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
