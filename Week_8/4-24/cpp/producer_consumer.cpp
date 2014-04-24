@@ -9,10 +9,12 @@ pthread_cond_t empty;
 pthread_cond_t full;
 
 
+std::queue<int> source;
+
 void *consumer(void *) {
 	while(true) {
 		pthread_mutex_lock(&mutex);	
-	
+		while()	
 
 		pthread_mutex_unlock(&mutex);
 	}
@@ -29,7 +31,6 @@ void *producer(void *) {
 	pthread_exit(0);
 }
 
-std::queue<int> source;
 
 int main() {
 	pthread_mutex_init(&mutex, NULL);
