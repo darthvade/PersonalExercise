@@ -7,3 +7,7 @@ Condition::Condition(Mutexlock *mutex) : _pMutex(mutex) {
 Condition::~Condition() {
 	pthread_cond_destroy(&_cond);
 }
+
+void Condition::wait() {
+	pthread_cond_wait(&_cond, &_pMutex->_mutex);
+}
