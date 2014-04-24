@@ -15,7 +15,7 @@ private:
 	int _i;
 };
 
-ostream& operator<< (ostream& os, const MyComplex&) {
+std::ostream& operator<< (std::ostream& os, const MyComplex&) {
 	
 }
 
