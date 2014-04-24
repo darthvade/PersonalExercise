@@ -26,4 +26,5 @@ MyVector::~MyVector() {
 
 MyVector::MyVector(const MyVector& other) {
 	_myptr = new int[other._capacity];
+	memcpy(_myptr, other._myptr, other._capacity);
 }
