@@ -1,4 +1,5 @@
 #include "MyVector.h"
+#include <cstring>
 
 MyVector::MyVector() : _myptr(0), _size(0), _capacity(0) {
 	
