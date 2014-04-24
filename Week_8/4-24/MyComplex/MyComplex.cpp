@@ -17,6 +17,10 @@ MyComplex& MyComplex::operator=(const MyComplex& other) {
 	return *this;
 }
 
+MyComplex& operator+(const MyComplex&) {
+
+}
+
 std::ostream& operator<< (std::ostream& os, const MyComplex& cplx) {
 	if(cplx._i != 0) {
 		os <<  cplx._r << "+" << cplx._i << "i";
@@ -31,4 +35,5 @@ std::istream& operator>> (std::istream& in, MyComplex& cplx) {
 	if(!in) {
 		cplx = MyComplex();
 	}
+	return in;
 }
