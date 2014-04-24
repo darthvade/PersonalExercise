@@ -19,7 +19,10 @@ private:
 std::ostream& operator<< (std::ostream& os, const MyComplex& cplx) {
 	if(cplx._i != 0) {
 		os <<  cplx._r << "+" << "i" << cplx._i;
+	} else {
+		os <<  cplx._r;
 	}
+	return os;
 }
 
 #endif
