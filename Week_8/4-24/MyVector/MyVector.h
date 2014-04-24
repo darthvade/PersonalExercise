@@ -5,6 +5,8 @@ class MyVector {
 public:
 	MyVector();
 	~MyVector();
+	MyVector(const MyVector&);
+	MyVector& operator= (const MyVector&);
 private:
 	int *_myptr;
 };
