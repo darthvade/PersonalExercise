@@ -68,9 +68,10 @@ void MyVector::insert(unsigned int n, int elem) {
 	} else if (n == this->_size) {
 		_myptr[n] = elem;	
 	} else {
-		int i = this->_size;
-		while(i != n) {
+		unsigned int i = this->_size;
+		while(i > n) {
 			_myptr[i] = _myptr[i - 1];
+			i--;
 		}
 	}
 }
