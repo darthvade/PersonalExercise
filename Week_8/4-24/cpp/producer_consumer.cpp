@@ -20,6 +20,7 @@ void *consumer(void *) {
 			std::cout << "queue is EMPTY!" << std::endl;
 			pthread_cond_wait(&full, &mutex);	
 		}
+		std::cout << "consumer run!" << std::endl;
 		source.pop();
 		pthread_cond_signal(&empty);
 		/***********************************/
@@ -35,6 +36,7 @@ void *producer(void *) {
 
 		/***********************************/
 		while(source.size() == N) {
+			std::cout << "queue is FULL!" << std::endl;
 			pthread_cond_wait(&empty, &mutex);	
 		}
 		source.push(999);
