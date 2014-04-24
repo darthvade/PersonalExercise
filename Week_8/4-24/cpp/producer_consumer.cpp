@@ -29,5 +29,8 @@ int main() {
 	pthread_create(&t_prot, NULL, consumer, NULL);
 
 
+	pthread_join(t_cons, NULL);
+	pthread_join(t_prot, NULL);
+
 	return 0;
 }
