@@ -24,7 +24,7 @@ void *consumer(void *) {
 		std::cout << "consumer run!" << std::endl;
 		source.pop();
 		pthread_cond_signal(&empty);
-		sleep(1);
+		sleep(5);
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
@@ -44,7 +44,7 @@ void *producer(void *) {
 		std::cout << "producer run!" << std::endl;
 		source.push(999);
 		pthread_cond_signal(&full);
-		sleep(5);
+		sleep(1);
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
