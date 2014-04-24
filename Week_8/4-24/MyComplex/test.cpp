@@ -5,8 +5,8 @@ using namespace std;
 
 int main() {
 	MyComplex a(3, 4);
-	cout << a << endl;
-	cin >> a;
-	cout << a << endl;
+	MyComplex b(4, 5);
+	cout << a + b << endl;
+
 	return 0;
 }
