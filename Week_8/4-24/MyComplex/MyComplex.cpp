@@ -34,6 +34,10 @@ MyComplex MyComplex::operator*(const MyComplex& other) {
 	return result;
 }
 
+bool MyComplex::operator==(const MyComplex& other) {
+	if()
+}
+
 std::ostream& operator<< (std::ostream& os, const MyComplex& cplx) {
 	if(cplx._i > 0) {
 		os <<  cplx._r << "+" << cplx._i << "i";
