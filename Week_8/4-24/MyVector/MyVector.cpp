@@ -43,5 +43,7 @@ MyVector& MyVector::operator= (const MyVector& other) {
 	if(*this != other) {
 		delete[] this->_myptr;	
 		this->_myptr = new int[other._capacity];
+		memcpy(_myptr, other._myptr, other._capacity);
+		this->_size = other._size;
 	}
 }
