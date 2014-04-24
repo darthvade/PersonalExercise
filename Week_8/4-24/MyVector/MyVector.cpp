@@ -31,6 +31,10 @@ MyVector::MyVector(const MyVector& other) {
 	_capacity = other._capacity;
 }
 
+bool MyVector::operator!= (const MyVector&) const {
+
+}
+
 MyVector& MyVector::operator= (const MyVector& other) {
 	
 }
