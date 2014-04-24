@@ -13,6 +13,7 @@ public:
 	int& operator[] (const unsigned int index);
 	unsigned int size();
 	unsigned int capacity();
+	void insert(int, int);
 private:
 	int *_myptr;
 	unsigned int _size;
