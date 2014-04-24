@@ -9,3 +9,7 @@ MyVector::MyVector(int n) : _size(n), _capacity(n) {
 	_myptr = new int[n];	
 	memset(_myptr, 0, n);
 }
+
+MyVector::MyVector(int *begin, int *end) {
+	int n = end - begin;
+}
