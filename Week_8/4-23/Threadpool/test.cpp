@@ -9,7 +9,7 @@ int main() {
 		Task tmp;
 		tmp._num = 8;
 		pool.add_task_queue(tmp);
-		sleep(1);
+		sleep(10);
 	}
 	return 0;
 }
