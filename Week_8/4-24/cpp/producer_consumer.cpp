@@ -36,7 +36,9 @@ void *producer(void *) {
 		pthread_mutex_lock(&mutex);	
 
 		/***********************************/
-		while()
+		while(source.empty()) {
+				
+		}
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
