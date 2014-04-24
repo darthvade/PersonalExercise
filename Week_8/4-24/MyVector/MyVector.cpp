@@ -58,6 +58,6 @@ unsigned int MyVector::capacity() {
 	return _capacity;
 }
 	
-int& operator[] (const unsigned int index){
-	return this[index];
+int& MyVector::operator[] (const unsigned int index){
+	return this->_myptr[index];
 }
