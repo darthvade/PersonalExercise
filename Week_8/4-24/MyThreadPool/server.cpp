@@ -43,8 +43,8 @@ int main(int argc, char *argv[]) {
 	//event
 	char buf[1024];
 	int n;
-	Threadpool pool(10);
-	pool.start_threadpool();
+//	Threadpool pool(10);
+//	pool.start_threadpool();
 //	while(true) {
 		n = read(connfd, buf, strlen(buf) + 1);	
 		cout << "read --> " << n << endl;
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
 			Task temp;
 			string str(buf, n);
 			temp.solve = str;
-			pool.add_task_queue(temp);
+//			pool.add_task_queue(temp);
 		}
 //	}
 
