@@ -47,7 +47,6 @@ int main(int argc, char *argv[]) {
 	while(true) {
 		n = read(connfd, buf, 1024);	
 		Task temp;
-		temp.solve = new string(buf, n);
 		pool.add_task_queue(temp);
 	}
 
