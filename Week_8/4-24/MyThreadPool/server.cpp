@@ -42,6 +42,9 @@ int main(int argc, char *argv[]) {
 	//event
 	Threadpool pool(10);
 	pool.start_threadpool();
+	while(true) {
+
+	}
 
 	close(serverfd);
 	close(connfd);
