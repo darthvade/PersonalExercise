@@ -22,7 +22,7 @@ int main() {
 	vec3.insert(4, 99);
 	cout << vec3 << endl;
 	cout << vec3.size() << endl;
-	cout << vec3.capacity() << endl;
+	cout << vec3.capacity() << endl << endl;
 	/*
 	MyVector vec4;
 	for(int i = 0; i != 20; ++i) {
