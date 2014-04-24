@@ -17,10 +17,11 @@ void *consumer(void *) {
 
 		/***********************************/
 		while(source.empty()) {
+			std::cout << "queue is EMPTY!" << std::endl;
 			pthread_cond_wait(&full, &mutex);	
 		}
 		source.pop();
-
+		pthread_cond_signal(&empty);
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
