@@ -62,6 +62,9 @@ int& MyVector::operator[] (const unsigned int index){
 }
 
 void MyVector::insert(unsigned int n, int elem) {
+	if(_size == 0) {
+		_myptr = new int(0);
+	}
 	if(n > this->_size) {
 		return;	
 	} else if (n <= this->_size && this->_size + 1 == this->_capacity) {
