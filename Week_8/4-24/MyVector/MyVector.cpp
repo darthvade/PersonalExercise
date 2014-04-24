@@ -13,6 +13,7 @@ MyVector::MyVector(int n) : _size(n), _capacity(n) {
 MyVector::MyVector(int *begin, int *end) {
 	if(begin <= end) {
 		unsigned int n = end - begin;
+		std::cout << n << std::endl;
 		_size = n;
 		_capacity = n;
 		_myptr = new int[n];
