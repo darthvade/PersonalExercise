@@ -21,3 +21,7 @@ MyVector::MyVector(int *begin, int *end) {
 MyVector::~MyVector() {
 	delete[] _myptr;
 }
+
+MyVector::MyVector(const MyVector& other) {
+
+}
