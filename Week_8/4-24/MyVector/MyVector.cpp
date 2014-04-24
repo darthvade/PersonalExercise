@@ -73,6 +73,7 @@ void MyVector::insert(unsigned int n, int elem) {
 		delete[] _myptr;
 		_myptr = new int[this->_capacity * 2];
 		memcpy(_myptr, temp._myptr, _capacity * 2 * sizeof(int));
+		_myptr[n + 1] = _myptr[n];
 		_myptr[n] = elem;	
 		_size++;
 		_capacity = _capacity * 2;
