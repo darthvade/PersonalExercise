@@ -17,7 +17,9 @@ void *consumer(void *) {
 		while(source.empty()) {
 			pthread_cond_wait(&empty, &mutex);	
 		}	
-
+		if(source.size() == N) {
+			pthread_cond_wait(&full, &mutex);
+		}
 		pthread_mutex_unlock(&mutex);
 	}
 	pthread_exit(0);
