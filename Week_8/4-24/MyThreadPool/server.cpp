@@ -42,6 +42,7 @@ int main(int argc, char *argv[]) {
 	//event
 	char buf[1024];
 	int n;
+	string solve;
 	Threadpool pool(10);
 	pool.start_threadpool();
 	while(true) {
