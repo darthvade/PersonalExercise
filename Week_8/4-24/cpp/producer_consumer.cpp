@@ -19,7 +19,7 @@ void *producer(void *) {
 	pthread_exit(0);
 }
 
-queue<int> source;
+std::queue<int> source;
 
 int main() {
 	pthread_mutex_init(&mutex, NULL);
