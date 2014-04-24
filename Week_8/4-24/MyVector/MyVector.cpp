@@ -1,8 +1,8 @@
 #include "MyVector.h"
 #include <cstring>
 
-MyVector::MyVector() : _myptr(0), _size(0), _capacity(0) {
-	
+MyVector::MyVector() : _size(0), _capacity(0) {
+	_myptr = new int(0);
 }
 
 MyVector::MyVector(int n) : _size(n), _capacity(n) {
