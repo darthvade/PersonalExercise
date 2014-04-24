@@ -31,6 +31,8 @@ void *producer(void *) {
 		while(source.size() == N) {
 			pthread_cond_wait(&empty, &mutex);	
 		}
+		source.push(999);
+		pthread_cond_signal(&full);
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
