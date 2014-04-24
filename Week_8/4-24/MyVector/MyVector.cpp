@@ -14,6 +14,6 @@ MyVector::MyVector(int *begin, int *end) {
 	if(begin <= end) {
 		int n = end - begin;
 		_myptr = new int[n];
-
+		memcopy(_myptr, begin, n);
 	}
 }
