@@ -4,6 +4,7 @@
 #include <iostream>
 
 class MyComplex {
+	friend std::ostream& operator<< (std::ostream&, const MyComplex&);
 public:
 	MyComplex();
 	MyComplex(int, int);
@@ -16,7 +17,7 @@ private:
 };
 
 std::ostream& operator<< (std::ostream& os, const MyComplex& cplx) {
-	os <<  
+	os <<  cplx.
 }
 
 #endif
