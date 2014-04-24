@@ -54,5 +54,9 @@ unsigned int MyVector::size() {
 	return _size;
 }
 
-unsigned int MyVector::capacity();
+unsigned int MyVector::capacity() {
+	return _capacity;
+}
+
+
 
