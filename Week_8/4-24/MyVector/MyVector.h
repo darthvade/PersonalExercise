@@ -4,7 +4,7 @@
 #include <iostream>
 
 class MyVector {
-	friend 
+	friend ostream& operator<< (const ostream&, const MyVector &);
 public:
 	MyVector();
 	MyVector(int n);
