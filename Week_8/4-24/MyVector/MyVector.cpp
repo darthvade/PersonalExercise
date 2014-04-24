@@ -1,5 +1,5 @@
 #include "MyVector.h"
-#include <cstring>
+#include <string.h>
 
 MyVector::MyVector() : _myptr(0), _size(0), _capacity(0) {
 	
