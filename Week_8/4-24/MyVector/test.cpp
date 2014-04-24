@@ -23,17 +23,21 @@ int main() {
 	cout << vec3 << endl;
 	cout << vec3.size() << endl;
 	cout << vec3.capacity() << endl << endl;
-	/*
+	
 	MyVector vec4;
 	for(int i = 0; i != 20; ++i) {
 		vec4.push_back(i);
 	}
 	cout << vec4 << endl;
-	*/
+	cout << vec4.size() << endl;
+	cout << vec4.capacity() << endl << endl;
+
+/*	
 	MyVector vec5;
 	vec5.push_back(99);
 	vec5.push_back(99);
 	vec5.push_back(99);
 	cout << vec5 << endl;
+*/
 	return 0;
 }
