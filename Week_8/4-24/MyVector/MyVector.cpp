@@ -77,8 +77,9 @@ void MyVector::insert(unsigned int n, int elem) {
 	}
 }
 
-std::ostream& operator<< (const std::ostream&, const MyVector &) {
-
+std::ostream& operator<< (const std::ostream& os, const MyVector &print) {
+	
+	return os;	
 }
 
 
