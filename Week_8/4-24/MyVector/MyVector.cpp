@@ -42,6 +42,6 @@ bool MyVector::operator!= (const MyVector& other) const {
 MyVector& MyVector::operator= (const MyVector& other) {
 	if(*this != other) {
 		delete[] this->_myptr;	
-		*this = other;
+		this->_myptr = new int[other._capacity];
 	}
 }
