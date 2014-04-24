@@ -30,7 +30,7 @@ int main() {
 
 	MyComplex  complex_obj5(complex_obj2) ;
 
-	cout << complex_obj5  ;
+	cout << complex_obj5 << endl;;
 
 	MyComplex  complex_obj6 ;
 
