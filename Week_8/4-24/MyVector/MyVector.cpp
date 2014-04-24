@@ -63,7 +63,7 @@ int& MyVector::operator[] (const unsigned int index){
 }
 
 void MyVector::insert(int n, int elem) {
-
+	if(n > this->_size)
 }
 
 
