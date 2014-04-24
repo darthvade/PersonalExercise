@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
 
 	//event
 	char buf[1024];
-	unsigned int n;
+	int n;
 	Threadpool pool(10);
 	pool.start_threadpool();
 	while(true) {
