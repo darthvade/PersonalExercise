@@ -17,7 +17,7 @@ MyVector::MyVector(int *begin, int *end) {
 		_size = n;
 		_capacity = n;
 		_myptr = new int[n];
-		memcpy(_myptr, begin, n);
+		memcpy(_myptr, begin, n * sizeof(int));
 	}
 }
 
