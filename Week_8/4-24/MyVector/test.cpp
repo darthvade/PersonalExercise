@@ -19,7 +19,7 @@ int main() {
 	cout << vec1 << endl;
 	cout << vec2 << endl;
 	cout << vec3 << endl;
-	vec3.insert(4, 99);
+//	vec3.insert(4, 99);
 //	cout << vec3 << endl;
 	return 0;
 }
