@@ -31,8 +31,12 @@ MyVector::MyVector(const MyVector& other) {
 	_capacity = other._capacity;
 }
 
-bool MyVector::operator!= (const MyVector&) const {
-
+bool MyVector::operator!= (const MyVector& other) const {
+	if(this->_myptr == other._myptr) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 MyVector& MyVector::operator= (const MyVector& other) {
