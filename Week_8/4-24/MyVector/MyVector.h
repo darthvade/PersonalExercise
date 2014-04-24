@@ -17,6 +17,7 @@ public:
 	unsigned int size();
 	unsigned int capacity();
 	void insert(unsigned int, int);
+	void push_back(int);
 private:
 	int *_myptr;
 	unsigned int _size;

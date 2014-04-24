@@ -97,5 +97,5 @@ std::ostream& operator<< (std::ostream& os, const MyVector &print) {
 }
 
 void MyVector::push_back(int elem) {
-
+	insert(_size, elem);
 }
