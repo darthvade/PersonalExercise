@@ -26,3 +26,6 @@ std::ostream& operator<< (std::ostream& os, const MyComplex& cplx) {
 	return os;
 }
 
+std::istream& operator>> (std::istream& in, const MyComplex& cplx) {
+	
+}
