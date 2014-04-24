@@ -46,8 +46,6 @@ MyVector& MyVector::operator= (const MyVector& other) {
 		memcpy(_myptr, other._myptr, other._capacity);
 		this->_size = other._size;
 		this->_capacity = other._capacity;
-		return *this;
-	} else {
-		
-	}
+	} 	
+	return *this;
 }
