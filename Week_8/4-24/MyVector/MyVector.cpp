@@ -49,3 +49,10 @@ MyVector& MyVector::operator= (const MyVector& other) {
 	} 	
 	return *this;
 }
+
+unsigned int MyVector::size() {
+	return _size;
+}
+
+unsigned int MyVector::capacity();
+
