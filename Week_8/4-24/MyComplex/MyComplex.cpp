@@ -38,7 +38,7 @@ std::ostream& operator<< (std::ostream& os, const MyComplex& cplx) {
 	if(cplx._i > 0) {
 		os <<  cplx._r << "+" << cplx._i << "i";
 	} else if(cplx._i < 0) {
-		os <<  cplx._r << "-" << cplx._i << "i";
+		os <<  cplx._r << cplx._i << "i";
 	} else {
 		os <<  cplx._r;
 	}
