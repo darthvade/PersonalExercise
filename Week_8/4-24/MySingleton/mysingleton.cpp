@@ -19,7 +19,7 @@ private:
 };
 
 int main() {
-	Base::Instance().print();
+	cout << &(Base::Instance()) << endl;;
 	Base::Instance().print();
 	Base::Instance().print();
 	return 0;
