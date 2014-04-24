@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
 	Threadpool pool(10);
 	pool.start_threadpool();
 	while(true) {
-				
+		readn(connfd, buf, 1024);	
 	}
 
 	close(serverfd);
