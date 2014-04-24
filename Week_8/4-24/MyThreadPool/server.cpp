@@ -46,10 +46,12 @@ int main(int argc, char *argv[]) {
 	pool.start_threadpool();
 	while(true) {
 		n = read(connfd, buf, 1024);	
-		Task temp;
-		string str(buf, n);
-		temp.solve = str;
-		pool.add_task_queue(temp);
+		if(n > 0) {
+			Task temp;
+			string str(buf, n);
+			temp.solve = str;
+			pool.add_task_queue(temp);
+		}
 	}
 
 	close(serverfd);
