@@ -1,7 +1,10 @@
 #ifndef __MYVECTOR_H__
 #define __MYVECTOR_H__
 
+#include <iostream>
+
 class MyVector {
+	friend 
 public:
 	MyVector();
 	MyVector(int n);
