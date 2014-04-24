@@ -80,7 +80,7 @@ void MyVector::insert(unsigned int n, int elem) {
 std::ostream& operator<< (std::ostream& os, const MyVector &print) {
 	unsigned int n = print._size;	
 	for(unsigned int i = 0; i != n; i++) {
-		os << print._myptr[i] << " ";
+		os << i << "->" << print._myptr[i] << std::endl;;
 	}
 	return os;	
 }
