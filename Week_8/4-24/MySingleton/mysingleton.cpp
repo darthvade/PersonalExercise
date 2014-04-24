@@ -19,6 +19,7 @@ private:
 };
 
 int main() {
-	Base::Instance().print();
+	Base &p = Base::Instance();
+	p.print();
 	return 0;
 }
