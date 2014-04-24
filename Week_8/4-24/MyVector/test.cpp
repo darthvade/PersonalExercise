@@ -21,5 +21,7 @@ int main() {
 	cout << vec3 << endl;
 	vec3.insert(4, 99);
 	cout << vec3 << endl;
+	cout << vec3.size() << endl;
+	cout << vec3.capacity() << endl;
 	return 0;
 }
