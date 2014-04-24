@@ -7,7 +7,7 @@ int main() {
 
 	while(true) {
 		Task tmp;
-		tmp._num = 8;
+		tmp.solve = "hello wprld!";
 		pool.add_task_queue(tmp);
 		//sleep(10);
 	}
