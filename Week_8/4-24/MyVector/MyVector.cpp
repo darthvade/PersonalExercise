@@ -65,10 +65,10 @@ int& MyVector::operator[] (const unsigned int index){
 void MyVector::insert(unsigned int n, int elem) {
 	if(n > this->_size) {
 		return;	
-	} else if (n == this->_size && this->_size + 1 == this->_capacity) {
+	} else if (n <= this->_size && this->_size + 1 == this->_capacity) {
 		_myptr[n] = elem;	
 		_size++;
-	} else if (n == this->_size && this->_size + 1 > this->_capacity) {
+	} else if (n <= this->_size && this->_size + 1 > this->_capacity) {
 		MyVector temp(*this);
 		delete[] _myptr;
 		_myptr = new int[this->_capacity * 2];
