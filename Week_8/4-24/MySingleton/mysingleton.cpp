@@ -10,3 +10,8 @@ private:
 	Base& operator=(const Base&);
 	~Base();
 };
+
+int main() {
+	Base::Instanc().Instanc().Instanc();
+	return 0;
+}
