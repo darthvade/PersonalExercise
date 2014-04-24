@@ -11,7 +11,7 @@ public:
 	MyComplex(int, int);
 	MyComplex(const MyComplex&);
 	MyComplex& operator=(const MyComplex&);
-	MyComplex& operator+(const MyComplex&);
+	MyComplex operator+(const MyComplex&);
 	~MyComplex();
 private:
 	int _r;

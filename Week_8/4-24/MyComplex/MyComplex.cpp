@@ -17,8 +17,9 @@ MyComplex& MyComplex::operator=(const MyComplex& other) {
 	return *this;
 }
 
-MyComplex& MyComplex::operator+(const MyComplex&) {
-	MyComplex result;
+MyComplex MyComplex::operator+(const MyComplex& other) {
+	MyComplex result(this->_r + other._r, this->_i + other._i);
+	return result;
 }
 
 std::ostream& operator<< (std::ostream& os, const MyComplex& cplx) {
