@@ -4,7 +4,7 @@
 #include <iostream>
 
 class MyVector {
-	friend ostream& operator<< (const ostream&, const MyVector &);
+	friend std::ostream& operator<< (const std::ostream&, const MyVector &);
 public:
 	MyVector();
 	MyVector(int n);
