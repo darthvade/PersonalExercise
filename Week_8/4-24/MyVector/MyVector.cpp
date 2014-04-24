@@ -11,5 +11,9 @@ MyVector::MyVector(int n) : _size(n), _capacity(n) {
 }
 
 MyVector::MyVector(int *begin, int *end) {
-	int n = end - begin;
+	if(begin <= end) {
+		int n = end - begin;
+		_myptr = new int[n];
+
+	}
 }
