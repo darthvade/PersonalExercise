@@ -25,6 +25,7 @@ int main(int argc, char *argv[]) {
 	connect(clientfd, (SA *)&seraddr, sizeof(seraddr));
 
 	//event
+	while(true) {
 	char buf[1024];
 	string str;
 	cin >> str;
@@ -32,6 +33,7 @@ int main(int argc, char *argv[]) {
 	write(clientfd, buf, strlen(buf) + 1);
 	int n = read(clientfd, buf, sizeof(buf));
 	cout << buf << n << endl;
+	}
 
 	close(clientfd);
 	return 0;
