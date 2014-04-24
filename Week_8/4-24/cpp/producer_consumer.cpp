@@ -28,6 +28,9 @@ void *producer(void *) {
 		pthread_mutex_lock(&mutex);	
 
 		/***********************************/
+		while(source.size() == N) {
+			pthread_cond_wait(&empty, &mutex);	
+		}
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
