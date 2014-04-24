@@ -9,6 +9,7 @@ public:
 	~MyVector();
 	MyVector(const MyVector&);
 	MyVector& operator= (const MyVector&);
+	bool operator!= (const MyVector&) const;
 private:
 	int *_myptr;
 	unsigned int _size;
