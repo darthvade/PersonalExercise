@@ -22,6 +22,16 @@ MyComplex MyComplex::operator+(const MyComplex& other) {
 	return result;
 }
 
+MyComplex MyComplex::operator-(const MyComplex& other) {
+	MyComplex result(this->_r - other._r, this->_i - other._i);
+	return result;
+}
+
+MyComplex MyComplex::operator*(const MyComplex& other) {
+	MyComplex result;
+	return result;
+}
+
 std::ostream& operator<< (std::ostream& os, const MyComplex& cplx) {
 	if(cplx._i != 0) {
 		os <<  cplx._r << "+" << cplx._i << "i";
