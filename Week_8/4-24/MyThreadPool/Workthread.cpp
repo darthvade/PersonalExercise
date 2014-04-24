@@ -12,7 +12,7 @@ void Workthread::run() {
 		if(ret == false) {
 			return;
 		}
-		compute_task(task._num);
+		compute_task(task.solve);
 	}
 }
 
