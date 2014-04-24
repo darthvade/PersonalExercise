@@ -19,8 +19,9 @@ private:
 };
 
 int main() {
-	cout << &(Base::Instance()) << endl;;
-	Base::Instance().print();
-	Base::Instance().print();
+	cout << &Base::Instance() << endl;;
+	cout << &Base::Instance() << endl;;
+	cout << &Base::Instance() << endl;;
+	cout << &Base::Instance().Instance().Instance() << endl;;
 	return 0;
 }
