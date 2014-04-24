@@ -61,7 +61,7 @@ int main() {
 
 	pthread_t t_cons, t_prot;
 	pthread_create(&t_cons, NULL, consumer, NULL);
-	pthread_create(&t_prot, NULL, consumer, NULL);
+	pthread_create(&t_prot, NULL, producer, NULL);
 
 
 	pthread_join(t_cons, NULL);
