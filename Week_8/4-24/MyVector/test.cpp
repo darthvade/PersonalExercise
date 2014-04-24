@@ -30,5 +30,10 @@ int main() {
 	}
 	cout << vec4 << endl;
 	*/
+	MyVector vec5;
+	vec5.push_back(99);
+	vec5.push_back(99);
+	vec5.push_back(99);
+	cout << vec5 << endl;
 	return 0;
 }
