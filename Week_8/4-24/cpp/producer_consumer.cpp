@@ -24,10 +24,10 @@ void *consumer(void *) {
 		std::cout << "consumer run!" << std::endl;
 		source.pop();
 		pthread_cond_signal(&empty);
-		sleep(5);
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
+		sleep(5);
 	}
 	pthread_exit(0);
 }
@@ -44,10 +44,10 @@ void *producer(void *) {
 		std::cout << "producer run!" << std::endl;
 		source.push(999);
 		pthread_cond_signal(&full);
-		sleep(1);
 		/***********************************/
 
 		pthread_mutex_unlock(&mutex);
+		sleep(1);
 	}
 	pthread_exit(0);
 }
