@@ -11,6 +11,8 @@ public:
 	MyVector& operator= (const MyVector&);
 private:
 	int *_myptr;
+	unsigned int _size;
+	unsigned int _capacity;
 };
 
 
