@@ -24,6 +24,10 @@ int main() {
 	pthread_cond_init(&full, NULL);
 
 
+	pthread_t t_cons, t_prot;
+	pthread_create(&t_cons, NULL, consumer, NULL);
+	pthread_create(&t_prot, NULL, consumer, NULL);
+
 
 	return 0;
 }
