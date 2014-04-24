@@ -32,7 +32,7 @@ MyVector::MyVector(const MyVector& other) {
 }
 
 bool MyVector::operator!= (const MyVector& other) const {
-	if(this->_myptr == other._myptr) {
+	if(this->_myptr != other._myptr) {
 		return true;
 	} else {
 		return false;
@@ -40,5 +40,5 @@ bool MyVector::operator!= (const MyVector& other) const {
 }
 
 MyVector& MyVector::operator= (const MyVector& other) {
-	
+	if(*this != other)	
 }
