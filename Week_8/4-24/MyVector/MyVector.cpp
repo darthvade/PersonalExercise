@@ -16,7 +16,7 @@ MyVector::MyVector(int *begin, int *end) {
 		std::cout << n << std::endl;
 		_size = n;
 		_capacity = n;
-		_myptr = new int[n + 5];
+		_myptr = new int[n];
 		memmove(_myptr, begin, n);
 	}
 }
