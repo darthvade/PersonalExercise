@@ -48,6 +48,7 @@ int main(int argc, char *argv[]) {
 //	while(true) {
 		n = read(connfd, buf, 1024);	
 		cout << "read --> " << n << endl;
+		cout << buf << endl;
 		if(n > 0) {
 			Task temp;
 			string str(buf, n);
