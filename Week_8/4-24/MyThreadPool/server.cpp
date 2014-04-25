@@ -11,6 +11,8 @@
 #include <cstring>
 #include "Threadpool.h"
 
+#include <cerrno>
+
 using namespace std;
 
 typedef sockaddr SA;
@@ -44,6 +46,7 @@ int main(int argc, char *argv[]) {
 	connfd = accept(serverfd, (SA *)&cliaddr, &cliaddrlen);
 
 	cout << "accept --> " << connfd << endl;
+	cout << errno << endl;
 
 	//event
 	char buf[1024];
