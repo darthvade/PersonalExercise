@@ -52,6 +52,7 @@ int main(int argc, char *argv[]) {
 			Task temp;
 			string str(buf, n - 1);
 			temp.solve = str;
+			cout << temp.solve << "+++end+++" << endl;
 //			pool.add_task_queue(temp);
 		}
 	}
