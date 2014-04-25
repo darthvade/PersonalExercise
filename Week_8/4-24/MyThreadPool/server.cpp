@@ -44,6 +44,7 @@ int main(int argc, char *argv[]) {
 	while(true) {
 		connfd = accept(serverfd, (SA *)&cliaddr, &cliaddrlen);
 		if(connfd > 0) {
+			cout << "accept --> " << connfd << endl;
 			break;
 		}
 	}
