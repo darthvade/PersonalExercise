@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
 	char buf[1024];
 	int n;
 	Threadpool pool(8);
-//	pool.start_threadpool();
+	pool.start_threadpool();
 	while(true) {
 		n = read(connfd, buf, 1024);	
 //		cout << n << "+++end+++" << endl;
