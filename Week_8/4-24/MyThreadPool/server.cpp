@@ -17,6 +17,11 @@ typedef sockaddr SA;
 
 int main(int argc, char *argv[]) {
 
+
+	Threadpool pool(8);
+	pool.start_threadpool();
+
+
 	int serverfd;
 	serverfd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -43,8 +48,8 @@ int main(int argc, char *argv[]) {
 	//event
 	char buf[1024];
 	int n;
-	Threadpool pool(8);
-	pool.start_threadpool();
+//	Threadpool pool(8);
+//	pool.start_threadpool();
 	while(true) {
 		n = read(connfd, buf, 1024);	
 //		cout << n << "+++end+++" << endl;
