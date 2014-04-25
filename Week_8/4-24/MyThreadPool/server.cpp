@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
 //	Threadpool pool(10);
 //	pool.start_threadpool();
 //	while(true) {
-		n = read(connfd, buf, strlen(buf) + 1);	
+		n = read(connfd, buf, 1024);	
 		cout << "read --> " << n << endl;
 		if(n > 0) {
 			Task temp;
