@@ -41,7 +41,9 @@ int main(int argc, char *argv[]) {
 	struct sockaddr_in cliaddr;
 	socklen_t cliaddrlen;
 	bzero(&cliaddr, sizeof(cliaddr));
-	connfd = accept(serverfd, (SA *)&cliaddr, &cliaddrlen);
+	while(true) {
+		connfd = accept(serverfd, (SA *)&cliaddr, &cliaddrlen);
+	}
 
 	cout << "accept --> " << connfd << endl;
 
