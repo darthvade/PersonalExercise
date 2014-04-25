@@ -3,10 +3,11 @@
 template <class T>
 class Base {
 public:
-	echo() {
-		std::cout << << std::endl;
+	void echo() {
+		std::cout << tmp << std::endl;
 	}
 private:
+	T tmp;
 };
 
 
