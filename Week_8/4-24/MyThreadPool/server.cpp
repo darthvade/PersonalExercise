@@ -50,6 +50,7 @@ int main(int argc, char *argv[]) {
 	int n;
 	Threadpool pool(8);
 	pool.start_threadpool();
+	cout << "strated pool" << endl;
 	while(true) {
 		n = read(connfd, buf, 1024);	
 //		cout << n << "+++end+++" << endl;
