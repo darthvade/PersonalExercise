@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
 	//event
 	char buf[1024];
 	int n;
-	Threadpool pool(10);
+	Threadpool pool(8);
 	pool.start_threadpool();
 	while(true) {
 		n = read(connfd, buf, 1024);	
