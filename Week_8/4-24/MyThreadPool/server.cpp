@@ -45,19 +45,16 @@ int main(int argc, char *argv[]) {
 	int n;
 //	Threadpool pool(10);
 //	pool.start_threadpool();
-//	while(true) {
+	while(true) {
 		n = read(connfd, buf, 1024);	
 		buf[n - 1] = '\0';
-		cout << "read --> " << n << endl;
-		cout << buf << "+++end+++" << endl;
 		if(n > 0) {
 			Task temp;
 			string str(buf, n - 1);
 			temp.solve = str;
-			cout << temp.solve << "+++end+++" << endl;
 //			pool.add_task_queue(temp);
 		}
-//	}
+	}
 
 	close(serverfd);
 	close(connfd);
