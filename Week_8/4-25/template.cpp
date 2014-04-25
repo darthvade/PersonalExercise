@@ -9,6 +9,7 @@ bool compare(const T &t1, const T &t2) {
 }
 
 int main() {
-	compare(string("hehe"), string("bbb"));
+	cout << compare(string("hehe"), string("bbb")) << endl;;
+	cout << compare(88, 90) << endl;;
 	return 0;
 }
