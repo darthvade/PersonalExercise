@@ -13,6 +13,8 @@ private:
 
 int main() {
 
+	Base<string> hehe;
+	hehe.echo();
 
 	return 0;
 }
