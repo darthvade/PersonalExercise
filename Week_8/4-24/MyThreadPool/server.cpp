@@ -53,8 +53,8 @@ int main(int argc, char *argv[]) {
 	char buf[1024];
 	int n;
 	Threadpool pool(8);
-//	pool.start_threadpool();
-//	cout << "strated pool" << endl;
+	pool.start_threadpool();
+	cout << "strated pool" << endl;
 
 	while(true) {
 		n = read(connfd, buf, 1024);	
@@ -64,8 +64,8 @@ int main(int argc, char *argv[]) {
 			Task temp;
 			string str(buf, n - 1);
 			temp.solve = str;
-			cout << temp.solve << "+++end+++" << endl;
-//			pool.add_task_queue(temp);
+//			cout << temp.solve << "+++end+++" << endl;
+			pool.add_task_queue(temp);
 		}
 	}
 
