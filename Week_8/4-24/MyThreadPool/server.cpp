@@ -47,6 +47,7 @@ int main(int argc, char *argv[]) {
 //	pool.start_threadpool();
 //	while(true) {
 		n = read(connfd, buf, 1024);	
+		buf[n - 1] = '\0';
 		cout << "read --> " << n << endl;
 		cout << buf << "+++end+++" << endl;
 		if(n > 0) {
