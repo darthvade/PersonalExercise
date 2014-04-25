@@ -41,7 +41,8 @@ int main(int argc, char *argv[]) {
 	
 	int connfd;
 	struct sockaddr_in cliaddr;
-	socklen_t cliaddrlen;
+	//socklen_t cliaddrlen;
+	socklen_t cliaddrlen = sizeof(cliaddr);
 	bzero(&cliaddr, sizeof(cliaddr));
 	connfd = accept(serverfd, (SA *)&cliaddr, &cliaddrlen);
 
