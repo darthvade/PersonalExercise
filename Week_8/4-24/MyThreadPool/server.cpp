@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	cout << "accept --> " << connfd << endl;
-
+/*
 	//event
 	char buf[1024];
 	int n;
@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
 			pool.add_task_queue(temp);
 		}
 	}
-
+*/
 	close(serverfd);
 	close(connfd);
 	return 0;
